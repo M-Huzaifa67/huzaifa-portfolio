@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.js"></script>
+    <!-- <link rel="icon" href="images/img10.jpg" type="image/x-icon"> -->
+    <title>Huzaifa's Portfolio</title>
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+    </style>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+      };
+    </script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const toggleDark = document.getElementById("toggleDark");
+        toggleDark.addEventListener("click", function () {
+          document.documentElement.classList.toggle("dark");
+        });
+      });
+    </script>
+
+  </head>
+
+  <body class="dark:bg-gray-900 dark:text-white transition-colors duration-500">
+    <!-- Nav Include -->
+    <div id="nav" include-html="partials/nav.html"></div>
+
+    <main class="scroll-smooth">
+      <section
+        id="home"
+        class="h-screen flex items-center justify-center bg-gray-100 dark:bg-gray-900 transition-colors duration-500"
+      >
+        <h1
+          class="text-4xl md:text-6xl font-bold text-center text-gray-900 dark:text-white"
+        >
+          Welcome to My Portfolio
+        </h1>
+      </section>
+
+      <section
+        id="about"
+        class="min-h-screen p-12 dark:bg-gray-800 transition-colors duration-500"
+      >
+        <h2
+          class="text-3xl font-semibold text-center text-gray-800 dark:text-white mb-4"
+        >
+          About Me
+        </h2>
+        <p
+          class="text-center text-gray-600 dark:text-gray-300 max-w-xl mx-auto"
+        >
+          I am Muhammad Huzaifa, a passionate Flutter and Node.js developer. I
+          build scalable apps with great UI.
+        </p>
+      </section>
+
+      <section
+        id="projects"
+        class="min-h-screen p-12 bg-gray-100 dark:bg-gray-900 transition-colors duration-500"
+      >
+        <h2
+          class="text-3xl font-semibold text-center text-gray-800 dark:text-white mb-6"
+        >
+          Projects
+        </h2>
+        <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+          <div
+            class="bg-white dark:bg-gray-800 shadow-md rounded-lg p-5 transition-transform transform hover:scale-105 duration-300"
+          >
+            <h3 class="text-xl font-bold mb-2 text-gray-900 dark:text-white">
+              Course Recommendation System
+            </h3>
+            <p class="text-gray-600 dark:text-gray-300">
+              An intelligent system recommending courses based on interests.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section
+        id="contact"
+        class="min-h-screen p-12 bg-white dark:bg-gray-800 transition-colors duration-500"
+      >
+        <h2
+          class="text-3xl font-semibold text-center text-gray-800 dark:text-white mb-4"
+        >
+          Contact
+        </h2>
+        <p class="text-center text-gray-600 dark:text-gray-300">
+          Email: huzaifa.cs67@gmail.com
+        </p>
+      </section>
+    </main>
+
+    <!-- <%- include('partials/footer') %> -->
+
+    <!-- Dark mode toggle button -->
+    <button
+      id="toggleDark"
+      class="fixed bottom-4 right-4 bg-gray-700 text-white p-3 rounded-full shadow hover:bg-gray-600"
+    >
+      🌗
+    </button>
+
+
+    <div id="footer" include-html="partials/footer.html"></div>
+
+    <script>
+      document.querySelectorAll('[include-html]').forEach(el => {
+        fetch(el.getAttribute('include-html'))
+          .then(res => res.text())
+          .then(data => el.innerHTML = data);
+      });
+    </script>
+
+  </body>
+</html>
