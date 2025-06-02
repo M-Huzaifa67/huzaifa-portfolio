@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-      <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css" />
 
   <!-- <link rel="icon" href="images/img10.jpg" type="image/x-icon"> -->
   <title>Huzaifa's Portfolio</title>
@@ -30,16 +30,39 @@
   <!-- <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script> -->
   <!-- <script src="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.js"></script> -->
   <script src="https://cdn.tailwindcss.com"></script>
-  <style>
-    html {
-      scroll-behavior: smooth;
-    }
-  </style>
   <script>
     tailwind.config = {
       darkMode: "class",
     };
   </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      new Typed(".type", {
+        strings: ["Flutter Developer", "NodeJs Developer", "Graphics Designer"],
+        typeSpeed: 100,
+        backSpeed: 40,
+        loop: true
+      });
+    });
+  </script>
+
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+    .intro {
+    font-size: 48px;
+    font-weight: 700;
+    font-family: 'Segoe UI', sans-serif;
+    color: black;
+  }
+  .type {
+    color: gray;
+  }
+  </style>
+
 
 </head>
 
@@ -49,12 +72,20 @@
   <div id="nav" include-html="sections/nav.html"></div>
 
   <main class="scroll-smooth">
+
     <section id="home"
       class="h-screen flex items-center justify-center bg-gray-100 dark:bg-gray-900 transition-colors duration-500">
-      <h1 class="text-4xl md:text-6xl font-bold text-center text-gray-900 dark:text-white">
-        Welcome to My Portfolio
-      </h1>
+      <div class="flex w-full px-8 items-center justify-between">
+
+          <h1 class="intro">I am Huzaifa <span class="type"></span></h1>
+
+        <div class="w-[50vw] h-[50vw] max-w-[400px] max-h-[400px] relative">
+          <img src="/assets/images/img0.jpg" alt="Profile" class="w-full h-full object-cover rounded-xl shadow-lg">
+        </div>
+
+      </div>
     </section>
+
 
     <section id="about" class="min-h-screen p-12 dark:bg-gray-800 transition-colors duration-500">
       <h2 class="text-3xl font-semibold text-center text-gray-800 dark:text-white mb-4">
@@ -64,6 +95,7 @@
         I am Muhammad Huzaifa, a passionate Flutter and Node.js developer. I
         build scalable apps with great UI.
       </p>
+      <img src="/assets/images/img0.jpg" alt="My Photo" class="w-40 h-40 rounded-full" />
     </section>
 
     <section id="projects" class="min-h-screen p-12 bg-gray-100 dark:bg-gray-900 transition-colors duration-500">
@@ -73,6 +105,9 @@
       <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
         <div
           class="bg-white dark:bg-gray-800 shadow-md rounded-lg p-5 transition-transform transform hover:scale-105 duration-300">
+          <div class="w-[50vw] h-[50vw] max-w-[400px] max-h-[400px] relative">
+            <img src="/assets/images/img0.jpg" alt="Profile" class="w-full h-full object-cover rounded-xl shadow-lg">
+          </div>
           <h3 class="text-xl font-bold mb-2 text-gray-900 dark:text-white">
             Course Recommendation System
           </h3>
@@ -102,7 +137,7 @@
 
   <div id="footer" include-html="sections/footer.html"></div>
 
-    <script src="script.js"></script>
+  <script src="script.js"></script>
 
 
 </body>
