@@ -1,3 +1,4 @@
+
 document.addEventListener("DOMContentLoaded", () => {
     const includeEls = document.querySelectorAll('[include-html]');
     includeEls.forEach(el => {
@@ -43,14 +44,16 @@ function setupNavHighlighting(navEl) {
     const observer = new IntersectionObserver(entries => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
+                var navbarBgColor = "bg-blue-500/20";
+                var navbarTextColor = "text-white";
                 // Remove active styles from all links
                 navLinks.forEach(link => {
-                    link.classList.remove("bg-blue-500", "bg-opacity-70", "bg-green-500", "text-white"); // Remove old styles
+                    link.classList.remove(navbarBgColor, navbarTextColor); // Remove old styles
                 });
 
                 // Add active styles to current
                 const activeLink = navEl.querySelector(`.nav-link[href="#${entry.target.id}"]`);
-                activeLink?.classList.add("bg-blue-500", "bg-opacity-70", "text-white");
+                activeLink?.classList.add(navbarBgColor, navbarTextColor);
             }
         });
     }, { threshold: 0.6 });
