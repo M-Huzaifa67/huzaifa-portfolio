@@ -1,22 +1,10 @@
-
-/* @tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-
-@layer components {
-  .responsive-image {
-    @apply w-[20vw] h-[20vw] sm:w-[30vw] sm:h-[30vw] lg:w-[50vh] lg:h-[50vh] rounded-full shadow-lg;
-  }
-
-  .btn-primary {
-    @apply bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition;
-  }
-} */
-
-
 html {
   scroll-behavior: smooth;
+}
+
+.scroll-smooth {
+  scroll-behavior: smooth;
+  scroll-margin-top: 4rem;
 }
 
 .section {
@@ -29,16 +17,24 @@ html {
 }
 
 .intro {
-      font-size: clamp(22px, 5vw, 44px);
-      /* clamp(min, preferred, max)  */
-      font-weight: 700;
-      font-family: 'Segoe UI', sans-serif;
-      color: black;
-    }
+  font-size: clamp(22px, 5vw, 44px);
+  /* clamp(min, preferred, max)  */
+  font-weight: 700;
+  font-family: 'Segoe UI', sans-serif;
+  color: black;
+}
 
-    .type {
-      color: gray;
-    }
+.type {
+  font-size: clamp(22px, 5vw, 44px);
+  font-weight: 700;
+  font-family: 'Segoe UI', sans-serif;
+  background-image: linear-gradient(to right ,#413c79, #c0abf0d1);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+
 
 .headline {
   font-size: 2.5rem;
