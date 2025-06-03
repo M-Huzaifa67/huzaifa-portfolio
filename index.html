@@ -50,25 +50,6 @@
     });
   </script>
 
-  <style>
-    html {
-      scroll-behavior: smooth;
-    }
-
-    .intro {
-
-      font-size: clamp(28px, 5vw, 64px);
-      /* clamp(min, preferred, max)  */
-      font-weight: 700;
-      font-family: 'Segoe UI', sans-serif;
-      color: black;
-    }
-
-    .type {
-      color: gray;
-    }
-  </style>
-
 
 </head>
 
@@ -78,24 +59,21 @@
   <div id="nav" include-html="sections/nav.html"></div>
 
   <main class="scroll-smooth">
+<!-- sm:aspect-square md:aspect-[4/3] lg:aspect-[16/9]  -->
+<section id="home"
+  class="w-full h-[100vh] sm:h[50vh] flex items-center justify-between bg-gray-100 dark:bg-gray-900 transition-colors duration-500">
+  
+  <div class="w-[60vw] h-full flex px-8 items-center justify-start">
+    <h1 class="intro">I am Huzaifa
+      <span class="type bg-gradient-to-r from-pink-500 to-violet-500 bg-clip-text"></span>
+    </h1>
+  </div>
+  <div class="w-[40vw] h-full relative flex  items-center justify-center animate__animated animate__fadeInLeft">
+    <img src="/assets/images/prof.jpg" alt="Profile"
+      class="w-[40vw] h-[40vw] sm:w-[20vw] sm:h-[20vw] object-cover rounded-full shadow-lg hover:scale-105 duration-300 ease-in-out hover:opacity-60">
+  </div>
+</section>
 
-    <section id="home"
-      class="h-screen flex items-center justify-center bg-gray-100 dark:bg-gray-900 transition-colors duration-500">
-      <div class="flex w-full px-8 items-center justify-between">
-
-        <h1 class="intro">I am Huzaifa <span
-            class="type bg-gradient-to-r from-pink-500 to-violet-500 bg-clip-text"></span></h1>
-
-        <div class="group w-[50vw] h-[50vw] max-w-[400px] max-h-[400px] relative animate__animated animate__fadeInLeft">
-          <img src="/assets/images/prof.jpg" alt="Profile"
-            class="w-full h-full object-cover rounded-full shadow-lg  hover:scale-105 duration-300 ease-in-out hover:opacity-60 ">
-        </div>
-
-
-
-
-      </div>
-    </section>
 
 
     <section id="about" class="min-h-screen p-12 dark:bg-gray-800 transition-colors duration-500">
