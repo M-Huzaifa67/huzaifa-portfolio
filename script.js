@@ -25,8 +25,6 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
-
-
 function setupSmoothScroll(navEl) {
     const navLinks = navEl.querySelectorAll('.nav-link');
     navLinks.forEach(link => {
