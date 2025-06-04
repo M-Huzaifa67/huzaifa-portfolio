@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- <link rel="icon" href="images/img10.jpg" type="image/x-icon"> -->
+  <title>Huzaifa's Portfolio</title>
+  <!-- update the version number as needed -->
+  <script defer src="/__/firebase/11.8.1/firebase-app-compat.js"></script>
+  <!-- include only the Firebase features as you need -->
+  <script defer src="/__/firebase/11.8.1/firebase-auth-compat.js"></script>
+  <script defer src="/__/firebase/11.8.1/firebase-database-compat.js"></script>
+  <script defer src="/__/firebase/11.8.1/firebase-firestore-compat.js"></script>
+  <script defer src="/__/firebase/11.8.1/firebase-functions-compat.js"></script>
+  <script defer src="/__/firebase/11.8.1/firebase-messaging-compat.js"></script>
+  <script defer src="/__/firebase/11.8.1/firebase-storage-compat.js"></script>
+  <script defer src="/__/firebase/11.8.1/firebase-analytics-compat.js"></script>
+  <script defer src="/__/firebase/11.8.1/firebase-remote-config-compat.js"></script>
+  <script defer src="/__/firebase/11.8.1/firebase-performance-compat.js"></script>
+  <!-- 
+      initialize the SDK after all desired features are loaded, set useEmulator to false
+      to avoid connecting the SDK to running emulators.
+    -->
+  <script defer src="/__/firebase/init.js?useEmulator=true"></script>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+  <!-- <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script> -->
+  <!-- <script src="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.js"></script> -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <script>
+    tailwind.config = {
+      darkMode: "class",
+    };
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      new Typed(".type", {
+        strings: ["Flutter Developer", "NodeJs Developer"],
+        typeSpeed: 88,
+        backSpeed: 44,
+        loop: true
+      });
+    });
+  </script>
+
+
+
+</head>
+
+<body class="bg-gray-100 text-gray-900 dark:bg-gray-900 dark:text-white min-h-screen mt-8v mx-10">
+  <!-- Sticky AppBar -->
+  <header class="sticky top-0 z-50 bg-white dark:bg-gray-800 shadow p-4">
+    <h1 class="text-xl font-bold">AppBar</h1>
+  </header>
+
+  <!-- Main container -->
+  <main class="flex flex-col p-4 space-y-4 h-[calc(100vh-64px)]"> <!-- adjust height minus header -->
+    <!-- Inner Row -->
+    <div class="flex flex-col md:flex-row gap-4 flex-1 overflow-hidden">
+      
+      <!-- Left: Scrollable ListView -->
+      <div class="flex-1 bg-white dark:bg-gray-700 p-4 rounded shadow overflow-y-auto max-h-full">
+       <ul id="myList"></ul>
+      </div>
+
+      <!-- Right: Form stays in place -->
+      <div class="w-full md:w-[40%] bg-white dark:bg-gray-700 p-4 rounded shadow self-start">
+        <form class="space-y-4">
+          <input type="text" placeholder="Your name" class="w-full p-2 border rounded" />
+          <input type="email" placeholder="Your email" class="w-full p-2 border rounded" />
+          <textarea placeholder="Message" class="w-full p-2 border rounded"></textarea>
+          <button class="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded">Submit</button>
+        </form>
+      </div>
+
+    </div>
+  </main>
+
+
+  <script>
+  const list = document.getElementById("myList");
+  for (let i = 1; i <= 70; i++) {
+    const li = document.createElement("li");
+    li.textContent = `Text ${i}`;
+    list.appendChild(li);
+  }
+</script> 
+
+
+</body>
+
+
+</html>
