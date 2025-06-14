@@ -22,9 +22,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // --- Close Mobile Menu on Outside Click ---
   document.addEventListener('click', (e) => {
-    if (mobileMenu.classList.contains('open') 
-      && !mobileMenu.contains(e.target) 
-    && e.target !== menuToggle) {
+    if (mobileMenu.classList.contains('open')
+      && !mobileMenu.contains(e.target)
+      && e.target !== menuToggle) {
       mobileMenu.classList.remove('open');
       setTimeout(() => mobileMenu.style.display = 'none', 300);
     }
@@ -36,7 +36,7 @@ document.addEventListener('DOMContentLoaded', () => {
     tabLinks.forEach(link => {
       link.classList.toggle('active', link.dataset.section === sectionId);
     });
-    
+
     // Update URL hash without triggering scroll
     if (window.location.hash !== `#${sectionId}`) {
       history.replaceState(null, null, `#${sectionId}`);
@@ -44,17 +44,23 @@ document.addEventListener('DOMContentLoaded', () => {
   };
 
   // --- Scroll to Section Smoothly ---
-  const scrollToSection = (sectionId) => {
-    const section = document.getElementById(sectionId);
-    if (section) {
-      isScrollingByClick = true;
-      section.scrollIntoView({ behavior: 'smooth' });
-      clearTimeout(scrollTimeout);
-      scrollTimeout = setTimeout(() => {
-        isScrollingByClick = false;
-      }, 1000);
-    }
-  };
+ const scrollToSection = (sectionId) => {
+  const section = document.getElementById(sectionId);
+  if (section) {
+    isScrollingByClick = true;
+
+    const offset = 64; // Header height
+    const y = section.getBoundingClientRect().top + window.pageYOffset - offset;
+
+    window.scrollTo({ top: y, behavior: 'smooth' });
+
+    clearTimeout(scrollTimeout);
+    scrollTimeout = setTimeout(() => {
+      isScrollingByClick = false;
+    }, 1000);
+  }
+};
+
 
   // --- Handle Tab Clicks ---
   tabLinks.forEach(link => {
@@ -87,9 +93,9 @@ document.addEventListener('DOMContentLoaded', () => {
         }
       });
     }, {
-      root: scrollContainer,
-      threshold: 0.5
+      threshold: 0.5 // or 0.4 if you want it more sensitive
     });
+
 
     sections.forEach(section => {
       observer.observe(section);
@@ -100,7 +106,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const handleInitialLoad = () => {
     const hash = window.location.hash.substring(1);
     const validSections = Array.from(sections).map(s => s.id);
-    
+
     if (hash && validSections.includes(hash)) {
       setActiveTab(hash);
       scrollToSection(hash);
@@ -114,7 +120,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const handleResize = () => {
     // Reinitialize observer on resize to ensure proper detection
     initObserver();
-    
+
     // Scroll to current section to maintain sync
     if (currentSection) {
       scrollToSection(currentSection);
@@ -124,7 +130,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // --- Initialize ---
   initObserver();
   handleInitialLoad();
-  
+
   // Add event listeners
   window.addEventListener('resize', handleResize);
   window.addEventListener('hashchange', handleInitialLoad);
