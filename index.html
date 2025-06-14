@@ -8,7 +8,7 @@
   <title>Huzaifa's Portfolio</title>
   <link href="./src/output.css" rel="stylesheet" />
 
-    <!-- update the version number as needed -->
+  <!-- update the version number as needed -->
   <script defer src="/__/firebase/11.8.1/firebase-app-compat.js"></script>
   <!-- include only the Firebase features as you need -->
   <script defer src="/__/firebase/11.8.1/firebase-auth-compat.js"></script>
@@ -80,8 +80,8 @@
             <a href="#home" class="tab-link active" data-section="home"><span>Home</span></a>
             <a href="#about" class="tab-link" data-section="about"><span>About</span></a>
             <a href="#experience" class="tab-link" data-section="experience"><span>Experince</span></a>
-            <a href="#project" class="tab-link" data-section="project"><span>Project</span></a>
             <a href="#skills" class="tab-link" data-section="skills"><span>Skills</span></a>
+            <a href="#project" class="tab-link" data-section="project"><span>Project</span></a>
             <a href="#contact" class="tab-link" data-section="contact"><span>Contact</span></a>
           </div>
         </nav>
@@ -108,59 +108,87 @@
     <div class="absolute right-5 top-10 w-50 bg-white shadow-xl rounded-lg p-1">
       <a href="#home" class="mob-tab-link active" data-section="home"><span>Home</span></a>
       <a href="#about" class="mob-tab-link" data-section="about"><span>About</span></a>
-      <a href="#experience" class="mob-tab-link" data-section="experience"><span>Experience</a>span></a>
-      <a href="#project" class="mob-tab-link" data-section="project"><span>Project</span></a>
+      <a href="#experience" class="mob-tab-link" data-section="experience"><span>Experience</span></a>
       <a href="#skills" class="mob-tab-link" data-section="skills"><span>Skills</span></a>
+      <a href="#project" class="mob-tab-link" data-section="project"><span>Project</span></a>
       <a href="#contact" class="mob-tab-link" data-section="contact"><span>Contact</span></a>
     </div>
   </div>
 
 
   <!-- Main Content -->
-  <main class="flex-grow flex justify-center">
+  <main class="flex justify-center">
 
     <div class="w-[92%] sm:w-[80%] flex flex-col shadow-lg shadow-blue-500/50" id="scroll-container">
 
       <div class="h-[64px]"></div>
 
       <!-- bg-[url('/assets/images/prof.jpg')] bg-cover bg-center -->
-      <section id="home" class="content-section h-[calc(100vh-64px)] dark:bg-gray-900 bg-blue-50" data-section="home">
-        <div class="flex flex-col sm:flex-row w-full h-full">
+      <section id="home" class="content-section dark:bg-gray-900 bg-blue-50" data-section="home">
+        <div class="flex h-full flex-col sm:flex-row">
           <div class="basis-[50%] flex flex-col justify-center items-start">
             <h1 class="intro text-gray-900 dark:text-white font-bold font-serif">Hi, This is Huzaifa</h1>
             <h1 class="py-3 pl-5"> <span class="type"></span></h1>
           </div>
-          <div class="basis-[50%] flex justify-center items-center animate__animated animate__fadeInLeft">
-            <img src="/assets/images/prof1.jpg" alt="Profile" class="profile-image size-64 sm:size-80 object-cover ">
-
+          <div class="basis-[50%] flex relative w-full h-full justify-center items-center animate__animated animate__fadeInLeft ">
+             <div class="size-55 sm:size-77 relative">
+                <div class="profile-image absolute inset-0 animate-spin"></div>
+                <div
+                  class="profile-image absolute inset-1 bg-[url('/assets/images/prof.jpg')] 
+                  brightness-50 hover:brightness-90 bg-cover bg-center">
+                </div>
+              </div>
           </div>
-        </div>
+          </div>
       </section>
 
       <section id="about" class="content-section py-11 dark:bg-gray-800 bg-green-50" data-section="about">
-        <div class="h-full w-full flex flex-col justify-center items-start">
-          <h1 class="text-2xl font-bold text-white mb-3">About me</h1>
-          <div class="text-[16px] font-mono mt-8 space-y-3 indent-5 text-justify">
-            I'm skilled Computer Science graduate with expertise in Flutter for cross-platform applications and backend
-            development using Node.js. Proficient in Firebase, FCM, RESTful APIs, Google Maps, State Management, MVC,
-            and UI/UX design. Strong foundation in Object-Oriented Programming (OOP) with hands-on experience in
-            building scalable and high-performance applications.
+        <div class="h-full w-full flex flex-col sm:flex-row">
+
+          <div class="flex">
+            <div class="relative w-full h-full flex items-center justify-center">
+              <div class="size-55 sm:size-77 relative">
+                <div class="absolute inset-3 rounded-full border-t-4 border-blue-500 border-opacity-50 animate-spin">
+                </div>
+                <div class="absolute inset-4 rounded-full border-l-4 border-blue-600 border-opacity-50 animate-spin">
+                </div>
+                <div
+                  class="absolute inset-5 rounded-full bg-[url('/assets/images/prof.jpg')] brightness-50 hover:brightness-90 hover:scale-105 z-10 bg-cover bg-center animate-pulse">
+                </div>
+              </div>
+            </div>
+            <div class="absolute bottom-6 left-0 right-0 text-center">
+              <p class="text-lg font-medium text-emerald-300"></p>
+            </div>
+          </div>
+
+
+          <div class="flex h-full flex-col justify-center items-start p-5">
+            <h1 class="font-bold underline decoration-2 underline-offset-8 my-5">About me</h1>
+            <div class="font-ubuntu space-y-3 indent-5 text-justify ">
+              I'm skilled Computer Science graduate with expertise in Flutter for cross-platform applications and
+              backend
+              development using Node.js. Proficient in Firebase, FCM, RESTful APIs, Google Maps, State Management, MVC,
+              and UI/UX design. Strong foundation in Object-Oriented Programming (OOP) with hands-on experience in
+              building scalable and high-performance applications.
+            </div>
           </div>
         </div>
+
       </section>
 
       <section id="experience" class="content-section py-11 dark:bg-gray-900 bg-purple-50" data-section="experience">
-        <div>
-          <h1 class="text-2xl font-bold underline decoration-2 underline-offset-8">Experiences</h1>
+        <div class="flex h-full flex-col justify-center items-start">
+          <h1 class="font-bold underline decoration-2 underline-offset-8 my-5">Experiences</h1>
 
           <div class="flex flex-col justify-start items-start px-2 my-3">
             <div
               class="flex flex-col justify-start sm:flex-row sm:justify-between items-start sm:items-center leading-normal">
-              <span class="text-[14px] font-bold">Backend Developer (Node.js) & MERN Stack Developer</span>
-              <span class="text-[12px]">Next Gen | 2025 - Present</span>
+              <span class="font-bold">Backend Developer (Node.js) & MERN Stack Developer</span>
+              <span class="">Next Gen | 2025 - Present</span>
             </div>
             <div class="pl-4 py-1">
-              <ul class="list-disc text-sm bullet-point">
+              <ul class="list-disc bullet-point">
                 <li>Developing backend APIs using Node.js, Express.js, and MongoDB to enhance full-stack expertise.</li>
                 <li>Implementing authentication, database management, and server-side logic.</li>
                 <li>Gaining experience in JWT authentication, Encryption, API Integration.</li>
@@ -171,11 +199,11 @@
           <div class="flex flex-col justify-start items-start px-2 my-3">
             <div
               class="flex flex-col justify-start sm:flex-row sm:justify-between items-start sm:items-center leading-normal">
-              <span class="text-[14px] font-bold">Flutter Developer and Graphic Designer</span>
-              <span class="text-[12px]">From PSEB at PTCP l Peshawar - 2024</span>
+              <span class=" font-bold">Flutter Developer and Graphic Designer</span>
+              <span class="">From PSEB at PTCP l Peshawar - 2024</span>
             </div>
             <div class="pl-4 py-1">
-              <ul class="list-disc text-sm bullet-point">
+              <ul class="list-disc bullet-point">
                 <li>Developed applications using Flutter, focusing on functionality and UI/UX.</li>
                 <li>Integrated ML models to enhance functionality and personalization.</li>
                 <li>Gained experience in graphic design using Canva and Figma.</li>
@@ -186,11 +214,11 @@
           <div class="flex flex-col justify-start items-start px-2 my-3">
             <div
               class="flex flex-col justify-start sm:flex-row sm:justify-between items-start sm:items-center leading-normal">
-              <span class="text-[14px] font-bold">Flutter and Graphic Designer </span>
-              <span class="text-[12px]">Self - 2 years</span>
+              <span class="font-bold">Flutter and Graphic Designer </span>
+              <span class="">Self - 2 years</span>
             </div>
             <div class="pl-4 py-1">
-              <ul class="list-disc text-sm bullet-point">
+              <ul class="list-disc bullet-point">
                 <li>Developed applications using Flutter, implementing features such as Firebase, FCM, RESTful API,
                   Google Maps, and State Management.</li>
                 <li>Designed professional UIs, logos for apps, and posters using Figma and Canva.</li>
@@ -204,10 +232,10 @@
 
 
       <section id="skills" class="content-section py-11 dark:bg-gray-800 bg-yellow-50" data-section="skills">
-        <div>
-          <h2 class="text-lg font-bold underline decoration-2 underline-offset-8">SKILLS</h2>
+        <div class="flex h-full flex-col justify-center items-start">
+          <h2 class="font-bold underline decoration-2 underline-offset-8 my-5">SKILLS</h2>
 
-          <table class="table-auto w-full text-sm mt-3">
+          <table class="table-auto w-full">
             <tbody>
               <!-- Expert-Level -->
               <tr class="align-top">
@@ -274,66 +302,71 @@
 
 
       <section id="project" class="content-section py-11 dark:bg-gray-900 bg-yellow-50" data-section="project">
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <div class="flex h-full flex-col justify-center items-start">
+          <h2 class="text-lg font-bold underline decoration-2 underline-offset-8 my-5">Projects</h2>
 
-          <div class="project-card flex bg-white dark:bg-gray-800 p-2 rounded-lg shadow-md">
-            <div class="w-22 h-auto mb-4">
-              <img src="/assets/images/proj1.jpg" alt="Project 1" class="w-full h-full object-cover rounded-lg">
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+
+            <div class="project-card flex bg-white dark:bg-gray-800 p-2 rounded-lg shadow-md">
+              <div class="w-22 h-auto mb-4">
+                <img src="/assets/images/proj1.jpg" alt="Project 1" class="w-full h-full object-cover rounded-lg">
+              </div>
+              <div class="flex-1 p-3 items-start justify-start">
+                <h3 class="font-semibold mb-2">Courses Recommendation System</h3>
+                <p class="mb-2">Developed an AI-based recommendation system to suggest courses
+                  tailored to user interests.</p>
+                <a href="#" class="text-blue-500 hover:underline">View Project</a>
+              </div>
             </div>
-            <div class="flex-1 p-3 items-start justify-start">
-              <h3 class="text-md font-semibold mb-2">Courses Recommendation System</h3>
-              <p class="text-sm mb-2">Developed an AI-based recommendation system to suggest courses
-                tailored to user interests.</p>
-              <a href="#" class="text-blue-500 hover:underline">View Project</a>
+
+            <div class="project-card flex bg-white dark:bg-gray-800 p-2 rounded-lg shadow-md">
+              <div class="w-22 h-auto mb-4">
+                <img src="/assets/images/proj5.jpg" alt="Project 2" class="w-full h-full object-cover rounded-lg">
+              </div>
+              <div class="flex-1 p-3 items-start justify-start">
+                <h3 class="font-semibold mb-2">Food Delivery App</h3>
+                <p class="mb-2">Created a cross-platform e-commerce application using Flutter, integrating
+                  Firebase for backend services.</p>
+                <a href="#" class="text-blue-500 hover:underline">View Project</a>
+              </div>
+            </div>
+            <div class="project-card flex bg-white dark:bg-gray-800 p-2 rounded-lg shadow-md">
+              <div class="w-22 h-auto mb-4">
+                <img src="/assets/images/proj3.jpg" alt="Project 3" class="w-full h-full object-cover rounded-lg">
+              </div>
+              <div class="flex-1 p-3 items-start justify-start">
+                <h3 class="text-md font-semibold mb-2">Tourism Guide</h3>
+                <p class="mb-2">Designed and developed a personal portfolio website to showcase my skills and
+                  projects.
+                </p>
+                <a href="#" class="text-blue-500 hover:underline">View Project</a>
+              </div>
+            </div>
+            <div class="project-card flex bg-white dark:bg-gray-800 p-2 rounded-lg shadow-md">
+              <div class="w-22 h-auto mb-4">
+                <img src="/assets/images/proj6.jpg" alt="Project 4" class="w-full h-full object-cover rounded-lg">
+              </div>
+              <div class="flex-1 p-3 items-start justify-start">
+                <h3 class="font-semibold mb-2">Chat Application</h3>
+                <p class="mb-2">Developed a real-time chat application using Flutter and Firebase, enabling
+                  seamless
+                  communication.</p>
+                <a href="#" class="text-blue-500 hover:underline">View Project</a>
+              </div>
             </div>
           </div>
 
-          <div class="project-card flex bg-white dark:bg-gray-800 p-2 rounded-lg shadow-md">
-            <div class="w-22 h-auto mb-4">
-              <img src="/assets/images/proj5.jpg" alt="Project 2" class="w-full h-full object-cover rounded-lg">
-            </div>
-            <div class="flex-1 p-3 items-start justify-start">
-              <h3 class="text-md font-semibold mb-2">Food Delivery App</h3>
-              <p class="text-sm mb-2">Created a cross-platform e-commerce application using Flutter, integrating
-                Firebase for backend services.</p>
-              <a href="#" class="text-blue-500 hover:underline">View Project</a>
-            </div>
-          </div>
-          <div class="project-card flex bg-white dark:bg-gray-800 p-2 rounded-lg shadow-md">
-            <div class="w-22 h-auto mb-4">
-              <img src="/assets/images/proj3.jpg" alt="Project 3" class="w-full h-full object-cover rounded-lg">
-            </div>
-            <div class="flex-1 p-3 items-start justify-start">
-              <h3 class="text-md font-semibold mb-2">Tourism Guide</h3>
-              <p class="text-sm mb-2">Designed and developed a personal portfolio website to showcase my skills and projects.</p>
-              <a href="#" class="text-blue-500 hover:underline">View Project</a>
-            </div>
-          </div>
-          <div class="project-card flex bg-white dark:bg-gray-800 p-2 rounded-lg shadow-md">
-            <div class="w-22 h-auto mb-4">
-              <img src="/assets/images/proj6.jpg" alt="Project 4" class="w-full h-full object-cover rounded-lg">
-            </div>
-            <div class="flex-1 p-3 items-start justify-start">
-              <h3 class="text-md font-semibold mb-2">Chat Application</h3>
-              <p class="text-sm mb-2">Developed a real-time chat application using Flutter and Firebase, enabling seamless communication.</p>
-              <a href="#" class="text-blue-500 hover:underline">View Project</a>
-            </div>
-          </div>
         </div>
-          
+
 
 
       </section>
 
 
 
-
-
-
-
       <section id="contact" class="content-section py-11 dark:bg-gray-800 dark:text-white" data-section="contact">
-        <div>
-          <h1 class="text-2xl font-bold mb-4">Contact us</h1>
+        <div class="flex h-full flex-col justify-center items-start">
+          <h1 class="font-bold mb-4">Contact us</h1>
           <form class="mt-8 space-y-4 text-black dark:text-white">
             <input type="text" placeholder="Name" class="form-input">
             <input type="email" placeholder="Email" class="form-input">
@@ -354,7 +387,7 @@
 
 
   <footer class="flex justify-center pt-1">
-    <div class="footer w-[92%] w-[80%] p-3">
+    <div class="footer w-[92%] sm:w-[80%] p-3">
       <p>&copy; 2025 M.Huzaifa. All rights reserved</p>
     </div>
   </footer>
