@@ -43,16 +43,21 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   };
 
-  // --- Scroll to Section Smoothly ---
- const scrollToSection = (sectionId) => {
+ // Improved scrollToSection function
+const scrollToSection = (sectionId) => {
   const section = document.getElementById(sectionId);
   if (section) {
     isScrollingByClick = true;
+    
+    // Calculate position accounting for fixed header
+    const headerHeight = 64;
+    const sectionTop = section.getBoundingClientRect().top + window.pageYOffset;
+    const offsetPosition = sectionTop - headerHeight;
 
-    const offset = 64; // Header height
-    const y = section.getBoundingClientRect().top + window.pageYOffset - offset;
-
-    window.scrollTo({ top: y, behavior: 'smooth' });
+    window.scrollTo({
+      top: offsetPosition,
+      behavior: 'smooth'
+    });
 
     clearTimeout(scrollTimeout);
     scrollTimeout = setTimeout(() => {
@@ -60,6 +65,21 @@ document.addEventListener('DOMContentLoaded', () => {
     }, 1000);
   }
 };
+
+// Update Intersection Observer config
+observer = new IntersectionObserver((entries) => {
+  if (isScrollingByClick) return;
+  
+  entries.forEach(entry => {
+    if (entry.isIntersecting && entry.intersectionRatio >= 0.35) {
+      const sectionId = entry.target.dataset.section;
+      setActiveTab(sectionId);
+    }
+  });
+}, {
+  threshold: [0.35, 0.65], // More reliable trigger points
+  rootMargin: '0px 0px -50% 0px' // Adjusts the trigger zone
+});
 
 
   // --- Handle Tab Clicks ---
