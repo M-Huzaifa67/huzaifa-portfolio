@@ -70,10 +70,10 @@
   <!-- Header -->
   <header class="flex fixed top-0 w-full justify-center z-20">
     <div class="header w-[92%] sm:w-[80%] h-[64px] flex justify-between items-center">
-      <div class="flex-1 text-2xl font-bold whitespace-nowrap">Welcome</div>
+      <div class="flex-1 text-2xl font-bold whitespace-nowrap">👋 Welcome</div>
 
       <!-- Desktop Navigation -->
-      <div class="w-3/4 justify-center hidden sm:block">
+      <div class="w-3/4 justify-center hidden md:block">
         <nav class="nav">
           <div class="flex justify-center items-center">
             <a href="#home" class="tab-link active" data-section="home"><span>Home</span></a>
@@ -94,7 +94,7 @@
         </button>
 
         <!-- Mobile Menu Button -->
-        <button id="menu-toggle" class="sm:hidden text-gray-500 focus:outline-none">
+        <button id="menu-toggle" class="md:hidden text-gray-500 focus:outline-none">
           <i class="fas fa-bars text-lg"></i>
         </button>
       </div>
@@ -124,16 +124,16 @@
 
       <!-- bg-[url('/assets/images/prof.jpg')] bg-cover bg-center -->
       <section id="home" class="content-section dark:bg-gray-900 bg-blue-50" data-section="home">
-        <div class="flex h-full flex-col sm:flex-row">
+        <div class="flex h-full flex-col md:flex-row">
           <div class="basis-[50%] flex flex-col justify-center items-start">
             <h1 class="intro text-gray-900 dark:text-white text-3xl font-bold font-ubuntu">Hi, This is Huzaifa</h1>
-            <h1 class="py-2 pl-5 text-xl font-mono "> <span class="type"></span></h1>
+            <h1 class="py-2 pl-5 text-xl font-mono"> <span class="type"></span></h1>
           </div>
           <div
             class="basis-[50%] flex relative w-full h-full justify-center items-center animate__animated animate__fadeInLeft ">
             <div class="size-55 sm:size-77 relative">
               <div class="profile-image absolute inset-0 animate-spin"></div>
-              <div class="profile-image absolute inset-1 bg-[url('/assets/images/prof.jpg')] 
+              <div class="profile-image absolute inset-1 bg-[url('/assets/images/prof1.jpg')] 
                   brightness-50 hover:brightness-90 bg-cover bg-center">
               </div>
             </div>
@@ -142,10 +142,9 @@
       </section>
 
       <section id="about" class="content-section py-5 dark:bg-gray-800 bg-gray-50" data-section="about">
-        <div class="h-full w-full flex flex-col-reverse sm:flex-row">
-
+        <div class="h-full w-full flex flex-col-reverse md:flex-row">
           <div class="flex p-5">
-            <div class="relative w-full h-full flex items-center justify-center">
+            <div class="relative w-full h-full flex items-start justify-center">
               <div class="size-55 sm:size-77 relative">
                 <div class="absolute inset-3 rounded-full border-t-4 border-blue-500 border-opacity-50 animate-spin">
                 </div>
@@ -162,30 +161,27 @@
           </div>
 
           <div class="flex p-5">
-            <div class="h-auto flex-col justify-center items-start">
-              <h1 class="text-2xl font-ubuntu font-bold underline decoration-2 underline-offset-8 my-5">About me</h1>
-              <div class="text-md font-mono h-full px-5 space-y-3 indent-3 leading-8 text-justify">
-                I’m a Computer Science graduate and mobile app developer specializing in Flutter, with a strong backend
-                development skillset in Node.js. I build fast, responsive, and visually appealing cross-platform
-                applications, powered by scalable backend systems.
+            <div class="h-auto w-full flex flex-col justify-center items-start">
+              <h1 class="text-2xl font-ubuntu font-bold underline decoration-2 underline-offset-8 my-5 text-center">
+                About me</h1>
+              <div class="text-md font-mono h-full px-5 space-y-3 leading-8 max-w-3xl text-justify">
+                <p>I'm a Computer Science graduate and mobile app developer specializing in Flutter, with a strong
+                  backend development skillset in Node.js. I build fast, responsive, and visually appealing
+                  cross-platform applications, powered by scalable backend systems.</p>
 
-                My toolkit includes Firebase (Auth, Realtime DB, FCM), RESTful APIs, Google Maps integration, and state
-                management solutions like Provider and Bloc. With a solid grasp of OOP principles and MVC architecture,
-                I
-                focus on writing clean, maintainable code that delivers smooth user experiences.
+                <p>My toolkit includes Firebase (Auth, Realtime DB, FCM), RESTful APIs, Google Maps integration, and
+                  state management solutions like Provider and Bloc. With a solid grasp of OOP principles and MVC
+                  architecture, I focus on writing clean, maintainable code that delivers smooth user experiences.</p>
 
-                Beyond development, I’m passionate about UI/UX design—ensuring my apps are not just functional but also
-                intuitive and delightful. When I’m not debugging or optimizing performance, you’ll find me exploring new
-                tech, contributing to open-source, or brainstorming ideas for my next project.
+                <p>Beyond development, I'm passionate about UI/UX design—ensuring my apps are not just functional but
+                  also intuitive and delightful. When I'm not debugging or optimizing performance, you'll find me
+                  exploring new tech, contributing to open-source, or brainstorming ideas for my next project.</p>
 
-                Let’s turn ideas into reality! 🚀
+                <p>Let's turn ideas into reality!</p>
               </div>
             </div>
           </div>
-
-
         </div>
-
       </section>
 
       <section id="experience" class="content-section py-5 dark:bg-gray-900 bg-blue-50" data-section="experience">
@@ -242,67 +238,51 @@
       <section id="skills" class="content-section py-11 dark:bg-gray-800 bg-gray-50" data-section="skills">
         <div class="flex h-full flex-col justify-center items-start">
           <h2 class="text-2xl font-ubuntu font-bold underline decoration-2 underline-offset-8 my-5">SKILLS</h2>
+          <div class="h-full w-full space-y-5">
+            <div class="w-full h-auto">
+              <p class="py-2 text-lg">Flutter &amp; Dart</p>
+              <div class="w-full bg-gray-200 rounded-full dark:bg-gray-700">
+                <div class="bg-blue-600 text-xs  font-medium text-blue-100 text-center p-0.5 leading-none rounded-full"
+                  style="width: 90%"> 90%</div>
+              </div>
+            </div>
+            <div class="w-full h-auto">
+              <p class="py-2 text-lg">Web development</p>
+              <div class="w-full bg-gray-200 rounded-full dark:bg-gray-700">
+                <div class="bg-blue-600 text-xs font-medium text-blue-100 text-center p-0.5 leading-none rounded-full"
+                  style="width: 60%"> 60%</div>
+              </div>
+            </div>
+            <div class="w-full h-auto">
+              <p class="py-2 text-lg">WordPress</p>
+              <div class="w-full bg-gray-200 rounded-full dark:bg-gray-700">
+                <div class="bg-blue-600 text-xs font-medium text-blue-100 text-center p-0.5 leading-none rounded-full"
+                  style="width: 70%"> 70%</div>
+              </div>
+            </div>
+            <div class="w-full h-auto">
+              <p class="py-2 text-lg">Firebase</p>
+              <div class="w-full bg-gray-200 rounded-full dark:bg-gray-700">
+                <div class="bg-blue-600 text-xs font-medium text-blue-100 text-center p-0.5 leading-none rounded-full"
+                  style="width: 80%"> 80%</div>
+              </div>
+            </div>
+            <div class="w-full h-auto">
+              <p class="py-2 text-lg">NodeJs</p>
+              <div class="w-full bg-gray-200 rounded-full dark:bg-gray-700">
+                <div class="bg-blue-600 text-xs font-medium text-blue-100 text-center p-0.5 leading-none rounded-full"
+                  style="width: 50%"> 50%</div>
+              </div>
+            </div>
+            <div class="w-full h-auto">
+              <p class="py-2 text-lg">MERN</p>
+              <div class="w-full bg-gray-200 rounded-full dark:bg-gray-700">
+                <div class="bg-blue-600 text-xs font-medium text-blue-100 text-center p-0.5 leading-none rounded-full"
+                  style="width: 40%"> 40%</div>
+              </div>
+            </div>
+          </div>
 
-          <table class="table-auto w-full">
-            <tbody>
-              <!-- Expert-Level -->
-              <tr class="align-top">
-                <td class="text-md font-bold pr-4 whitespace-nowrap">Expert-Level :</td>
-                <td class="">
-                  <ul class="text-md font-mono list-disc list-inside flex flex-wrap gap-x-4 gap-y-1">
-                    <li>Flutter/Dart</li>
-                    <li>Object Oriented Programming</li>
-                    <li>UI/UX Design</li>
-                  </ul>
-                </td>
-              </tr>
-
-              <!-- Intermediate -->
-              <tr class="align-top">
-                <td class="text-md font-bold pr-4 whitespace-nowrap">Intermediate :</td>
-                <td>
-                  <ul class="text-md font-mono list-disc list-inside flex flex-wrap gap-x-4 gap-y-1">
-                    <li>Java</li>
-                    <li>JavaScript</li>
-                    <li>C++</li>
-                    <li>C#</li>
-                    <li>SQL</li>
-                    <li>WordPress</li>
-                    <li>Theory of Automata</li>
-                    <li>Data Structure and Algorithms</li>
-                    <li>Design and Analysis of Algorithms</li>
-                  </ul>
-                </td>
-              </tr>
-
-              <!-- Basic-Level -->
-              <tr class="align-top">
-                <td class="text-md font-bold pr-4 whitespace-nowrap">Basic-Level :</td>
-                <td>
-                  <ul class="text-md font-mono list-disc list-inside flex flex-wrap gap-x-4 gap-y-1">
-                    <li>Kotlin</li>
-                    <li>ASP.net</li>
-                    <li>html</li>
-                    <li>css</li>
-                    <li>ejs</li>
-                    <li>php</li>
-                    <li>Open-GL</li>
-                  </ul>
-                </td>
-              </tr>
-
-              <!-- In Progress -->
-              <tr class="align-top">
-                <td class="text-md font-bold pr-4 whitespace-nowrap">In Progress :</td>
-                <td>
-                  <ul class="text-md list-disc list-inside flex flex-wrap gap-x-4 gap-y-1">
-                    <li>MERN</li>
-                  </ul>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
 
       </section>
 
@@ -322,7 +302,9 @@
               <div class="pl-5 flex-1 flex flex-col">
                 <div class="flex-1">
                   <h3 class="text-lg font-semibold pb-3">Courses Recommendation System</h3>
-                  <p class="text-md font-mono line-clamp-4">Designed an AI-based recommendation system that analyzes user preferences and behavior to deliver personalized course suggestions, enhancing learning engagement and discovery</p>
+                  <p class="text-md font-mono line-clamp-4">Designed an AI-based recommendation system that analyzes
+                    user preferences and behavior to deliver personalized course suggestions, enhancing learning
+                    engagement and discovery</p>
                 </div>
                 <div class="text-center pt-2">
                   <a href="#" class="text-blue-500 hover:underline">View Project</a>
@@ -337,7 +319,8 @@
               <div class="pl-5 flex-1 flex flex-col">
                 <div class="flex-1">
                   <h3 class="text-lg font-semibold pb-3">Food Delivery App</h3>
-                  <p class="text-md font-mono line-clamp-4">Crafted a seamless food ordering experience with real-time tracking, menu browsing, and secure payments for local restaurants.</p>
+                  <p class="text-md font-mono line-clamp-4">Crafted a seamless food ordering experience with real-time
+                    tracking, menu browsing, and secure payments for local restaurants.</p>
                 </div>
                 <div class="text-center pt-2">
                   <a href="#" class="text-blue-500 hover:underline">View Project</a>
@@ -352,7 +335,8 @@
               <div class="pl-5 flex-1 flex flex-col">
                 <div class="flex-1">
                   <h3 class="text-lg font-semibold pb-3">Tourism Guide</h3>
-                  <p class="text-md font-mono line-clamp-4">Built an intuitive travel companion app featuring popular attractions, offline maps, and personalized itinerary suggestions.</p>
+                  <p class="text-md font-mono line-clamp-4">Built an intuitive travel companion app featuring popular
+                    attractions, offline maps, and personalized itinerary suggestions.</p>
                 </div>
                 <div class="text-center pt-2">
                   <a href="#" class="text-blue-500 hover:underline">View Project</a>
@@ -367,7 +351,8 @@
               <div class="pl-5 flex-1 flex flex-col ">
                 <div class="flex-1">
                   <h3 class="text-lg font-semibold pb-3">Chat Application</h3>
-                  <p class="text-md font-mono line-clamp-4">Developed a real-time chat lightweight messaging platform with instant notifications, user authentication, and smooth one-on-one conversations.</p>
+                  <p class="text-md font-mono line-clamp-4">Developed a real-time chat lightweight messaging platform
+                    with instant notifications, user authentication, and smooth one-on-one conversations.</p>
                 </div>
                 <div class="text-center pt-2">
                   <a href="#" class="text-blue-500 hover:underline">View Project</a>
@@ -385,21 +370,22 @@
 
 
 
-  <section id="contact" class="content-section py-11 dark:bg-gray-800 dark:text-white bg-gray-50" data-section="contact">
-  <div class="flex h-full w-full justify-center">
-    <div class="flex-col justify-center items-start">
-      <h1 class="text-2xl font-ubuntu font-bold mb-4">Contact us</h1>
-      <form class="mt-8 space-y-4 w-auto flex-col justify-center text-black dark:text-white">
-        <input type="text" placeholder="Name" class="form-input">
-        <input type="email" placeholder="Email" class="form-input">
-        <textarea placeholder="Message" class="form-textarea h-32"></textarea>
-        <div class="flex justify-center">
-          <button type="submit" class="btn-primary">Send Message</button>
+      <section id="contact" class="content-section py-11 dark:bg-gray-800 dark:text-white bg-gray-50"
+        data-section="contact">
+        <div class="flex h-full w-full justify-center items-center">
+          <div class="flex-col justify-center items-start">
+            <h1 class="text-2xl font-ubuntu font-bold mb-4">Contact us</h1>
+            <form class="mt-8 space-y-4 w-auto flex-col justify-center text-black dark:text-white">
+              <input type="text" placeholder="Name" class="form-input">
+              <input type="email" placeholder="Email" class="form-input">
+              <textarea placeholder="Message" class="form-textarea h-32"></textarea>
+              <div class="flex justify-center">
+                <button type="submit" class="btn-primary">Send Message</button>
+              </div>
+            </form>
+          </div>
         </div>
-      </form>
-    </div>
-  </div>
-</section>
+      </section>
 
 
       <div class="h-[5px]"></div>
