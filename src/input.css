@@ -3,19 +3,20 @@
 @custom-variant dark (&:where(.dark, .dark *));
 
 @layer base {
-   html {
-    @apply scroll-smooth;
-     overflow-x: hidden;
-  }
-  body {
-    @apply font-sans antialiased text-gray-900 bg-white dark:text-gray-100 dark:bg-gray-900;
-  }
+    html {
+        @apply scroll-smooth;
+        overflow-x: hidden;
+    }
+
+    body {
+        @apply font-sans antialiased text-gray-900 bg-white dark:text-gray-100 dark:bg-gray-900;
+    }
 }
 
 
 
-@theme {  
-    --font-oswald: Oswald, "sans-serif"; 
+@theme {
+    --font-oswald: Oswald, "sans-serif";
     --font-poppins: Poppins, "sans-serif";
     --font-montserrat: Montserrat, "sans-serif";
     --font-noto: Noto Sans, "sans-serif";
@@ -25,16 +26,50 @@
     --font-lato: Lato, "sans-serif";
     --font-lora: Lora, "serif";
 
+    /* --text-xxs: 8px;
+    --text-xs: 10px;
+    --text-sm: 13px;
+    --text-md: 16px;
+    --text-lg: 18px;
+    --text-xl: 20px;
+    --text-2xl: 22px;
+    --text-3xl: 25px;
+    --text-4xl: 30px;
+    --text-5xl: 35px;
+    --text-6xl: 40px;
+    --text-7xl: 50px; */
 
-     --text-xs: 0.8rem;
-    --text-sm: 1rem; 
-    --text-md: 1.25rem;
-    --text-lg: 1.5rem; 
-    --text-xl: 2.2rem;
-    --text-2xl: 2.25rem;  
-    --text-3xl: 3rem;  
+}
+/* irem = 16px , 2=32 */
+:root {
+  /* Method 2: Linear scaling with clear breakpoints */
+  --text-xxs: clamp(0.5rem, 0.5rem + 0.3vw, 0.75rem);
+  --text-xs: clamp(0.63rem, 0.63rem + 0.4vw, 0.9rem);
+  --text-sm: clamp(0.75rem, 0.75rem + 0.5vw, 1rem);
+  --text-md: clamp(0.9rem, 0.9rem + 0.6vw, 1.2rem);
+  --text-lg: clamp(1rem, 1rem + 1vw, 1.5rem);
+  --text-xl: clamp(1.1rem, 1.1rem + 1.3vw, 1.75rem);
+  --text-2xl: clamp(1.2rem, 1.2rem + 1.6vw, 2rem);
+  --text-3xl: clamp(1.4rem, 1.4rem + 2.2vw, 2.5rem);
+  --text-4xl: clamp(1.6rem, 1.6rem + 2.7vw, 3rem);
+  --text-5xl: clamp(1.8rem, 1.8rem + 3.4vw, 3.5rem);
+  --text-6xl: clamp(2rem, 2rem + 4vw, 4rem);
+  --text-7xl: clamp(2.2rem, 2.2rem + 5.6vw, 5rem);
+}
 
-
+@theme {
+    --text-xxs: var(--text-xxs);
+    --text-xs: var(--text-xs);
+    --text-sm: var(--text-sm);
+    --text-md: var(--text-md);
+    --text-lg: var(--text-lg);
+    --text-xl: var(--text-xl);
+    --text-2xl: var(--text-2xl);
+    --text-3xl: var(--text-3xl);
+    --text-4xl: var(--text-4xl);
+    --text-5xl: var(--text-5xl);
+    --text-6xl: var(--text-6xl);
+    --text-7xl: var(--text-7xl);
 }
 
 
@@ -42,65 +77,31 @@
 
     /* Header */
     .header {
-        @apply 
-        px-4 
-        bg-white/90 
-        shadow-lg 
-        shadow-blue-500/50 
-        items-center 
-        rounded-lg
-        dark:bg-gray-900 
-        dark:shadow-blue-500/30 
+        @apply px-4 bg-white/90 shadow-lg shadow-blue-500/50 items-center rounded-lg dark:bg-gray-900 dark:shadow-blue-500/30
     }
 
-     .footer{   
-        @apply 
-        bg-white/90 
-        text-black 
-        text-center 
-        rounded-b-lg 
-        shadow-lg 
-        shadow-blue-500/50 
-        dark:bg-gray-900 
-        dark:text-white 
-        dark:shadow-blue-500/30;
+    .footer {
+        @apply bg-white/90 text-black text-center rounded-b-lg shadow-lg shadow-blue-500/50 dark:bg-gray-900 dark:text-white dark:shadow-blue-500/30;
     }
 
     /* Navigation Links */
-    .tab-link { 
-        @apply 
-        rounded-sm
-        block
-        mx-1 
-        px-2 py-1
-        justify-center
-        hover:bg-blue-500/15 
-        hover:text-black 
-        dark:hover:bg-white/90 
+    .tab-link {
+        @apply rounded-sm block mx-1 px-2 py-1 justify-center hover:bg-blue-500/15 hover:text-black dark:hover:bg-white/90
     }
+
     /* .tab-link span{ 
         @apply 
     } */
 
     .tab-link.active {
-        @apply 
-        text-blue-500 
-        font-medium 
-        border-b-4 
-        border-blue-500;
+        @apply text-blue-500 font-medium border-b-4 border-blue-500;
     }
 
     .tab-link.active span {
         /* @apply animate-bounce relative -bottom-2 inline-block duration-300 leading-none; */
-        @apply 
-        inline-block 
-        leading-none
-        text-blue-500
-        hover:text-black
-        dark:text-white
-          /* dark:hover:bg-blue-600   */
-          transition-colors 
-          duration-200;
+        @apply inline-block leading-none text-blue-500 hover:text-black dark:text-white
+        /* dark:hover:bg-blue-600   */
+        transition-colors duration-200;
         animation: custom-bounce 1.5s infinite;
     }
 
@@ -119,132 +120,82 @@
     }
 
     .mob-tab-link {
-        @apply 
-        flex py-2 px-4 my-0.5 
-        text-gray-600 
-        hover:text-blue-500 
-        rounded-sm
-        hover:bg-gray-50 
-        transition-colors 
-        duration-200 
+        @apply flex py-2 px-4 my-0.5 text-gray-600 hover:text-blue-500 rounded-sm hover:bg-gray-50 transition-colors duration-200
     }
 
     .mob-tab-link.active {
-        @apply 
-        text-blue-500 
-        font-medium;
+        @apply text-blue-500 font-medium;
     }
 
     .mob-tab-link.active span {
-        @apply 
-        animate-pulse 
-        inline-block 
-        duration-200;
+        @apply animate-pulse inline-block duration-200;
     }
 
     /* Mobile menu */
     .mobile-menu {
-        @apply 
-        fixed top-0 right-0 z-30 w-fit h-fit 
-        bg-transparent 
-        transition-opacity 
-        duration-300;
+        @apply fixed top-0 right-0 z-30 w-fit h-fit bg-transparent transition-opacity duration-300;
         backdrop-filter: blur(2px);
     }
 
     .mobile-menu.hidden {
-        @apply 
-        opacity-0 
-        pointer-events-none;
+        @apply opacity-0 pointer-events-none;
     }
 
     .mobile-menu.open {
-        @apply 
-        opacity-100 
-        pointer-events-auto;
+        @apply opacity-100 pointer-events-auto;
     }
 
     /* Content sections */
     .content-section {
         @apply 
-        min-h-screen w-full px-5 pb-4;
+        min-h-screen
+        sm:min-h-[calc(100vs-64px)] 
+        w-full px-5 py-5
+        ;
         /* text-[clamp(1.3rem,3vw,2rem)] leading-[1.3]; */
-        scroll-snap-align: start; /* Optional for better scroll control */
+        scroll-snap-align: start;
+        /* Optional for better scroll control */
     }
 
 
 
-    .intro {
+    /* .intro { */
         /* @apply text-[clamp(20px, 4vw, 40px)] leading-[1.3]; */
-        @apply 
-        text-[clamp(1.7rem,3vw,4rem)] leading-[1.3];
+        /* @apply text-[clamp(1.7rem, 3vw, 4rem)] leading-[1.3]; */
         /* font-size: font-xl; */
-    }
+    /* } */
 
     .type {
         @apply 
-        text-[clamp(1.5rem,3vw,4rem)] leading-[1.3]
-        font-mono
-        bg-gradient-to-r from-gray-400 to-blue-500 
-        bg-clip-text 
-        text-transparent;
+        /* text-[clamp(1.5rem, 3vw, 4rem)] leading-[1.3]  */
+        bg-gradient-to-r from-gray-400 to-blue-500 bg-clip-text text-transparent;
     }
 
 
     /* profile image */
-     .profile-image {
-        @apply 
-        rounded-full
-         /* opacity-40 */
-        brightness-60
-        border-blue-500 
-        shadow-xl
-        shadow-blue-500/50
-        hover:scale-105
+    .profile-image {
+        @apply rounded-full
+        /* opacity-40 */
+        brightness-60 border-blue-500 shadow-xl shadow-blue-500/50 hover:scale-105
         /* hover:opacity-70 */
-        hover:brightness-70 
-        dark:shadow-blue-500/70
-        ease-in-out
-        transition-all
-        duration-300
+        hover:brightness-70 dark:shadow-blue-500/70 ease-in-out transition-all duration-300
     }
 
     /* Form components */
     .form-input {
-        @apply 
-        w-full p-3 
-        border border-gray-300 
-        rounded-md 
-        focus:ring-2 focus:ring-blue-500 focus:border-blue-500 
-        outline-none 
-        transition-colors 
-        duration-200;
+        @apply w-full p-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-colors duration-200;
     }
 
     .form-input {
-        @apply 
-        w-full px-4 py-2 
-        border border-gray-300 
-        rounded-lg 
-        focus:ring-2 focus:ring-blue-500 focus:border-transparent;
+        @apply w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent;
     }
 
     .form-textarea {
-        @apply 
-        w-full px-4 py-2 
-        border border-gray-300 
-        rounded-lg 
-        focus:ring-2 focus:ring-blue-500 focus:border-transparent 
-        resize-none;
+        @apply w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent resize-none;
     }
 
     .btn-primary {
-        @apply 
-        bg-blue-600 
-        text-white px-6 py-2 
-        rounded-lg 
-        hover:bg-blue-700 
-        transition-colors duration-200;
+        @apply bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors duration-200;
     }
 
 

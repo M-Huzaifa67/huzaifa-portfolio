@@ -66,12 +66,11 @@
 
 </head>
 
-<body
-  class="font-sans flex flex-col min-h-screen bg-white text-gray-900 dark:bg-gray-900 dark:text-white">
+<body class="font-sans flex flex-col min-h-screen bg-white text-gray-900 dark:bg-gray-900 dark:text-white">
   <!-- Header -->
-  <header class="flex fixed top-0 w-full justify-center z-10">
+  <header class="flex fixed top-0 w-full justify-center z-20">
     <div class="header w-[92%] sm:w-[80%] h-[64px] flex justify-between items-center">
-      <div class="flex-1 text-lg font-bold whitespace-nowrap">Welcome</div>
+      <div class="flex-1 text-2xl font-bold whitespace-nowrap">Welcome</div>
 
       <!-- Desktop Navigation -->
       <div class="w-3/4 justify-center hidden sm:block">
@@ -117,7 +116,7 @@
 
 
   <!-- Main Content -->
-  <main class="flex mt-16 justify-center">
+  <main class="flex justify-center">
 
     <div class="w-[92%] sm:w-[80%] mx-auto flex flex-col shadow-lg shadow-blue-500/50" id="scroll-container">
 
@@ -127,25 +126,25 @@
       <section id="home" class="content-section dark:bg-gray-900 bg-blue-50" data-section="home">
         <div class="flex h-full flex-col sm:flex-row">
           <div class="basis-[50%] flex flex-col justify-center items-start">
-            <h1 class="intro text-gray-900 dark:text-white font-bold font-serif">Hi, This is Huzaifa</h1>
-            <h1 class="py-3 pl-5"> <span class="type"></span></h1>
+            <h1 class="intro text-gray-900 dark:text-white text-3xl font-bold font-ubuntu">Hi, This is Huzaifa</h1>
+            <h1 class="py-2 pl-5 text-xl font-mono "> <span class="type"></span></h1>
           </div>
-          <div class="basis-[50%] flex relative w-full h-full justify-center items-center animate__animated animate__fadeInLeft ">
-             <div class="size-55 sm:size-77 relative">
-                <div class="profile-image absolute inset-0 animate-spin"></div>
-                <div
-                  class="profile-image absolute inset-1 bg-[url('/assets/images/prof.jpg')] 
+          <div
+            class="basis-[50%] flex relative w-full h-full justify-center items-center animate__animated animate__fadeInLeft ">
+            <div class="size-55 sm:size-77 relative">
+              <div class="profile-image absolute inset-0 animate-spin"></div>
+              <div class="profile-image absolute inset-1 bg-[url('/assets/images/prof.jpg')] 
                   brightness-50 hover:brightness-90 bg-cover bg-center">
-                </div>
               </div>
+            </div>
           </div>
-          </div>
+        </div>
       </section>
 
-      <section id="about" class="content-section py-11 dark:bg-gray-800 bg-gray-50" data-section="about">
-        <div class="h-full w-full flex flex-col sm:flex-row">
+      <section id="about" class="content-section py-5 dark:bg-gray-800 bg-gray-50" data-section="about">
+        <div class="h-full w-full flex flex-col-reverse sm:flex-row">
 
-          <div class="flex">
+          <div class="flex p-5">
             <div class="relative w-full h-full flex items-center justify-center">
               <div class="size-55 sm:size-77 relative">
                 <div class="absolute inset-3 rounded-full border-t-4 border-blue-500 border-opacity-50 animate-spin">
@@ -162,33 +161,44 @@
             </div>
           </div>
 
+          <div class="flex p-5">
+            <div class="h-auto flex-col justify-center items-start">
+              <h1 class="text-2xl font-ubuntu font-bold underline decoration-2 underline-offset-8 my-5">About me</h1>
+              <div class="text-md font-mono h-full px-5 space-y-3 indent-3 leading-8 text-justify">
+                I’m a Computer Science graduate and mobile app developer specializing in Flutter, with a strong backend
+                development skillset in Node.js. I build fast, responsive, and visually appealing cross-platform
+                applications, powered by scalable backend systems.
 
-          <div class="flex h-full flex-col justify-center items-start p-5">
-            <h1 class="text-lg font-bold underline decoration-2 underline-offset-8 my-5">About me</h1>
-            <div class="text-md font-ubuntu space-y-3 indent-5 text-justify ">
-              I'm skilled Computer Science graduate with expertise in Flutter for cross-platform applications and
-              backend
-              development using Node.js. Proficient in Firebase, FCM, RESTful APIs, Google Maps, State Management, MVC,
-              and UI/UX design. Strong foundation in Object-Oriented Programming (OOP) with hands-on experience in
-              building scalable and high-performance applications.
+                My toolkit includes Firebase (Auth, Realtime DB, FCM), RESTful APIs, Google Maps integration, and state
+                management solutions like Provider and Bloc. With a solid grasp of OOP principles and MVC architecture,
+                I
+                focus on writing clean, maintainable code that delivers smooth user experiences.
+
+                Beyond development, I’m passionate about UI/UX design—ensuring my apps are not just functional but also
+                intuitive and delightful. When I’m not debugging or optimizing performance, you’ll find me exploring new
+                tech, contributing to open-source, or brainstorming ideas for my next project.
+
+                Let’s turn ideas into reality! 🚀
+              </div>
             </div>
           </div>
+
+
         </div>
 
       </section>
 
-      <section id="experience" class="content-section py-11 dark:bg-gray-900 bg-blue-50" data-section="experience">
+      <section id="experience" class="content-section py-5 dark:bg-gray-900 bg-blue-50" data-section="experience">
         <div class="flex h-full flex-col justify-center items-start">
-          <h1 class="text-lg font-bold underline decoration-2 underline-offset-8 my-5">Experiences</h1>
+          <h1 class="text-2xl font-ubuntu font-bold underline decoration-2 underline-offset-8 my-5">Experiences</h1>
 
           <div class="flex flex-col justify-start items-start px-2 my-3">
-            <div
-              class="flex flex-col justify-start sm:flex-row sm:justify-between items-start sm:items-center leading-normal">
-              <span class="text-md font-bold">Backend Developer (Node.js) & MERN Stack Developer</span>
-              <span class="text-xs">Next Gen | 2025 - Present</span>
+            <div class="flex flex-col justify-start items-start leading-normal">
+              <span class="text-lg font-bold">Backend Developer (Node.js) & MERN Stack Developer</span>
+              <span class="text-sm">Next Gen | 2025 - Present</span>
             </div>
-            <div class="pl-4 py-1">
-              <ul class="list-disc bullet-point text-sm">
+            <div class="pl-8 py-1">
+              <ul class="list-disc font-mono bullet-point text-md">
                 <li>Developing backend APIs using Node.js, Express.js, and MongoDB to enhance full-stack expertise.</li>
                 <li>Implementing authentication, database management, and server-side logic.</li>
                 <li>Gaining experience in JWT authentication, Encryption, API Integration.</li>
@@ -197,13 +207,12 @@
           </div>
 
           <div class="flex flex-col justify-start items-start px-2 my-3">
-            <div
-              class="flex flex-col justify-start sm:flex-row sm:justify-between items-start sm:items-center leading-normal">
-              <span class="text-md font-bold">Flutter Developer and Graphic Designer</span>
-              <span class="text-xs">From PSEB at PTCP l Peshawar - 2024</span>
+            <div class="flex flex-col justify-start items-start leading-normal">
+              <span class="text-lg font-bold">Flutter Developer and Graphic Designer</span>
+              <span class="text-sm">From PSEB at PTCP l Peshawar - 2024</span>
             </div>
-            <div class="pl-4 py-1">
-              <ul class="list-disc bullet-point text-sm">
+            <div class="pl-8 py-1">
+              <ul class="list-disc bullet-point text-md font-mono">
                 <li>Developed applications using Flutter, focusing on functionality and UI/UX.</li>
                 <li>Integrated ML models to enhance functionality and personalization.</li>
                 <li>Gained experience in graphic design using Canva and Figma.</li>
@@ -212,13 +221,12 @@
           </div>
 
           <div class="flex flex-col justify-start items-start px-2 my-3">
-            <div
-              class="flex flex-col justify-start sm:flex-row sm:justify-between items-start sm:items-center leading-normal">
-              <span class="text--md font-bold">Flutter and Graphic Designer </span>
-              <span class="text-xs">Self - 2 years</span>
+            <div class="flex flex-col justify-start items-start leading-normal">
+              <span class="text-lg font-bold">Flutter and Graphic Designer </span>
+              <span class="text-sm">Self - 2 years</span>
             </div>
-            <div class="pl-4 py-1">
-              <ul class="list-disc bullet-point text-sm">
+            <div class="pl-8 py-1">
+              <ul class="list-disc bullet-point text-md font-mono">
                 <li>Developed applications using Flutter, implementing features such as Firebase, FCM, RESTful API,
                   Google Maps, and State Management.</li>
                 <li>Designed professional UIs, logos for apps, and posters using Figma and Canva.</li>
@@ -233,15 +241,15 @@
 
       <section id="skills" class="content-section py-11 dark:bg-gray-800 bg-gray-50" data-section="skills">
         <div class="flex h-full flex-col justify-center items-start">
-          <h2 class="text-lg font-bold underline decoration-2 underline-offset-8 my-5">SKILLS</h2>
+          <h2 class="text-2xl font-ubuntu font-bold underline decoration-2 underline-offset-8 my-5">SKILLS</h2>
 
           <table class="table-auto w-full">
             <tbody>
               <!-- Expert-Level -->
               <tr class="align-top">
-                <td class="text-md font-semibold pr-4 whitespace-nowrap">Expert-Level :</td>
-                <td>
-                  <ul class="text-sm list-disc list-inside flex flex-wrap gap-x-4 gap-y-1">
+                <td class="text-md font-bold pr-4 whitespace-nowrap">Expert-Level :</td>
+                <td class="">
+                  <ul class="text-md font-mono list-disc list-inside flex flex-wrap gap-x-4 gap-y-1">
                     <li>Flutter/Dart</li>
                     <li>Object Oriented Programming</li>
                     <li>UI/UX Design</li>
@@ -251,9 +259,9 @@
 
               <!-- Intermediate -->
               <tr class="align-top">
-                <td class="text-md font-semibold pr-4 whitespace-nowrap">Intermediate :</td>
+                <td class="text-md font-bold pr-4 whitespace-nowrap">Intermediate :</td>
                 <td>
-                  <ul class="text-sm list-disc list-inside flex flex-wrap gap-x-4 gap-y-1">
+                  <ul class="text-md font-mono list-disc list-inside flex flex-wrap gap-x-4 gap-y-1">
                     <li>Java</li>
                     <li>JavaScript</li>
                     <li>C++</li>
@@ -269,9 +277,9 @@
 
               <!-- Basic-Level -->
               <tr class="align-top">
-                <td class="text-md font-semibold pr-4 whitespace-nowrap">Basic-Level :</td>
+                <td class="text-md font-bold pr-4 whitespace-nowrap">Basic-Level :</td>
                 <td>
-                  <ul class="text-sm list-disc list-inside flex flex-wrap gap-x-4 gap-y-1">
+                  <ul class="text-md font-mono list-disc list-inside flex flex-wrap gap-x-4 gap-y-1">
                     <li>Kotlin</li>
                     <li>ASP.net</li>
                     <li>html</li>
@@ -285,9 +293,9 @@
 
               <!-- In Progress -->
               <tr class="align-top">
-                <td class="text-md font-semibold pr-4 whitespace-nowrap">In Progress :</td>
+                <td class="text-md font-bold pr-4 whitespace-nowrap">In Progress :</td>
                 <td>
-                  <ul class="text-sm list-disc list-inside flex flex-wrap gap-x-4 gap-y-1">
+                  <ul class="text-md list-disc list-inside flex flex-wrap gap-x-4 gap-y-1">
                     <li>MERN</li>
                   </ul>
                 </td>
@@ -303,57 +311,70 @@
 
       <section id="project" class="content-section py-11 dark:bg-gray-900 bg-blue-50" data-section="project">
         <div class="flex h-full flex-col justify-center items-start">
-          <h2 class="text-lg font-bold underline decoration-2 underline-offset-8 my-5">Projects</h2>
+          <h2 class="text-2xl font-ubuntu font-bold underline decoration-2 underline-offset-8 my-5">Projects</h2>
 
           <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
 
-            <div class="project-card flex bg-white dark:bg-gray-800 p-2 rounded-lg shadow-md">
-              <div class="w-22 h-auto mb-4">
-                <img src="/assets/images/proj1.jpg" alt="Project 1" class="w-full h-full object-cover rounded-lg">
+            <div class="project-card flex h-full bg-white dark:bg-gray-800 p-3 rounded-lg shadow-md">
+              <div class="aspect-video w-25 h-auto">
+                <img src="/assets/images/proj1.jpg" alt="Project 1" class="object-cover rounded-lg">
               </div>
-              <div class="flex-1 p-3 items-start justify-start">
-                <h3 class="text-md font-semibold mb-2">Courses Recommendation System</h3>
-                <p class="text-sm mb-2">Developed an AI-based recommendation system to suggest courses
-                  tailored to user interests.</p>
-                <a href="#" class="text-blue-500 hover:underline">View Project</a>
+              <div class="pl-5 flex-1 flex flex-col">
+                <div class="flex-1">
+                  <h3 class="text-lg font-semibold pb-3">Courses Recommendation System</h3>
+                  <p class="text-md font-mono line-clamp-4">Designed an AI-based recommendation system that analyzes user preferences and behavior to deliver personalized course suggestions, enhancing learning engagement and discovery</p>
+                </div>
+                <div class="text-center pt-2">
+                  <a href="#" class="text-blue-500 hover:underline">View Project</a>
+                </div>
               </div>
             </div>
 
-            <div class="project-card flex bg-white dark:bg-gray-800 p-2 rounded-lg shadow-md">
-              <div class="w-22 h-auto mb-4">
-                <img src="/assets/images/proj5.jpg" alt="Project 2" class="w-full h-full object-cover rounded-lg">
+            <div class="project-card flex h-full bg-white dark:bg-gray-800 p-3 rounded-lg shadow-md">
+              <div class="aspect-video w-25 h-auto">
+                <img src="/assets/images/proj5.jpg" alt="Project 1" class="object-cover rounded-lg">
               </div>
-              <div class="flex-1 p-3 items-start justify-start">
-                <h3 class="text-md font-semibold mb-2">Food Delivery App</h3>
-                <p class="text-sm mb-2">Created a cross-platform e-commerce application using Flutter, integrating
-                  Firebase for backend services.</p>
-                <a href="#" class="text-blue-500 hover:underline">View Project</a>
-              </div>
-            </div>
-            <div class="project-card flex bg-white dark:bg-gray-800 p-2 rounded-lg shadow-md">
-              <div class="w-22 h-auto mb-4">
-                <img src="/assets/images/proj3.jpg" alt="Project 3" class="w-full h-full object-cover rounded-lg">
-              </div>
-              <div class="flex-1 p-3 items-start justify-start">
-                <h3 class="text-md font-semibold mb-2">Tourism Guide</h3>
-                <p class="text-sm mb-2">Designed and developed a personal portfolio website to showcase my skills and
-                  projects.
-                </p>
-                <a href="#" class="text-blue-500 hover:underline">View Project</a>
+              <div class="pl-5 flex-1 flex flex-col">
+                <div class="flex-1">
+                  <h3 class="text-lg font-semibold pb-3">Food Delivery App</h3>
+                  <p class="text-md font-mono line-clamp-4">Crafted a seamless food ordering experience with real-time tracking, menu browsing, and secure payments for local restaurants.</p>
+                </div>
+                <div class="text-center pt-2">
+                  <a href="#" class="text-blue-500 hover:underline">View Project</a>
+                </div>
               </div>
             </div>
-            <div class="project-card flex bg-white dark:bg-gray-800 p-2 rounded-lg shadow-md">
-              <div class="w-22 h-auto mb-4">
-                <img src="/assets/images/proj6.jpg" alt="Project 4" class="w-full h-full object-cover rounded-lg">
+
+            <div class="project-card flex h-full bg-white dark:bg-gray-800 p-3 rounded-lg shadow-md">
+              <div class="aspect-video w-25 h-auto">
+                <img src="/assets/images/proj3.jpg" alt="Project 1" class="object-cover rounded-lg">
               </div>
-              <div class="flex-1 p-3 items-start justify-start">
-                <h3 class="text-mdfont-semibold mb-2">Chat Application</h3>
-                <p class="text-sm mb-2">Developed a real-time chat application using Flutter and Firebase, enabling
-                  seamless
-                  communication.</p>
-                <a href="#" class="text-blue-500 hover:underline">View Project</a>
+              <div class="pl-5 flex-1 flex flex-col">
+                <div class="flex-1">
+                  <h3 class="text-lg font-semibold pb-3">Tourism Guide</h3>
+                  <p class="text-md font-mono line-clamp-4">Built an intuitive travel companion app featuring popular attractions, offline maps, and personalized itinerary suggestions.</p>
+                </div>
+                <div class="text-center pt-2">
+                  <a href="#" class="text-blue-500 hover:underline">View Project</a>
+                </div>
               </div>
             </div>
+
+            <div class="project-card flex h-full bg-white dark:bg-gray-800 p-3 rounded-lg shadow-md">
+              <div class="aspect-video w-25 h-auto">
+                <img src="/assets/images/proj6.jpg" alt="Project 1" class="object-cover rounded-lg">
+              </div>
+              <div class="pl-5 flex-1 flex flex-col ">
+                <div class="flex-1">
+                  <h3 class="text-lg font-semibold pb-3">Chat Application</h3>
+                  <p class="text-md font-mono line-clamp-4">Developed a real-time chat lightweight messaging platform with instant notifications, user authentication, and smooth one-on-one conversations.</p>
+                </div>
+                <div class="text-center pt-2">
+                  <a href="#" class="text-blue-500 hover:underline">View Project</a>
+                </div>
+              </div>
+            </div>
+
           </div>
 
         </div>
@@ -364,17 +385,21 @@
 
 
 
-      <section id="contact" class="content-section py-11 dark:bg-gray-800 dark:text-white bg-gray-50" data-section="contact">
-        <div class="flex h-full flex-col justify-center items-start">
-          <h1 class="font-bold mb-4">Contact us</h1>
-          <form class="mt-8 space-y-4 text-black dark:text-white">
-            <input type="text" placeholder="Name" class="form-input">
-            <input type="email" placeholder="Email" class="form-input">
-            <textarea placeholder="Message" class="form-textarea h-32"></textarea>
-            <button type="submit" class="btn-primary w-full">Send Message</button>
-          </form>
+  <section id="contact" class="content-section py-11 dark:bg-gray-800 dark:text-white bg-gray-50" data-section="contact">
+  <div class="flex h-full w-full justify-center">
+    <div class="flex-col justify-center items-start">
+      <h1 class="text-2xl font-ubuntu font-bold mb-4">Contact us</h1>
+      <form class="mt-8 space-y-4 w-auto flex-col justify-center text-black dark:text-white">
+        <input type="text" placeholder="Name" class="form-input">
+        <input type="email" placeholder="Email" class="form-input">
+        <textarea placeholder="Message" class="form-textarea h-32"></textarea>
+        <div class="flex justify-center">
+          <button type="submit" class="btn-primary">Send Message</button>
         </div>
-      </section>
+      </form>
+    </div>
+  </div>
+</section>
 
 
       <div class="h-[5px]"></div>
