@@ -155,28 +155,31 @@
         @apply text-2xl font-mono bg-gradient-to-r from-gray-400 to-blue-500 bg-clip-text text-transparent;
     }
 
-    .about-title{
+    .about-title {
         @apply text-xl font-oswald font-bold underline decoration-2 underline-offset-8 my-5 text-center;
     }
-    .about-desc{
+
+    .about-desc {
         @apply text-md;
     }
 
-    .experience-title{
+    .experience-title {
         @apply text-md font-bold;
     }
-    .experience-subtitle{
-        @apply  text-sm;
+
+    .experience-subtitle {
+        @apply text-sm;
     }
-    .experience-desc{
+
+    .experience-desc {
         @apply list-disc font-oswald text-md;
     }
 
-    .skills-title{
-        @apply  py-2 text-md;
+    .skills-title {
+        @apply py-2 text-md;
     }
 
-    .skills-bar{
+    .skills-bar {
         @apply bg-blue-600 text-sm font-medium text-blue-100 text-center p-0.5 leading-none rounded-full;
     }
 
@@ -216,6 +219,10 @@
     .btn-primary {
         @apply bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors duration-200;
     }
+
+
+    /* contact section */
+
 
 
 }

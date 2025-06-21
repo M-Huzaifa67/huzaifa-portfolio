@@ -70,18 +70,18 @@
         </nav>
       </div>
 
-      
-<div class="flex-1 flex justify-end items-center gap-3"> <!-- Added gap-3 -->
-  <button id="themeToggle" class="p-1 rounded-full bg-gray-800 text-white dark:bg-gray-200 dark:text-black">
-    <span id="lightIcon" class="dark:hidden">🌙</span>
-    <span id="darkIcon" class="hidden dark:inline">☀️</span>
-  </button>
 
-  <!-- Mobile Menu Button -->
-  <button id="menu-toggle" class="md:hidden p-1 text-gray-500 focus:outline-none">
-    <i class="fas fa-bars text-lg"></i>
-  </button>
-</div>
+      <div class="flex-1 flex justify-end items-center gap-3"> <!-- Added gap-3 -->
+        <button id="themeToggle" class="p-1 rounded-full bg-gray-800 text-white dark:bg-gray-200 dark:text-black">
+          <span id="lightIcon" class="dark:hidden">🌙</span>
+          <span id="darkIcon" class="hidden dark:inline">☀️</span>
+        </button>
+
+        <!-- Mobile Menu Button -->
+        <button id="menu-toggle" class="md:hidden p-1 text-gray-500 focus:outline-none">
+          <i class="fas fa-bars text-lg"></i>
+        </button>
+      </div>
 
     </div>
   </header>
@@ -126,7 +126,7 @@
       </section>
 
       <section id="about" class="content-section dark:bg-gray-800 bg-gray-50" data-section="about">
-        <div class="h-full w-full flex flex-col-reverse md:flex-row">
+        <div class="h-full w-full flex flex-col-reverse md:flex-row items-center">
           <div class="flex p-5">
             <div class="relative w-full h-full flex items-start justify-center">
               <div class="size-55 sm:size-77 relative">
@@ -226,50 +226,43 @@
             <div class="w-full h-auto p-2">
               <p class="skills-title">Flutter &amp; Dart</p>
               <div class="w-full bg-gray-200 rounded-full dark:bg-gray-700">
-                <div class="skills-bar bg-blue-600"
-                  style="width: 90%"> 90%</div>
+                <div class="skills-bar bg-blue-600" style="width: 90%"> 90%</div>
               </div>
             </div>
             <div class="w-full h-auto p-2">
               <p class="skills-title">Web development</p>
               <div class="w-full bg-gray-200 rounded-full dark:bg-gray-700">
-                <div class="skills-bar bg-blue-600"
-                  style="width: 60%"> 60%</div>
+                <div class="skills-bar bg-blue-600" style="width: 60%"> 60%</div>
               </div>
             </div>
             <div class="w-full h-auto p-2">
               <p class="skills-title">WordPress</p>
               <div class="w-full bg-gray-200 rounded-full dark:bg-gray-700">
-                <div class="skills-bar bg-blue-600 "
-                  style="width: 70%"> 70%</div>
+                <div class="skills-bar bg-blue-600 " style="width: 70%"> 70%</div>
               </div>
             </div>
             <div class="w-full h-auto p-2">
               <p class="skills-title ">Firebase</p>
               <div class="w-full bg-gray-200 rounded-full dark:bg-gray-700">
-                <div class="skills-bar bg-blue-600"
-                  style="width: 80%"> 80%</div>
+                <div class="skills-bar bg-blue-600" style="width: 80%"> 80%</div>
               </div>
             </div>
             <div class="w-full h-auto p-2">
               <p class="skills-title">NodeJs</p>
               <div class="w-full bg-gray-200 rounded-full dark:bg-gray-700">
-                <div class="skills-bar bg-blue-600 "
-                  style="width: 50%"> 50%</div>
+                <div class="skills-bar bg-blue-600 " style="width: 50%"> 50%</div>
               </div>
             </div>
             <div class="w-full h-auto p-2">
               <p class="skills-title">MERN</p>
               <div class="w-full bg-gray-200 rounded-full dark:bg-gray-700">
-                <div class="skills-bar bg-blue-600"
-                style="width: 40%"> 40%</div>
+                <div class="skills-bar bg-blue-600" style="width: 40%"> 40%</div>
               </div>
             </div>
             <div class="w-full h-auto p-2">
               <p class="skills-title">SQL</p>
               <div class="w-full bg-gray-200 rounded-full dark:bg-gray-700">
-                <div class="skills-bar bg-blue-600 "
-                  style="width: 60%"> 60%</div>
+                <div class="skills-bar bg-blue-600 " style="width: 60%"> 60%</div>
               </div>
             </div>
           </div>
@@ -359,24 +352,75 @@
 
       </section>
 
-
-
-      <section id="contact" class="content-section dark:bg-gray-800 dark:text-white bg-gray-50"
+      <section id="contact" class="content-section dark:bg-gray-800 dark:text-white bg-gray-50 py-10 px-4"
         data-section="contact">
-        <div class="flex h-full w-full justify-center items-center">
-          <div class="flex-col justify-center items-start">
-            <h1 class="text-2xl font-ubuntu font-bold mb-2">Contact us</h1>
-            <form class="mt-8 space-y-4 w-auto flex-col justify-center text-black dark:text-white">
-              <input type="text" placeholder="Name" class="form-input">
-              <input type="email" placeholder="Email" class="form-input">
-              <textarea placeholder="Message" class="form-textarea h-44"></textarea>
+        <div class="w-full h-full max-w-4xl mx-auto flex flex-col justify-between">
+
+          <!-- Contact Form -->
+          <div>
+            <h1 class="text-2xl font-ubuntu font-bold mb-4">Contact Us</h1>
+            <form class="space-y-4 text-black dark:text-white">
+              <input type="text" placeholder="Name" class="form-input w-full" />
+              <input type="email" placeholder="Email" class="form-input w-full" />
+              <textarea placeholder="Message" class="form-textarea w-full h-44"></textarea>
               <div class="flex justify-center mt-5">
                 <button type="submit" class="btn-primary">Send Message</button>
               </div>
             </form>
           </div>
+
+
+          <div class="w-full flex flex-col-reverse md:flex-row items-center gap-4">
+            <div class="flex-1 hidden sm:block"></div>
+            <div class="flex-[3] flex justify-center text-center gap-4 md:gap-6">
+              <a href="https://www.facebook.com/Talented.Coders67" target="_blank"
+                class="hover:text-blue-600 flex items-center">
+                <i class="fas fa-globe text-lg md:text-md text-blue-500"></i>
+                <span class="hidden md:block p-1">Facebook</span>
+              </a>
+
+              <a href="https://instagram.com" target="_blank" class="hover:text-pink-500 flex items-center">
+                <i class="fab fa-instagram text-lg md:text-md text-blue-500"></i>
+                <span class="hidden md:block p-1">Instagram</span>
+              </a>
+
+              <a href="https://wa.me/+923351533981" target="_blank" class="hover:text-green-500 flex items-center">
+                <i class="fab fa-whatsapp text-lg md:text-md text-orange-500"></i>
+                <span class="hidden md:block p-1">WhatsApp</span>
+              </a>
+
+              <a href="https://www.linkedin.com/in/muhammad-huzaifa-cs67" target="_blank"
+                class="hover:text-blue-700 flex items-center">
+                <i class="fab fa-linkedin text-lg md:text-md  !text-red-500"></i>
+                <span class="hidden md:block p-1">LinkedIn</span>
+              </a>
+
+              <a href="https://github.com/yourusername" target="_blank"
+                class="hover:text-gray-800 dark:hover:text-white flex items-center">
+                <i class="fab fa-github text-lg md:text-md text-gray-500"></i>
+                <span class="hidden md:block p-1">GitHub</span>
+              </a>
+            </div>
+
+
+            <div class="flex-1 flex justify-end">
+              <a href="/assets/Huzaifa_Flutter CV-25.pdf" download
+                class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition whitespace-nowrap">
+                📄 Download CV
+              </a>
+            </div>
+          </div>
+
+
+
+
+
         </div>
       </section>
+
+
+
+
 
 
       <div class="h-[5px]"></div>
