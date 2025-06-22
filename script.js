@@ -113,7 +113,7 @@ observer = new IntersectionObserver((entries) => {
         }
       });
     }, {
-      threshold: 0.5 // or 0.4 if you want it more sensitive
+      threshold: 0.5
     });
 
 
