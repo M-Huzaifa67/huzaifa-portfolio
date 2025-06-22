@@ -87,13 +87,15 @@
         @apply text-blue-500 font-medium border-b-4 border-blue-500;
     }
 
+
     .tab-link.active span {
         /* @apply animate-bounce relative -bottom-2 inline-block duration-300 leading-none; */
         @apply inline-block leading-none text-blue-500 hover:text-black dark:text-white
         /* dark:hover:bg-blue-600   */
-        transition-colors duration-200;
+        transition-colors duration-300;
         animation: custom-bounce 1.5s infinite;
     }
+
 
     @keyframes custom-bounce {
 
@@ -106,8 +108,40 @@
             transform: translateY(-5px);
             /* ← Change this value to control height */
         }
-
     }
+
+
+    .animate-full-bounce {
+        animation: full-bounce 10s infinite ease-in-out;
+    }
+
+    @keyframes full-bounce {
+
+        0%,
+        100% {
+            transform: translateY(33px);
+            /* down side */
+        }
+
+        50% {
+            transform: translateY(-55%);
+        }
+    }
+
+
+    .form-input,
+    .form-textarea {
+        background: transparent;
+        transition: all 0.3s ease;
+    }
+
+    .form-input:focus,
+    .form-textarea:focus {
+        outline: none;
+        border-color: #3b82f6;
+        box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.2);
+    }
+
 
     .mob-tab-link {
         @apply flex py-2 px-4 my-0.5 text-gray-600 hover:text-blue-500 rounded-sm hover:bg-gray-50 transition-colors duration-200

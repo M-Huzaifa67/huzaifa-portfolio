@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" href="images/img10.jpg" type="image/x-icon">
+  <link rel="icon" href="images/new-icon.png" type="image/png">
   <title>Huzaifa's Portfolio</title>
   <link href="./src/output.css" rel="stylesheet" />
 
@@ -116,9 +116,9 @@
           </div>
           <div
             class="basis-[50%] flex relative w-full h-full justify-center items-center animate__animated animate__fadeInLeft ">
-            <div class="size-55 sm:size-77 relative">
+            <div class="size-55 sm:size-77 relative  hover:animate-pulse">
               <div class="profile-image absolute inset-0 animate-spin"></div>
-              <div class="profile-image absolute inset-1 bg-[url('/assets/images/prof1.jpg')] 
+              <div class="profile-image absolute inset-1 bg-[url('/assets/prof1.jpg')] 
                   brightness-50 hover:brightness-90 bg-cover bg-center">
               </div>
             </div>
@@ -128,15 +128,15 @@
 
       <section id="about" class="content-section dark:bg-gray-800 bg-gray-50" data-section="about">
         <div class="h-full w-full flex flex-col-reverse md:flex-row items-center">
-          <div class="flex p-5">
-            <div class="relative w-full h-full flex items-start justify-center">
+          <div class="flex h-full p-5 animate-full-bounce">
+            <div class="relative w-full h-full flex items-end justify-end">
               <div class="size-55 sm:size-77 relative">
                 <div class="absolute inset-3 rounded-full border-t-4 border-blue-500 border-opacity-50 animate-spin">
                 </div>
                 <div class="absolute inset-4 rounded-full border-l-4 border-blue-600 border-opacity-50 animate-spin">
                 </div>
                 <div
-                  class="absolute inset-5 rounded-full bg-[url('/assets/images/prof.jpg')] brightness-50 hover:brightness-90 hover:scale-105 z-10 bg-cover bg-center animate-pulse">
+                  class="absolute inset-5 rounded-full bg-[url('/assets/prof.jpg')] brightness-50 hover:brightness-90 hover:scale-105 z-10 bg-cover bg-center">
                 </div>
               </div>
             </div>
@@ -181,13 +181,14 @@
         <div class="flex h-full flex-col justify-center items-start">
           <h1 class="text-2xl font-ubuntu font-bold underline decoration-2 underline-offset-8 my-5">Experiences</h1>
 
-          <div class="flex flex-col justify-start items-start px-1 my-2">
+          <div class="flex flex-col justify-start items-start px-2 my-2">
             <div class="flex flex-col justify-start items-start leading-normal">
               <span class="experience-title">Flutter Developer</span>
               <span class="experience-subtitle">Software Develpment Hub | Rawalakot - 2025-Present</span>
             </div>
             <div class="pl-5 py-1">
-              <p class="experience-desc">Working as a Flutter Developer while also mentoring and leading internees in mobile app development</p>
+              <p class="experience-desc">Working as a Flutter Developer while also mentoring and leading internees in
+                mobile app development</p>
               <ul class="experience-desc bullet-point ">
                 <li>Developing cross-platform mobile apps using Flutter with clean UI and responsive UX</li>
                 <li>Leading and mentoring internees in mobile development tasks and best practices</li>
@@ -197,7 +198,7 @@
             </div>
           </div>
 
-          <div class="flex flex-col justify-start items-start px-1 my-2">
+          <div class="flex flex-col justify-start items-start px-2 my-2">
             <div class="flex flex-col justify-start items-start leading-normal">
               <span class="experience-title">Backend Developer (Node.js)</span>
               <span class="experience-subtitle">Next Gen | 2025-(6 Months)</span>
@@ -211,7 +212,7 @@
             </div>
           </div>
 
-          <div class="flex flex-col justify-start items-start px-1 my-2">
+          <div class="flex flex-col justify-start items-start px-2 my-2">
             <div class="flex flex-col justify-start items-start leading-normal">
               <span class="experience-title">Flutter Developer and Graphic Designer</span>
               <span class="experience-subtitle">From PSEB at PTCP | Peshawar-2024</span>
@@ -225,7 +226,7 @@
             </div>
           </div>
 
-          <div class="flex flex-col justify-start items-start px-1 my-2">
+          <div class="flex flex-col justify-start items-start px-2 my-2">
             <div class="flex flex-col justify-start items-start leading-normal">
               <span class="experience-title">Flutter and Graphic Designer </span>
               <span class="experience-subtitle">Self - 2 years</span>
@@ -243,63 +244,97 @@
       </section>
 
 
-
       <section id="skills" class="content-section dark:bg-gray-800 bg-gray-50" data-section="skills">
         <div class="flex h-full flex-col justify-center items-start">
           <h2 class="text-2xl font-ubuntu font-bold underline decoration-2 underline-offset-8 my-5">SKILLS</h2>
           <div class="h-full w-full space-y-3">
+
+            <!-- 1. Flutter & Dart -->
             <div class="w-full h-auto p-2">
-              <p class="skills-title">Flutter &amp; Dart</p>
-              <div class="flex w-full bg-gray-200 rounded-full dark:bg-gray-700 space-x-5">
-                <i class="fas fa-code icon text-xl md:text-md text-gray-600"></i>
-                <div class="skills-bar bg-blue-600" style="width: 90%"> 90%</div>
+              <p class="skills-title">Flutter & Dart</p>
+              <div class="flex space-x-5 items-center">
+                <i class="fas fa-code text-2xl text-gray-600"></i>
+                <div class="flex w-full bg-gray-200 rounded-full dark:bg-gray-700 min-h-fit">
+                  <div class="skills-bar bg-blue-600 flex items-center justify-center text-xs px-2" style="width: 90%">
+                    90%</div>
+                </div>
               </div>
             </div>
+
+            <!-- 2. Web Development -->
             <div class="w-full h-auto p-2">
               <p class="skills-title">Web development</p>
-              <div class="flex w-full bg-gray-200 rounded-full dark:bg-gray-700 space-x-5">
-                <i class="fa-solid fa-laptop-code text-xl md:text-md text-gray-400"></i>
-                <div class="skills-bar bg-blue-600" style="width: 60%"> 60%</div>
+              <div class="flex space-x-5 items-center">
+                <i class="fa-solid fa-laptop-code text-2xl text-gray-400"></i>
+                <div class="flex w-full bg-gray-200 rounded-full dark:bg-gray-700 min-h-fit">
+                  <div class="skills-bar bg-blue-600 flex items-center justify-center text-xs px-2" style="width: 60%">
+                    60%</div>
+                </div>
               </div>
             </div>
+
+            <!-- 3. WordPress -->
             <div class="w-full h-auto p-2">
               <p class="skills-title">WordPress</p>
-              <div class="flex w-full bg-gray-200 rounded-full dark:bg-gray-700 space-x-5">
-                <i class="fa-brands fa-wordpress text-xl md:text-md text-blue-500"></i>
-                <div class="skills-bar bg-blue-600 " style="width: 70%"> 70%</div>
+              <div class="flex space-x-5 items-center">
+                <i class="fa-brands fa-wordpress text-2xl text-blue-500"></i>
+                <div class="flex w-full bg-gray-200 rounded-full dark:bg-gray-700 min-h-fit">
+                  <div class="skills-bar bg-blue-600 flex items-center justify-center text-xs px-2" style="width: 70%">
+                    70%</div>
+                </div>
               </div>
             </div>
+
+            <!-- 4. Firebase -->
             <div class="w-full h-auto p-2">
-              <p class="skills-title ">Firebase</p>
-              <div class="flex w-full bg-gray-200 rounded-full dark:bg-gray-700 space-x-5">
-                <i class="fa-solid fa-fire text-xl md:text-md text-red-500"></i>
-                <div class="skills-bar bg-blue-600" style="width: 80%"> 80%</div>
+              <p class="skills-title">Firebase</p>
+              <div class="flex space-x-5 items-center">
+                <i class="fa-solid fa-fire text-2xl text-red-500"></i>
+                <div class="flex w-full bg-gray-200 rounded-full dark:bg-gray-700 min-h-fit">
+                  <div class="skills-bar bg-blue-600 flex items-center justify-center text-xs px-2" style="width: 80%">
+                    80%</div>
+                </div>
               </div>
             </div>
+
+            <!-- 5. Node.js -->
             <div class="w-full h-auto p-2">
               <p class="skills-title">NodeJs</p>
-              <div class="flex w-full bg-gray-200 rounded-full dark:bg-gray-700 space-x-5">
-                <i class="fa-brands fa-node-js text-xl md:text-md text-green-500"></i>
-                <div class="skills-bar bg-blue-600 " style="width: 50%"> 50%</div>
+              <div class="flex space-x-5 items-center">
+                <i class="fa-brands fa-node-js text-2xl text-green-500"></i>
+                <div class="flex w-full bg-gray-200 rounded-full dark:bg-gray-700 min-h-fit">
+                  <div class="skills-bar bg-blue-600 flex items-center justify-center text-xs px-2" style="width: 50%">
+                    50%</div>
+                </div>
               </div>
             </div>
+
+            <!-- 6. MERN -->
             <div class="w-full h-auto p-2">
               <p class="skills-title">MERN</p>
-              <div class="flex w-full bg-gray-200 rounded-full dark:bg-gray-700 space-x-5">
-                <i class="fa-brands fa-wordpress text-xl md:text-md text-blue-500"></i>
-                <div class="skills-bar bg-blue-600" style="width: 40%"> 40%</div>
+              <div class="flex space-x-5 items-center">
+                <i class="fa-brands fa-js text-2xl text-yellow-500"></i>
+                <div class="flex w-full bg-gray-200 rounded-full dark:bg-gray-700 min-h-fit">
+                  <div class="skills-bar bg-blue-600 flex items-center justify-center text-xs px-2" style="width: 40%">
+                    40%</div>
+                </div>
               </div>
             </div>
+
+            <!-- 7. SQL -->
             <div class="w-full h-auto p-2">
               <p class="skills-title">SQL</p>
-              <div class="flex w-full bg-gray-200 rounded-full dark:bg-gray-700 space-x-5">
-                <i class="fa-solid fa-database text-xl md:text-md text-gray-500"></i>
-                <div class="skills-bar bg-blue-600 " style="width: 60%"> 60%</div>
+              <div class="flex space-x-5 items-center">
+                <i class="fa-solid fa-database text-2xl text-gray-500"></i>
+                <div class="flex w-full bg-gray-200 rounded-full dark:bg-gray-700 min-h-fit">
+                  <div class="skills-bar bg-blue-600 flex items-center justify-center text-xs px-2" style="width: 60%">
+                    60%</div>
+                </div>
               </div>
             </div>
+
           </div>
-
-
+        </div>
       </section>
 
 
@@ -308,7 +343,7 @@
       <section id="project" class="content-section dark:bg-gray-900 bg-blue-50" data-section="project">
         <div class="flex h-full flex-col justify-center items-start">
           <h2 class="text-2xl font-ubuntu font-bold underline decoration-2 underline-offset-8 my-5">Projects</h2>
-          <p class="text-md mb-8 text-justify indent-3">
+          <p class="text-md mb-8 text-justify indent-3 px-5">
             Here are some of my key projects, developed using cutting-edge technologies like Flutter, Google Maps, and
             more. Each project reflects my problem-solving skills, attention to detail, and passion for creating
             seamless user experiences. I’ve leveraged best practices in UI/UX design, API integration, and performance
@@ -391,26 +426,43 @@
 
       </section>
 
-      <section id="contact" class="content-section dark:bg-gray-800 dark:text-white bg-gray-50 py-10 px-4"
-        data-section="contact">
-        <div class="w-full h-full max-w-4xl mx-auto flex flex-col justify-between">
+      <section id="contact" class="content-section dark:bg-gray-800 dark:text-white bg-gray-50" data-section="contact">
+        <div class="w-full h-full flex flex-col justify-between">
 
           <!-- Contact Form -->
-          <div>
-            <h1 class="text-2xl font-ubuntu font-bold mb-4">Contact Us</h1>
-            <form class="space-y-4 text-black dark:text-white">
-              <input type="text" placeholder="Name" class="form-input w-full" />
-              <input type="email" placeholder="Email" class="form-input w-full" />
-              <textarea placeholder="Message" class="form-textarea w-full h-44"></textarea>
-              <div class="flex justify-center mt-5">
-                <button type="submit" class="btn-primary">Send Message</button>
+          <div class="p-5">
+            <div class="space-y-5 p-5"> 
+              <h1 class="text-2xl font-ubuntu font-bold underline decoration-2 underline-offset-8 my-5 flex justify-center">Contact us</h1>
+              <div class="flex flex-col sm:flex-row justify-center text-center space-x-5 ">
+                <div class="flex items-center justify-center gap-2">
+                  <i class="fas fa-envelope text-blue-500"></i>
+                  <span>huzaifa.cs67@gmail.com</span>
+                </div>
+                <div class="flex items-center justify-center gap-2">
+                  <i class="fas fa-phone text-green-500"></i>
+                  <span>+92 335 1533 981</span>
+                </div>
               </div>
-            </form>
+            </div>
+
+            <div class="p-5">
+              <form class="space-y-4 text-black dark:text-white max-w-2xl mx-auto">
+                <input type="text" placeholder="Name" class="form-input w-full" />
+                <input type="email" placeholder="Email" class="form-input w-full" />
+                <textarea placeholder="Message" class="form-textarea w-full h-44"></textarea>
+                <div class="flex justify-center mt-5">
+                  <button type="submit" class="btn-primary">Send Message</button>
+                </div>
+              </form>
+            </div>
+
           </div>
 
 
           <div class="w-full flex flex-col-reverse md:flex-row items-center gap-4">
+
             <div class="flex-1 hidden sm:block"></div>
+
             <div class="flex-[3] flex justify-center text-center gap-4 md:gap-6">
               <a href="https://www.facebook.com/Talented.Coders67" target="_blank"
                 class="hover:text-blue-600 flex items-center">
@@ -442,17 +494,13 @@
             </div>
 
 
-            <div class="flex-1 flex justify-end">
+            <div class="flex-1 flex w-full justify-end ">
               <a href="/assets/Huzaifa_Flutter CV-25.pdf" download
                 class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition whitespace-nowrap">
                 📄 Download CV
               </a>
             </div>
           </div>
-
-
-
-
 
         </div>
       </section>
