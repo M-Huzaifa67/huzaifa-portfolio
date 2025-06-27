@@ -24,23 +24,28 @@
 } */
 
 @layer base {
-
-
-    html,
-    body {
+    html {
         @apply scroll-smooth;
-        @apply font-sans antialiased text-gray-900 bg-white dark:text-gray-100 dark:bg-gray-900;
-        scroll-behavior: smooth;
         overflow-x: hidden;
-        overscroll-behavior-y: none;
-        /* prevent iOS bounce */
-        touch-action: manipulation;
-        /* improve tap response */
+        scroll-behavior: auto; /* Changed from smooth to prevent auto-scrolling */
+        overscroll-behavior-y: contain; /* Prevents pull-to-refresh and overscroll effects */
+        -webkit-overflow-scrolling: touch; /* Enables smooth scrolling on iOS */
+    }
+
+    body {
+        @apply font-sans antialiased text-gray-900 bg-white dark:text-gray-100 dark:bg-gray-900;
+        position: relative;
+        overflow-x: hidden;
+        height: 100%;
+    }
+
+    /* Prevent any unwanted momentum scrolling */
+    #scroll-container {
         -webkit-overflow-scrolling: touch;
-        /* iOS smooth scroll */
+        scroll-snap-type: y proximity;
+        overscroll-behavior-y: contain;
     }
 }
-
 
 
 @theme {
