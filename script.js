@@ -10,6 +10,8 @@ document.addEventListener('DOMContentLoaded', () => {
   let scrollTimeout;
   let observer;
 
+  const isMobile = () => window.innerWidth <= 768; // adjust as needed
+
   // -------------------------------
   // Utility: Set Active Tab
   // -------------------------------
@@ -30,7 +32,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     isScrollingByClick = true;
 
-    const headerOffset = 64; // adjust if your header height changes
+    const headerOffset = 64;
     const offsetTop = section.getBoundingClientRect().top + window.scrollY - headerOffset;
 
     window.scrollTo({
@@ -41,16 +43,18 @@ document.addEventListener('DOMContentLoaded', () => {
     clearTimeout(scrollTimeout);
     scrollTimeout = setTimeout(() => {
       isScrollingByClick = false;
-    }, 800); // shorter timeout = snappier reaction
+    }, 800);
   };
 
   // -------------------------------
-  // Intersection Observer Setup
+  // Intersection Observer for Desktop Only
   // -------------------------------
   const initObserver = () => {
     if (observer) {
       sections.forEach(section => observer.unobserve(section));
     }
+
+    if (isMobile()) return; // ✅ Do not activate on mobile
 
     observer = new IntersectionObserver((entries) => {
       if (isScrollingByClick) return;
@@ -80,7 +84,6 @@ document.addEventListener('DOMContentLoaded', () => {
       setActiveTab(sectionId);
       scrollToSection(sectionId);
 
-      // Close mobile menu if open
       if (mobileMenu.classList.contains('open')) {
         mobileMenu.classList.remove('open');
         setTimeout(() => mobileMenu.style.display = 'none', 300);
@@ -109,7 +112,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // -------------------------------
-  // Handle Initial Page Load (Hash)
+  // Handle Initial Page Load
   // -------------------------------
   const handleInitialLoad = () => {
     const hash = window.location.hash.replace('#', '');
@@ -125,15 +128,15 @@ document.addEventListener('DOMContentLoaded', () => {
   };
 
   // -------------------------------
-  // Handle Resize (Maintain State)
+  // Handle Resize
   // -------------------------------
   const handleResize = () => {
-    initObserver();
+    initObserver(); // Re-init observer only if desktop
     if (currentSection) scrollToSection(currentSection);
   };
 
   // -------------------------------
-  // Initialize Everything
+  // Initialize
   // -------------------------------
   initObserver();
   handleInitialLoad();
