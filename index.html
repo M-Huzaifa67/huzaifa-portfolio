@@ -55,7 +55,7 @@
   <!-- Header -->
   <header class="flex fixed top-0 w-full justify-center z-20">
     <div class="header w-[92%] sm:w-[80%] h-[64px] flex justify-between items-center">
-      <div class="flex-1 whitespace-nowrap">👋 Welcome</div>
+      <div class="flex-1 whitespace-nowrap font-bold">👋 Welcome</div>
 
       <!-- Desktop Navigation -->
       <div class="w-3/4 justify-center hidden md:block">
@@ -127,7 +127,7 @@
       </section>
 
       <section id="about" class="content-section dark:bg-gray-800 bg-gray-50" data-section="about">
-        <div class="h-full w-full flex flex-col-reverse md:flex-row items-center">
+        <div class="h-full w-full flex flex-col-reverse lg:flex-row items-center">
           <div class="flex h-full p-5 animate-full-bounce">
             <div class="relative w-full h-full flex items-end justify-end">
               <div class="size-55 sm:size-77 relative">
@@ -150,25 +150,22 @@
               <p class="about-title">
                 About me</p>
               <div class="about-desc h-full px-1 space-y-3 indent-1 leading-8 max-w-3xl text-justify">
-                <p>As a Computer Science graduate and passionate software engineer, I specialize in building beautiful,
-                  high-performance mobile applications using Flutter. With over [2+ years] of hands-on experience in
-                  full-stack development, I bridge the gap between elegant front-end interfaces and robust back-end
-                  systems.</p>
+                <p>I am a Computer Science graduate with over 2+ years of experience in mobile and backend development.
+                  My core expertise lies in building cross-platform mobile applications using Flutter and developing
+                  backend services with Node.js, Express.js, and MongoDB.</p>
 
-                <p>On the technical front, I've mastered the Flutter framework to develop cross-platform apps that
-                  deliver native-like performance. My backend expertise in Node.js allows me to architect scalable
-                  server-side solutions, RESTful APIs, and real-time features. I'm particularly skilled at integrating
-                  complex systems like Firebase (Authentication, Realtime Database, Cloud Messaging) and Google Maps.
-                </p>
+                <p>I have a strong command of tools and technologies such as Firebase, Google Maps, RESTful APIs, JWT
+                  authentication, and state management solutions. I also integrate secure APIs and optimize app
+                  performance for better user experience.</p>
 
-                <p>What sets my work apart is my obsessive attention to both code quality and user experience. I
-                  implement clean architecture patterns (MVC, MVVM) and rigorous state management (Provider, Bloc) to
-                  build maintainable applications. Beyond functionality, I invest significant time in UI/UX design
-                  principles, creating interfaces that are not just usable but delightful.</p>
+                <p>With a solid foundation in Object-Oriented Programming and a good grasp of design patterns like MVC
+                  and MVVM, I focus on writing clean, scalable, and maintainable code. My UI/UX design skills using
+                  Figma and Canva help me create interfaces that are both functional and user-friendly.</p>
 
-                <p>I'm currently looking for opportunities to work on challenging projects where I can apply my
-                  full-stack expertise while growing as an engineer. Let's connect and explore how we can work together!
-                </p>
+                <p>I am continuously learning and improving, currently expanding my skillset with React Native to become
+                  more versatile in mobile development. I enjoy collaborative environments, mentoring others, and
+                  building digital solutions that solve real-world problems.</p>
+
 
                 <p>Let's turn ideas into reality!</p>
               </div>
@@ -431,9 +428,11 @@
 
           <!-- Contact Form -->
           <div class="p-5">
-            <div class="space-y-5 p-5"> 
-              <h1 class="text-2xl font-ubuntu font-bold underline decoration-2 underline-offset-8 my-5 flex justify-center">Contact us</h1>
-              <div class="flex flex-col sm:flex-row justify-center text-center space-x-5 ">
+            <div class="space-y-5 p-5">
+              <h1
+                class="text-2xl font-ubuntu font-bold underline decoration-2 underline-offset-8 my-5 flex justify-center">
+                Contact us</h1>
+              <div class="flex flex-col md:flex-row justify-center text-center space-x-5 ">
                 <div class="flex items-center justify-center gap-2">
                   <i class="fas fa-envelope text-blue-500"></i>
                   <span>huzaifa.cs67@gmail.com</span>
@@ -447,23 +446,28 @@
 
             <div class="p-5">
               <form class="space-y-4 text-black dark:text-white max-w-2xl mx-auto">
-                <input type="text" placeholder="Name" class="form-input w-full" />
-                <input type="email" placeholder="Email" class="form-input w-full" />
-                <textarea placeholder="Message" class="form-textarea w-full h-44"></textarea>
+                <input type="text" placeholder="Name"
+                  class="form-input w-full placeholder-gray-500 dark:placeholder-gray-400" />
+                <input type="email" placeholder="Email"
+                  class="form-input w-full placeholder-gray-500 dark:placeholder-gray-400" />
+                <textarea placeholder="Message"
+                  class="form-textarea w-full h-44 placeholder-gray-500 dark:placeholder-gray-400"></textarea>
+
                 <div class="flex justify-center mt-5">
                   <button type="submit" class="btn-primary">Send Message</button>
                 </div>
               </form>
+
             </div>
 
           </div>
 
 
-          <div class="w-full flex flex-col-reverse md:flex-row items-center gap-4">
+          <div class="w-full flex flex-col-reverse md:flex-row items-center md:gap-y-5 gap-4">
 
-            <div class="flex-1 hidden sm:block"></div>
+            <div class="flex-1 hidden md:block"></div>
 
-            <div class="flex-[3] flex justify-center text-center gap-4 md:gap-6">
+            <div class="flex-[3] flex justify-center text-center gap-5 ">
               <a href="https://www.facebook.com/Talented.Coders67" target="_blank"
                 class="hover:text-blue-600 flex items-center">
                 <i class="fab fa-facebook text-xl md:text-md text-blue-500"></i>
@@ -494,12 +498,23 @@
             </div>
 
 
-            <div class="flex-1 flex w-full justify-end ">
-              <a href="/assets/Huzaifa_Flutter CV-25.pdf" download
-                class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition whitespace-nowrap">
+
+            <div class="flex-1 w-full hidden md:block justify-center md:justify-end ">
+              <a href="/assets/Flutter_Huzaifa_2025.pdf" download
+                class="bg-blue-600 text-white p-2 rounded-lg hover:bg-blue-700 transition whitespace-nowrap">
                 📄 Download CV
               </a>
             </div>
+
+            <div class="flex-1 flex w-full md:hidden justify-center">
+              <a href="/assets/Flutter_Huzaifa_2025.pdf" download
+                class="bg-blue-600 text-white p-3 rounded-full hover:bg-blue-700">
+                   <i class="fa-solid fa-arrow-down animate-bounce"></i>
+                <span class="p-1">CV</span>
+              </a>
+            </div>
+
+
           </div>
 
         </div>
@@ -520,8 +535,8 @@
 
 
   <footer class="flex justify-center pt-1">
-    <div class="footer w-[92%] sm:w-[80%] p-3">
-      <p>&copy; 2025 M.Huzaifa. All rights reserved</p>
+    <div class="footer w-[92%] sm:w-[80%] p-3 text-center text-sm text-gray-500">
+      <p>&copy; 2025 M. Huzaifa. All rights reserved.</p>
     </div>
   </footer>
 
