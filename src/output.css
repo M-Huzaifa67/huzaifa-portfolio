@@ -560,9 +560,6 @@
   .overflow-y-auto {
     overflow-y: auto;
   }
-  .scroll-smooth {
-    scroll-behavior: smooth;
-  }
   .rounded {
     border-radius: 0.25rem;
   }
@@ -630,6 +627,9 @@
   .bg-yellow-50 {
     background-color: var(--color-yellow-50);
   }
+  .bg-\[url\(\'\/assets\/downloadIcon\.png\'\)\] {
+    background-image: url('/assets/downloadIcon.png');
+  }
   .bg-\[url\(\'\/assets\/images\/prof\.jpg\'\)\] {
     background-image: url('/assets/images/prof.jpg');
   }
@@ -639,11 +639,17 @@
   .bg-\[url\(\'\/assets\/prof1\.jpg\'\)\] {
     background-image: url('/assets/prof1.jpg');
   }
+  .bg-contain {
+    background-size: contain;
+  }
   .bg-cover {
     background-size: cover;
   }
   .bg-center {
     background-position: center;
+  }
+  .bg-no-repeat {
+    background-repeat: no-repeat;
   }
   .object-cover {
     object-fit: cover;
@@ -1162,13 +1168,12 @@
 @layer theme, base, components, utilities;
 @layer base {
   html {
-    scroll-behavior: smooth;
-    overflow-x: hidden;
     scroll-behavior: auto;
     overscroll-behavior-y: contain;
     -webkit-overflow-scrolling: touch;
   }
   body {
+    cursor: url('/assets/cursor.png') 0 0, auto;
     background-color: var(--color-white);
     font-family: var(--font-sans);
     color: var(--color-gray-900);
@@ -1183,11 +1188,6 @@
     position: relative;
     overflow-x: hidden;
     height: 100%;
-  }
-  #scroll-container {
-    -webkit-overflow-scrolling: touch;
-    scroll-snap-type: y proximity;
-    overscroll-behavior-y: contain;
   }
 }
 @layer components {
