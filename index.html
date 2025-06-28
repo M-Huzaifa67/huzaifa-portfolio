@@ -369,7 +369,7 @@
 
             <div class="project-card flex h-full bg-white dark:bg-gray-800 p-3 rounded-lg shadow-md">
               <div class="aspect-video w-25 h-auto">
-                <img src="/assets/images/proj5.jpg" alt="Project 1" class="object-cover rounded-lg">
+                <img src="/assets/images/foodies.jpeg" alt="Project 1" class="object-cover rounded-lg">
               </div>
               <div class="pl-5 flex-1 flex flex-col">
                 <div class="flex-1">
@@ -390,8 +390,9 @@
               <div class="pl-5 flex-1 flex flex-col">
                 <div class="flex-1">
                   <h3 class="project-title text-md font-semibold pb-2">Tourism Guide</h3>
-                  <p class="project-desc">Built an intuitive travel companion app featuring popular
-                    attractions, offline maps, and personalized itinerary suggestions.</p>
+                  <p class="project-desc">Developed a smart Tourism Guide App providing personalized recommendations,
+                    nearby attractions, restaurant bookings, and seamless itinerary planning through location-based
+                    services.</p>
                 </div>
                 <div class="text-center pt-2">
                   <a href="#" class="text-blue-500 hover:underline">View Project</a>
@@ -401,7 +402,7 @@
 
             <div class="project-card flex h-full bg-white dark:bg-gray-800 p-3 rounded-lg shadow-md">
               <div class="aspect-video w-25 h-auto">
-                <img src="/assets/images/proj6.jpg" alt="Project 1" class="object-cover rounded-lg">
+                <img src="/assets/images/chatApp.jpeg" alt="Project 1" class="object-cover rounded-lg">
               </div>
               <div class="pl-5 flex-1 flex flex-col ">
                 <div class="flex-1">
@@ -445,18 +446,21 @@
             </div>
 
             <div class="p-5">
-              <form class="space-y-4 text-black dark:text-white max-w-2xl mx-auto">
-                <input type="text" placeholder="Name"
-                  class="form-input w-full placeholder-gray-500 dark:placeholder-gray-400" />
-                <input type="email" placeholder="Email"
-                  class="form-input w-full placeholder-gray-500 dark:placeholder-gray-400" />
-                <textarea placeholder="Message"
-                  class="form-textarea w-full h-44 placeholder-gray-500 dark:placeholder-gray-400"></textarea>
+              <form action="https://formsubmit.co/huzaifa.cs67@gmail.com" method="POST" class="space-y-4">
+                <input type="text" name="name" placeholder="Your Name" required class="form-input w-full" />
+                <input type="email" name="email" placeholder="Your Email" required class="form-input w-full" />
+                <input type="text" name="subject" placeholder="Subject" required class="form-input w-full" />
+                <textarea name="message" placeholder="Your Message" required
+                  class="form-textarea w-full h-40"></textarea>
 
-                <div class="flex justify-center mt-5">
+                <!-- Optional redirect after submission -->
+                <input type="hidden" name="_next" value="https://yourwebsite.com/thank-you.html">
+
+                <div class="flex justify-center">
                   <button type="submit" class="btn-primary">Send Message</button>
                 </div>
               </form>
+
 
             </div>
 
@@ -509,7 +513,7 @@
             <div class="flex-1 flex w-full md:hidden justify-center">
               <a href="/assets/Flutter_Huzaifa_2025.pdf" download
                 class="bg-blue-600 text-white p-3 rounded-full hover:bg-blue-700">
-                   <i class="fa-solid fa-arrow-down animate-bounce"></i>
+                <i class="fa-solid fa-arrow-down animate-bounce"></i>
                 <span class="p-1">CV</span>
               </a>
             </div>
