@@ -24,27 +24,19 @@
 } */
 
 @layer base {
-    html {
-        @apply scroll-smooth;
-        overflow-x: hidden;
-        scroll-behavior: auto; /* Changed from smooth to prevent auto-scrolling */
-        overscroll-behavior-y: contain; /* Prevents pull-to-refresh and overscroll effects */
-        -webkit-overflow-scrolling: touch; /* Enables smooth scrolling on iOS */
-    }
+  html {
+    scroll-behavior: auto;
+    overscroll-behavior-y: contain;
+    -webkit-overflow-scrolling: touch;
+  }
 
-    body {
-        @apply font-sans antialiased text-gray-900 bg-white dark:text-gray-100 dark:bg-gray-900;
-        position: relative;
-        overflow-x: hidden;
-        height: 100%;
-    }
-
-    /* Prevent any unwanted momentum scrolling */
-    #scroll-container {
-        -webkit-overflow-scrolling: touch;
-        scroll-snap-type: y proximity;
-        overscroll-behavior-y: contain;
-    }
+  body {
+    cursor: url('/assets/cursor.png') 0 0, auto;
+    @apply font-sans antialiased text-gray-900 bg-white dark:text-gray-100 dark:bg-gray-900;
+    position: relative;
+    overflow-x: hidden;
+    height: 100%;
+  }
 }
 
 

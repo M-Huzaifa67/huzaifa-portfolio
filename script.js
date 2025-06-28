@@ -6,11 +6,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const sections = document.querySelectorAll('#scroll-container .content-section');
 
     let isScrollingByClick = false;
-    let isScrollingByTouch = false;
     let scrollTimeout;
     let observer;
     let currentSection = 'home';
-    let touchStartY = 0;
 
     // --- Mobile Menu Toggle ---
     menuToggle.addEventListener('click', (e) => {
@@ -41,12 +39,12 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     };
 
-    // --- Improved scrollToSection function ---
+    // --- Scroll to Section ---
     const scrollToSection = (sectionId) => {
         const section = document.getElementById(sectionId);
         if (section) {
             isScrollingByClick = true;
-            
+
             const headerHeight = 64;
             const sectionTop = section.getBoundingClientRect().top + window.pageYOffset;
             const offsetPosition = sectionTop - headerHeight;
@@ -63,37 +61,14 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     };
 
-    // --- Touch Event Handlers ---
-    const handleTouchStart = (e) => {
-        touchStartY = e.touches[0].clientY;
-        isScrollingByTouch = true;
-    };
-
-    const handleTouchMove = (e) => {
-        if (!isScrollingByTouch) return;
-        
-        const touchY = e.touches[0].clientY;
-        const diff = touchStartY - touchY;
-        
-        // Prevent default only if we're not at the top/bottom of page
-        if ((window.scrollY > 0 || diff < 0) && 
-            (window.scrollY < document.body.scrollHeight - window.innerHeight || diff > 0)) {
-            e.preventDefault();
-        }
-    };
-
-    const handleTouchEnd = () => {
-        isScrollingByTouch = false;
-    };
-
-    // --- Enhanced Intersection Observer ---
+    // --- Intersection Observer ---
     const initObserver = () => {
         if (observer) {
             sections.forEach(section => observer.unobserve(section));
         }
 
         observer = new IntersectionObserver((entries) => {
-            if (isScrollingByClick || isScrollingByTouch) return;
+            if (isScrollingByClick) return;
 
             entries.forEach(entry => {
                 if (entry.isIntersecting && entry.intersectionRatio >= 0.5) {
@@ -124,7 +99,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // --- Handle Initial Load ---
+    // --- Initial Load ---
     const handleInitialLoad = () => {
         const hash = window.location.hash.substring(1);
         const validSections = Array.from(sections).map(s => s.id);
@@ -137,23 +112,13 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     };
 
-    // --- Initialize ---
     const init = () => {
-        // Add touch event listeners
-        document.addEventListener('touchstart', handleTouchStart, { passive: false });
-        document.addEventListener('touchmove', handleTouchMove, { passive: false });
-        document.addEventListener('touchend', handleTouchEnd);
+        // Prevent scroll freeze on iOS
+        document.body.style.touchAction = 'manipulation';
 
         initObserver();
         handleInitialLoad();
     };
 
     init();
-
-    // Cleanup
-    window.addEventListener('beforeunload', () => {
-        document.removeEventListener('touchstart', handleTouchStart);
-        document.removeEventListener('touchmove', handleTouchMove);
-        document.removeEventListener('touchend', handleTouchEnd);
-    });
 });
