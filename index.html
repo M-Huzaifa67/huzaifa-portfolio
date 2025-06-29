@@ -453,16 +453,32 @@
                 <textarea name="message" placeholder="Your Message" required
                   class="form-textarea w-full h-40"></textarea>
 
-                <!-- Optional redirect after submission -->
-                <input type="hidden" name="_next" value="https://yourwebsite.com/thank-you.html">
+                <input type="hidden" name="_next" value="https://huzaifa-portfolio-67.web.app?sent=1">
 
                 <div class="flex justify-center">
                   <button type="submit" class="btn-primary">Send Message</button>
                 </div>
               </form>
 
+              <div id="toast" class="fixed bottom-5 right-5 bg-green-500 text-white px-4 py-2 rounded shadow-lg hidden">
+                Email sent, Thank you!
+              </div>
 
+              <script>
+                document.addEventListener("DOMContentLoaded", () => {
+                  const urlParams = new URLSearchParams(window.location.search);
+                  if (urlParams.get("sent") === "1") {
+                    const toast = document.getElementById("toast");
+                    toast.classList.remove("hidden");
+                    setTimeout(() => {
+                      toast.classList.add("hidden");
+                    }, 3000);
+                  }
+                });
+              </script>
             </div>
+
+
 
           </div>
 
@@ -513,8 +529,8 @@
             <div class="flex-1 flex w-full md:hidden justify-center">
               <a href="/assets/Huzaifa_Flutter_CV.pdf" download
                 class="bg-blue-600 text-white p-3 rounded-full hover:bg-blue-700">
-                   <div
-                      class="w-6 h-6 bg-[url('/assets/downloadIcon.png')] bg-contain bg-no-repeat bg-center animate-bounce">
+                <div
+                  class="w-6 h-6 bg-[url('/assets/downloadIcon.png')] bg-contain bg-no-repeat bg-center animate-bounce">
                 </div>
                 <span class="p-1">CV</span>
               </a>
