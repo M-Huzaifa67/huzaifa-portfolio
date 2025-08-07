@@ -1,0 +1,6 @@
+# robots.txt for Huzaifa's Portfolio
+
+User-agent: *
+Disallow:
+
+Sitemap: https://huzaifa-portfolio-67.web.app/sitemap.xml
