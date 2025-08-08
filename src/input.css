@@ -193,12 +193,20 @@
         @apply text-xl font-mono bg-gradient-to-r from-gray-400 to-blue-500 bg-clip-text text-transparent;
     }
 
+    .about-card {
+        @apply h-auto w-full flex flex-col justify-center items-start px-5 py-3 my-3 rounded-md border-2 border-blue-400/40 shadow-lg shadow-blue-500/50;
+    }
+
     .about-title {
         @apply text-xl font-oswald font-bold underline decoration-2 underline-offset-8 my-5 text-center;
     }
 
     .about-desc {
         @apply text-md;
+    }
+
+    .experience-card{
+        @apply flex flex-col w-full justify-start items-start px-5 py-3 my-3 rounded-md border-2 border-blue-400/40 shadow-lg shadow-blue-500/50
     }
 
     .experience-title {

@@ -19,14 +19,14 @@
   <!-- SEO Meta Tags -->
   <meta name="google-site-verification" content="28cuH-llgbR88SIqx83tpB8ljiBSBZdR3r-reDJaz9E" />
   <meta name="description"
-    content="Huzaifa, a skilled Flutter and Junior Node.js developer, showcasing mobile and web development projects. Explore my portfolio for innovative solutions.">
+    content="Huzaifa, a skilled Flutter and Junior NodeJs developer, showcasing mobile and web development projects. Explore my portfolio for innovative solutions.">
   <meta name="keywords"
     content="Huzaifa, Flutter developer, Node.js developer, web developer, mobile app developer, portfolio, software developer">
   <meta name="author" content="Huzaifa">
   <meta name="robots" content="index, follow">
 
   <!-- Open Graph Meta Tags (for Facebook, LinkedIn, etc.) -->
-  <meta property="og:title" content="Huzaifa's Portfolio - Flutter & Node.js Developer">
+  <meta property="og:title" content="Huzaifa - Flutter & Jr NodeJs Developer">
   <meta property="og:description"
     content="Explore Huzaifa's portfolio, featuring Flutter and Node.js projects, showcasing expertise in mobile and web development.">
   <meta property="og:image" content="https://huzaifa-portfolio-67.web.app/assets/prof1.jpg">
@@ -35,7 +35,7 @@
 
   <!-- Twitter Card Meta Tags -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Huzaifa's Portfolio - Flutter & Node.js Developer">
+  <meta name="twitter:title" content="Huzaifa - Flutter & Jr. NodeJs Developer">
   <meta name="twitter:description"
     content="Explore Huzaifa's portfolio, featuring Flutter and Node.js projects, showcasing expertise in mobile and web development.">
   <meta name="twitter:image" content="https://huzaifa-portfolio-67.web.app/assets/prof1.jpg">
@@ -60,11 +60,16 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/simple-icons@latest/font/simple-icons.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 
+  <!-- AOS CSS -->
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
 
   <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
   <script>
     document.addEventListener("DOMContentLoaded", function () {
-      new Typed(".type", {
+      new Typed(
+        ".type", {
         strings: ["Flutter Developer", "Jr. NodeJs Developer"],
         typeSpeed: 88,
         backSpeed: 44,
@@ -157,13 +162,13 @@
       <!-- bg-[url('/assets/images/prof.jpg')] bg-cover bg-center -->
       <section id="home" class="content-section scroll-mt-16 dark:bg-gray-900 bg-blue-50" data-section="home">
         <div class="flex h-full flex-col md:flex-row">
-          <div class="basis-[50%] flex flex-col justify-center items-start">
+          <div class="basis-[50%] flex flex-col justify-center items-start"  data-aos="fade-down-right" data-aos-duration="2000" >
             <h1 class="intro text-gray-900 dark:text-white">Hi, This is Huzaifa</h1>
             <h1 class="py-2 pl-5"> <span class="type"></span></h1>
           </div>
           <div
             class="basis-[50%] flex relative w-full h-full justify-center items-center animate__animated animate__fadeInLeft ">
-            <div class="size-55 sm:size-77 relative  hover:animate-pulse">
+            <div class="size-55 sm:size-77 relative  hover:animate-pulse"  data-aos="fade-up-left" data-aos-duration="2000" >
               <div class="profile-image absolute inset-0 animate-spin"></div>
               <div class="profile-image absolute inset-1 bg-[url('/assets/prof1.jpg')] 
                   brightness-50 hover:brightness-90 bg-cover bg-center">
@@ -191,9 +196,8 @@
               <p class="text-lg font-medium text-emerald-300"></p>
             </div>
           </div>
-
           <div class="flex p-1">
-            <div class="h-auto w-full flex flex-col justify-center items-start">
+            <div class="about-card"  data-aos="fade-up" data-aos-anchor-placement="center-bottom" data-aos-duration="2000">
               <p class="about-title">
                 About me</p>
               <div class="about-desc h-full px-1 space-y-3 indent-1 leading-8 max-w-3xl text-justify">
@@ -222,11 +226,12 @@
         </div>
       </section>
 
-      <section id="experiences" class="content-section scroll-mt-16 dark:bg-gray-900 bg-blue-50" data-section="experiences">
+      <section id="experiences" class="content-section scroll-mt-16 dark:bg-gray-900 bg-blue-50"
+        data-section="experiences">
         <div class="flex h-full flex-col justify-center items-start">
           <h1 class="text-2xl font-ubuntu font-bold underline decoration-2 underline-offset-8 my-5">Experiences</h1>
 
-          <div class="flex flex-col justify-start items-start px-2 my-2">
+          <div class="experience-card" data-aos="fade-up" data-aos-anchor-placement="center-bottom" data-aos-duration="1000">
             <div class="flex flex-col justify-start items-start leading-normal">
               <span class="experience-title">Flutter Developer</span>
               <span class="experience-subtitle">Software Develpment Hub | Rawalakot - 2025-Present</span>
@@ -243,7 +248,7 @@
             </div>
           </div>
 
-          <div class="flex flex-col justify-start items-start px-2 my-2">
+          <div class="experience-card" data-aos="fade-up" data-aos-anchor-placement="center-bottom" data-aos-duration="1500">
             <div class="flex flex-col justify-start items-start leading-normal">
               <span class="experience-title">NodeJs Developer</span>
               <span class="experience-subtitle">Next Gen | 2025-(6 Months)</span>
@@ -257,7 +262,7 @@
             </div>
           </div>
 
-          <div class="flex flex-col justify-start items-start px-2 my-2">
+          <div class="experience-card" data-aos="fade-up" data-aos-anchor-placement="center-bottom" data-aos-duration="2000">
             <div class="flex flex-col justify-start items-start leading-normal">
               <span class="experience-title">Flutter Developer and Graphic Designer</span>
               <span class="experience-subtitle">From PSEB at PTCP | Peshawar-2024</span>
@@ -271,7 +276,7 @@
             </div>
           </div>
 
-          <div class="flex flex-col justify-start items-start px-2 my-2">
+          <div class="experience-card" data-aos="fade-up" data-aos-anchor-placement="center-bottom" data-aos-duration="2500">
             <div class="flex flex-col justify-start items-start leading-normal">
               <span class="experience-title">Flutter and Graphic Designer </span>
               <span class="experience-subtitle">Self - 2 years</span>
@@ -303,7 +308,7 @@
       <section id="projects" class="content-section scroll-mt-16 dark:bg-gray-900 bg-blue-50" data-section="projects">
         <div class="flex h-full flex-col justify-center items-start">
           <h2 class="text-2xl font-ubuntu font-bold underline decoration-2 underline-offset-8 my-5">Projects</h2>
-          <p class="text-md mb-8 text-justify indent-3 px-5">
+          <p class="text-md mb-8 text-justify indent-3 px-5" data-aos="fade-up" data-aos-anchor-placement="center-bottom" data-aos-duration="1000">
             Here are some of my key projects, developed using cutting-edge technologies like Flutter, Google Maps, and
             more. Each project reflects my problem-solving skills, attention to detail, and passion for creating
             seamless user experiences. I’ve leveraged best practices in UI/UX design, API integration, and performance
@@ -318,12 +323,13 @@
       </section>
 
 
-      <section id="contact" class="content-section scroll-mt-16 dark:bg-gray-800 bg-gray-50 dark:text-white" data-section="contact">
+      <section id="contact" class="content-section scroll-mt-16 dark:bg-gray-800 bg-gray-50 dark:text-white"
+        data-section="contact">
         <div class="w-full h-full flex flex-col justify-between">
 
           <!-- Contact Form -->
           <div class="p-5">
-            <div class="space-y-5 p-5">
+            <div class="space-y-5 p-5" data-aos="fade-up" data-aos-anchor-placement="center-center" data-aos-duration="1500">
               <h1
                 class="text-2xl font-ubuntu font-bold underline decoration-2 underline-offset-8 my-5 flex justify-center">
                 Contact us</h1>
@@ -340,7 +346,7 @@
             </div>
 
             <div class="p-5">
-              <form action="https://formsubmit.co/huzaifa.cs67@gmail.com" method="POST" class="space-y-4">
+              <form action="https://formsubmit.co/huzaifa.cs67@gmail.com" method="POST" class="space-y-4" data-aos="fade-up" data-aos-anchor-placement="center-bottom" data-aos-duration="2000">
                 <input type="text" name="name" placeholder="Your Name" required
                   class="form-input w-full text-gray-400 dark:text-gray-50" />
                 <input type="email" name="email" placeholder="Your Email" required
@@ -386,23 +392,26 @@
 
 
 
-
-            <!-- Desktop CV download -->
+            <!-- Desktop CV Download -->
             <div class="flex-1 w-full hidden md:block justify-center md:justify-end">
-              <a id="cvInDesktop" href="/assets/Huzaifa_Flutter_CV.pdf" download
+              <button id="cvInDesktop" onclick="downloadCV()"
                 class="bg-blue-600 text-white p-2 rounded-lg hover:bg-blue-700 transition whitespace-nowrap">
                 📄 Download CV
-              </a>
+              </button>
             </div>
 
-            <!-- Mobile CV download -->
+
+            <!-- Mobile CV Download -->
             <div class="flex-1 flex w-full md:hidden justify-center">
-              <a id="cvInMobile" href="/assets/Huzaifa_Flutter_CV.pdf" download
-                class="bg-blue-600 text-white p-3 rounded-full hover:bg-blue-700">
-                <div class="w-6 h-6 bg-[url('/assets/downloadIcon.png')] bg-contain bg-no-repeat bg-center animate-bounce"></div>
+              <button id="cvInMobile" onclick="downloadCV()"
+                class="bg-blue-600 text-white p-3 rounded-full hover:bg-blue-700 flex items-center gap-2">
+                <div
+                  class="w-6 h-6 bg-[url('/assets/downloadIcon.png')] bg-contain bg-no-repeat bg-center animate-bounce">
+                </div>
                 <span class="p-1">CV</span>
-              </a>
+              </button>
             </div>
+
 
 
 
@@ -420,14 +429,16 @@
 
 
     </div>
-
-
   </main>
 
-  <!-- Toast Message -->
-<div id="cv-toast" class="fixed bottom-5 right-5 bg-green-600 text-white px-4 py-2 rounded-lg shadow-lg hidden z-50">
-  📁 CV Download Started
+
+
+  <!-- Toast (Snackbar) Message -->
+<div id="global-toast" class="fixed bottom-5 left-1/2 transform -translate-x-1/2 
+  bg-blue-600 text-white px-4 py-2 rounded-md shadow-lg 
+  opacity-0 pointer-events-none transition-opacity duration-300 z-50">
 </div>
+
 
 
   <footer class="flex justify-center pt-1">
@@ -437,7 +448,19 @@
   </footer>
 
 
+  <script type="module" src="/utils/scripts/cv_download.js" ></script>
   <script src="/utils/scripts/pageScript.js"></script>
+
+  <!-- AOS JS -->
+
+  <script>
+    // Initialize AOS
+    AOS.init({
+      once: false, // Whether animation should happen only once
+      debounceDelay: 55, // Delay in milliseconds for debouncing scroll events
+      throttleDelay: 99, // Delay in milliseconds for throttling scroll events
+    });
+  </script>
 
 </body>
 
