@@ -18,7 +18,10 @@ const createProjectCard = (project, index) => {
       data-aos-delay="${delay}"
       data-project-index="${index}"
     >
-      <div class="aspect-video w-25 h-auto">
+      <div class="aspect-video w-25 h-auto"    
+      data-aos="flip-right"
+      data-aos-easing="ease-out-cubic"
+      data-aos-delay="${delay+1000}">
         <img src="${project.image}" alt="${project.title}" loading="lazy" class="object-cover rounded-lg">
       </div>
       <div class="pl-5 flex-1 flex flex-col">
