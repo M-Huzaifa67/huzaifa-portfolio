@@ -47,7 +47,7 @@
     --text-lg--line-height: calc(1.75 / 1.125);
     --text-xl: clamp(1.1rem, 1.1rem + 1.3vw, 1.75rem);
     --text-xl--line-height: calc(1.75 / 1.25);
-    --text-2xl: clamp(1.2rem, 1.2rem + 1.5vw, 2rem);
+    --text-2xl: clamp(1.2rem, 1.8rem + 1.5vw, 2rem);
     --text-2xl--line-height: calc(2 / 1.5);
     --text-3xl: clamp(1.4rem, 1.4rem + 2.2vw, 2.5rem);
     --text-3xl--line-height: calc(2.25 / 1.875);
@@ -1401,8 +1401,8 @@
     --tw-gradient-stops: var(--tw-gradient-via-stops, var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-to) var(--tw-gradient-to-position));
     background-clip: text;
     font-family: var(--font-mono);
-    font-size: var(--text-2xl);
-    line-height: var(--tw-leading, var(--text-2xl--line-height));
+    font-size: var(--text-xl);
+    line-height: var(--tw-leading, var(--text-xl--line-height));
     color: transparent;
   }
   .about-title {

@@ -57,7 +57,7 @@
     --text-md: clamp(0.9rem, 0.9rem + 0.6vw, 1.2rem);
     --text-lg: clamp(1rem, 1rem + 1vw, 1.5rem);
     --text-xl: clamp(1.1rem, 1.1rem + 1.3vw, 1.75rem);
-    --text-2xl: clamp(1.2rem, 1.2rem + 1.5vw, 2rem);
+    --text-2xl: clamp(1.2rem, 1.8rem + 1.5vw, 2rem);
     --text-3xl: clamp(1.4rem, 1.4rem + 2.2vw, 2.5rem);
     --text-4xl: clamp(1.6rem, 1.6rem + 2.7vw, 3rem);
     --text-5xl: clamp(1.8rem, 1.8rem + 3.4vw, 3.5rem);
@@ -190,7 +190,7 @@
 
     .type {
         /* @apply text-[clamp(22px, 5vw, 55px)] leading-[1.3]; */
-        @apply text-2xl font-mono bg-gradient-to-r from-gray-400 to-blue-500 bg-clip-text text-transparent;
+        @apply text-xl font-mono bg-gradient-to-r from-gray-400 to-blue-500 bg-clip-text text-transparent;
     }
 
     .about-title {
