@@ -368,7 +368,7 @@
                 <input type="hidden" name="_next" value="https://huzaifa-portfolio-67.web.app?sent=1">
 
                 <div class="flex justify-center">
-                  <button type="submit" class="btn-primary">Send Message</button>
+                  <button type="submit" id="emailButton" class="btn-primary">Send Message</button>
                 </div>
               </form>
 
@@ -377,6 +377,9 @@
                 document.addEventListener("DOMContentLoaded", () => {
                   const urlParams = new URLSearchParams(window.location.search);
                   if (urlParams.get("sent") === "1") {
+                    const emailButton = document.getElementById("emailButton");
+                    emialButton.disabled = true;
+                    emialButton.classList.add("bg-gray-500", "cursor-not-allowed");
                     showToast("Email sent, Thanks", "success");
                   }
                 });
@@ -407,10 +410,10 @@
             <div class="flex-1 flex w-full lg:hidden justify-center">
               <button id="cvInMobile" onclick="downloadCV()"
                 class="bg-blue-600 text-white p-3 rounded-full hover:bg-blue-700 flex items-center gap-2">
+                <span class="px-3">CV</span>
                 <div
                   class="w-6 h-6 bg-[url('/assets/downloadIcon.png')] bg-contain bg-no-repeat bg-center animate-bounce">
                 </div>
-                <span class="p-1">CV</span>
               </button>
             </div>
 
@@ -421,10 +424,6 @@
 
         </div>
       </section>
-
-
-
-
 
 
       <div class="h-[5px]"></div>
@@ -457,13 +456,12 @@
   <script src="/utils/scripts/pageScript.js"></script>
 
   <!-- AOS JS -->
-
   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
   <script>
     // Initialize AOS
     AOS.init({
-      once: false, // Whether animation should happen only once
       startEvent: 'DOMContentLoaded', // Event to initialize AOS
+      once: false, // Whether animation should happen only once
       debounceDelay: 55, // Delay in milliseconds for debouncing scroll events
       throttleDelay: 99, // Delay in milliseconds for throttling scroll events
     });
