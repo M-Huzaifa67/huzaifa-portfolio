@@ -9,7 +9,7 @@ const createSocialLink = (social, index) => {
     href="${social.link}" 
     target="_blank" 
     class="${social.hoverColor} flex items-center"
-     data-aos="fade-up" 
+     data-aos="zoom-in" 
       data-aos-duration="800" 
       data-aos-delay="${delay}"
   >
