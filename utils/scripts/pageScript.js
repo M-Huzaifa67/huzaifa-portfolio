@@ -1,26 +1,45 @@
 
 document.addEventListener("DOMContentLoaded", () => {
-  const links = document.querySelectorAll(".tab-link");
+  const links = document.querySelectorAll(".tab-link, .mob-tab-link");
   const sections = document.querySelectorAll(".content-section");
+  const menuToggle = document.getElementById("menu-toggle");
+  const mobileMenu = document.getElementById("mobile-menu");
 
-  // -- Click Navigation
+  // --- Toggle Mobile Menu ---
+  menuToggle.addEventListener("click", () => {
+    mobileMenu.classList.toggle("hidden");
+  });
+
+    // --- Close Mobile Menu on Outside Click ---
+    document.addEventListener("click", (e) => {
+        if (mobileMenu && !mobileMenu.classList.contains("hidden") &&
+            !mobileMenu.contains(e.target) && e.target !== menuToggle) {
+            mobileMenu.classList.add("hidden");
+        }
+        });
+
+
+  // --- Smooth Scroll + Close Menu ---
   links.forEach(link => {
     link.addEventListener("click", e => {
       e.preventDefault();
       const id = link.dataset.section;
       document.getElementById(id).scrollIntoView({ behavior: "smooth" });
       setActiveTab(id);
+      if (mobileMenu && !mobileMenu.classList.contains("hidden")) {
+        mobileMenu.classList.add("hidden");
+      }
     });
   });
 
-  // -- Set Active Tab
+  // --- Set Active Tab ---
   function setActiveTab(id) {
     links.forEach(link => {
       link.classList.toggle("active", link.dataset.section === id);
     });
   }
 
-  // -- Scroll Observer
+  // --- Scroll Observer for Active Tab ---
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
@@ -28,12 +47,11 @@ document.addEventListener("DOMContentLoaded", () => {
         setActiveTab(id);
       }
     });
-  }, {
-    threshold: 0.6
-  });
+  }, { threshold: 0.6 });
 
   sections.forEach(section => observer.observe(section));
 });
+
 
 
 

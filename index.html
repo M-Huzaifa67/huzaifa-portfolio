@@ -138,18 +138,18 @@
 
     </div>
   </header>
-
+ 
   <!-- Mobile Menu -->
-  <div id="mobile-menu" class="mobile-menu hidden">
-    <div class="absolute right-5 top-10 w-50 bg-white shadow-xl rounded-lg p-1">
+  <nav id="mobile-menu" class="mobile-menu hidden">
+    <div class="absolute right-7 top-12 w-50 bg-white dark:bg-gray-950 shadow-xl rounded-lg p-1">
       <a href="#home" class="mob-tab-link active" data-section="home"><span>Home</span></a>
-      <a href="#about" class="tab-link" data-section="about"><span>About</span></a>
-      <a href="#experiences" class="tab-link" data-section="experiences"><span>Experience</span></a>
-      <a href="#skills" class="tab-link" data-section="skills"><span>Skills</span></a>
-      <a href="#projects" class="tab-link" data-section="projects"><span>Projects</span></a>
-      <a href="#contact" class="tab-link" data-section="contact"><span>Contact</span></a>
+      <a href="#about" class="mob-tab-link" data-section="about"><span>About</span></a>
+      <a href="#experiences" class="mob-tab-link" data-section="experiences"><span>Experience</span></a>
+      <a href="#skills" class="mob-tab-link" data-section="skills"><span>Skills</span></a>
+      <a href="#projects" class="mob-tab-link" data-section="projects"><span>Projects</span></a>
+      <a href="#contact" class="mob-tab-link" data-section="contact"><span>Contact</span></a>
     </div>
-  </div>
+  </nav>
 
 
   <!-- Main Content -->
@@ -345,7 +345,7 @@
               </div>
             </div>
 
-            <div class="p-5">
+            <div class="p-1">
               <form action="https://formsubmit.co/huzaifa.cs67@gmail.com" method="POST" class="space-y-4" data-aos="fade-up" data-aos-anchor-placement="center-bottom" data-aos-duration="2000">
                 <input type="text" name="name" placeholder="Your Name" required
                   class="form-input w-full text-gray-400 dark:text-gray-50" />
@@ -363,19 +363,12 @@
                 </div>
               </form>
 
-              <div id="toast" class="fixed bottom-5 right-5 bg-green-500 text-white px-4 py-2 rounded shadow-lg hidden">
-                Email sent, Thank you!
-              </div>
-
               <script>
+                import { showToast } from '/utils/scripts/toast.js';
                 document.addEventListener("DOMContentLoaded", () => {
                   const urlParams = new URLSearchParams(window.location.search);
                   if (urlParams.get("sent") === "1") {
-                    const toast = document.getElementById("toast");
-                    toast.classList.remove("hidden");
-                    setTimeout(() => {
-                      toast.classList.add("hidden");
-                    }, 3000);
+                     showToast("Email sent, Thanks", "success");
                   }
                 });
               </script>
@@ -434,10 +427,7 @@
 
 
   <!-- Toast (Snackbar) Message -->
-<div id="global-toast" class="fixed bottom-5 left-1/2 transform -translate-x-1/2 
-  bg-blue-600 text-white px-4 py-2 rounded-md shadow-lg 
-  opacity-0 pointer-events-none transition-opacity duration-300 z-50">
-</div>
+<div id="global-toast" class="fixed bottom-5 right-5 bg-blue-500 text-white px-4 py-2 rounded shadow-lg hidden"></div>
 
 
 
