@@ -24,9 +24,12 @@ const createSocialLink = (social, index) => {
 
 document.addEventListener("DOMContentLoaded", () => {
   const container = document.getElementById("socials-container");
-  if (container) {
-    // container.innerHTML = SOCIALS.map(createSocialLink).join("");
-    container.innerHTML = SOCIALS.map((social, index) => createSocialLink(social, index)).join('');
-    
+  if (!container) return;
+
+  container.innerHTML = SOCIALS.map((social, i) => createSocialLink(social, i)).join("");
+
+  // Refresh AOS after dynamic content is added
+  if (window.AOS) {
+    AOS.refresh();
   }
 });
