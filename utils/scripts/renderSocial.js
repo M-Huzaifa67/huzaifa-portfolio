@@ -2,7 +2,7 @@
 import { SOCIALS } from "/utils/socials.js";
 
 const createSocialLink = (social, index) => {
-    const delay = index * 150; // Delay each skill slightly
+    const delay = index * 150 + 100; // Delay each skill slightly
   return `
   <a 
     id="${social.id}" 
@@ -12,7 +12,7 @@ const createSocialLink = (social, index) => {
     data-aos="fade-up"
     data-aos-offset="200"
     data-aos-mirror="true"
-    data-aos-once="false"
+    data-aos-once="true"
     data-aos-duration="1000"
     data-aos-easing="ease-in-out"
     data-aos-anchor-placement="bottom-bottom"
@@ -34,7 +34,7 @@ document.addEventListener("DOMContentLoaded", () => {
   container.innerHTML = SOCIALS.map((social, i) => createSocialLink(social, i)).join("");
 
   // Refresh AOS after dynamic content is added
-  if (window.AOS) {
-    AOS.refresh();
-  }
+  // if (window.AOS) {
+  //   AOS.refresh();
+  // }
 });

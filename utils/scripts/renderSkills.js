@@ -5,7 +5,7 @@
 import { SKILLS } from '../skills.js';
 
 const createSkillsCard = (skill, index) => {
-  const delay = index * 150; // Delay each skill slightly
+  const delay = index * 150 + 100; // Delay each skill slightly
 
   return `
     <div 
