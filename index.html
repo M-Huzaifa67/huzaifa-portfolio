@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" style="display:none">
 
 <head>
 
@@ -13,23 +13,40 @@
   <!-- Favicon -->
   <link rel="icon" href="assets/prof1.jpg" type="image/png">
 
-  <!-- Main CSS -->
-  <link href="./src/output.css" rel="stylesheet">
+  <!-- Instant Theme Loader -->
+  <script>
+    (function () {
+      const theme = localStorage.getItem('theme') ||
+        (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+      if (theme === 'dark') document.documentElement.classList.add('dark');
+      document.documentElement.style.display = '';
+    })();
+  </script>
+
 
   <!-- SEO Meta Tags -->
   <meta name="google-site-verification" content="28cuH-llgbR88SIqx83tpB8ljiBSBZdR3r-reDJaz9E">
-  <meta name="description" content="Huzaifa, a skilled Flutter & Jr. NodeJs developer, showcasing mobile and web development projects. Explore my portfolio for innovative solutions.">
-  <meta name="keywords"
-    content="Huzaifa, Flutter & Jr. NodeJs developer, hybrid developer, mobile app developer, portfolio, software developer">
-  <meta name="author" content="Huzaifa">
+  <meta name="description" content="Huzaifa, a skilled Flutter & Jr.NodeJs & Jr.Web developer, showcasing mobile and web development projects. Explore my portfolio for innovative solutions.">
+  <meta name="keywords" content="Huzaifa, Huzaifa67, Flutter & Jr. NodeJs developer, hybrid developer, mobile app developer, portfolio, software developer">
+  <meta name="author" content="Muhammad Huzaifa">
   <meta name="robots" content="index, follow">
+  <!-- set preview image for social media -->
+  <meta name="image" content="https://huzaifa-portfolio-67.web.app/assets/prof-social.png">
 
-  <!-- Open Graph Meta Tags (for Facebook, LinkedIn, etc.) -->
-  <meta property="og:title" content="Huzaifa - Flutter & Jr. NodeJs Developer">
-  <meta property="og:description" content="Explore Huzaifa's portfolio, featuring Flutter & Jr. NodeJs projects, showcasing expertise in mobile and web development.">
-  <meta property="og:image" itemprop="image" content="https://huzaifa-portfolio-67.web.app/assets/prof-social.jpg">
-  <meta name="msapplication-TileImage" content="https://huzaifa-portfolio-67.web.app/assets/prof-social.jpg">
-  <meta property="og:image:secure_url" content="https://huzaifa-portfolio-67.web.app/assets/prof-social.jpg">
+  <!-- set icon/logo for website/portfolio -->
+  <link rel="icon" href="https://huzaifa-portfolio-67.web.app/assets/prof-social.png" type="image/png">
+  <link rel="apple-touch-icon" href="https://huzaifa-portfolio-67.web.app/assets/prof-social.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="https://huzaifa-portfolio-67.web.app/assets/prof-social.png">
+
+
+
+  <!-- Open Graph Meta Tags (for Facebook, Whatsapp, LinkedIn, etc.) -->
+  <meta property="og:title" content="Flutter - Jr.NodeJs - Jr.Web Developer">
+  <meta property="og:description"
+    content="Explore Huzaifa's portfolio, featuring Flutterprojects, showcasing expertise in mobile and web development.">
+  <meta property="og:image" itemprop="image" content="https://huzaifa-portfolio-67.web.app/assets/prof-social.png">
+  <meta name="msapplication-TileImage" content="https://huzaifa-portfolio-67.web.app/assets/prof-social.png">
+  <meta property="og:image:secure_url" content="https://huzaifa-portfolio-67.web.app/assets/prof-social.png">
   <meta property="og:image:alt" content="Huzaifa's Portfolio Image">
   <meta property="og:url" content="https://huzaifa-portfolio-67.web.app">
   <meta property="og:type" content="website">
@@ -37,21 +54,21 @@
   <meta property="og:locale" content="en_US">
   <meta property="og:image:width" content="300">
   <meta property="og:image:height" content="300">
-  <meta property="og:image:type" content="image/jpeg">
+  <meta property="og:image:type" content="image/png">
 
 
   <!-- set for whatsapp -->
   <meta property="og:whatsapp:description"
-    content="Explore Huzaifa's portfolio, featuring Flutter & Jr. NodeJs projects, showcasing expertise in mobile and web development.">
-  <meta property="og:whatsapp:title" content="Huzaifa - Flutter & Jr. NodeJs Developer">
+    content="Explore Huzaifa's portfolio, featuring Flutter projects, showcasing expertise in mobile and web development.">
+  <meta property="og:whatsapp:title" content="Flutter - Jr.NodeJs - Jr.Web Developer">
   <meta property="og:whatsapp:image" content="https://huzaifa-portfolio-67.web.app/assets/prof-social.jpg">
-  <meta property="og:whatsapp:image:secure_url" content="https://huzaifa-portfolio-67.web.app/assets/prof-social.jpg">
+  <meta property="og:whatsapp:image:secure_url" content="https://huzaifa-portfolio-67.web.app/assets/prof-social.png">
   <meta property="og:whatsapp:url" content="https://huzaifa-portfolio-67.web.app">
   <meta property="og:whatsapp:site_name" content="Huzaifa's Portfolio">
   <meta property="og:whatsapp:locale" content="en_US">
-  <meta property="og:whatsapp:image:width" content="1200">
-  <meta property="og:whatsapp:image:height" content="630">
-  <meta property="og:whatsapp:image:type" content="image/jpeg">
+  <meta property="og:whatsapp:image:width" content="300">
+  <meta property="og:whatsapp:image:height" content="300">
+  <meta property="og:whatsapp:image:type" content="image/png">
 
 
   <!-- JSON-LD Structured Data for Schema.org -->
@@ -69,6 +86,8 @@
   }
   </script>
 
+  <!-- Main CSS -->
+  <link href="./src/output.css" rel="stylesheet">
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/simple-icons@latest/font/simple-icons.min.css">
@@ -80,42 +99,8 @@
   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 
 
-
   <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      new Typed(
-        ".type", {
-        strings: ["Flutter Developer", "Jr. NodeJs Developer"],
-        typeSpeed: 88,
-        backSpeed: 44,
-        loop: true
-      });
-    });
-  </script>
 
-  <script>
-    // theme-switcher.js
-    document.addEventListener('DOMContentLoaded', () => {
-      const themeToggle = document.getElementById('themeToggle');
-      const html = document.documentElement;
-
-      // Check for saved preference or system preference
-      const savedTheme = localStorage.getItem('theme') ||
-        (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
-
-      // Apply initial theme
-      if (savedTheme === 'dark') {
-        html.classList.add('dark');
-      }
-
-      // Toggle handler
-      themeToggle.addEventListener('click', () => {
-        html.classList.toggle('dark');
-        localStorage.setItem('theme', html.classList.contains('dark') ? 'dark' : 'light');
-      });
-    });
-  </script>
 
 </head>
 
@@ -178,15 +163,15 @@
       <!-- bg-[url('/assets/images/prof.jpg')] bg-cover bg-center -->
       <section id="home" class="content-section scroll-mt-16 dark:bg-gray-900 bg-blue-50" data-section="home">
         <div class="flex h-full flex-col md:flex-row">
-          <div class="basis-[50%] flex flex-col justify-center items-start" data-aos="fade-down-right"
-            data-aos-duration="2000">
+          <div class="basis-[50%] flex flex-col justify-center items-start" 
+          data-aos="fade-down-right" data-aos-duration="1000"  data-aos-mirror="false" data-aos-once="true"> 
             <h1 class="intro text-gray-900 dark:text-white">Hi, This is Huzaifa</h1>
             <h1 class="py-2 pl-5"> <span class="type"></span></h1>
           </div>
           <div
             class="basis-[50%] flex relative w-full h-full justify-center items-center animate__animated animate__fadeInLeft ">
-            <div class="size-55 sm:size-77 relative  hover:animate-pulse" data-aos="fade-up-left"
-              data-aos-duration="2000">
+            <div class="size-55 sm:size-77 relative  hover:animate-pulse" 
+            data-aos="fade-up-left" data-aos-duration="1200" data-aos-mirror="false" data-aos-once="true">
               <div class="profile-image absolute inset-0 animate-spin"></div>
               <div class="profile-image absolute inset-1 bg-[url('/assets/prof1.jpg')] 
                   brightness-50 hover:brightness-90 bg-cover bg-center">
@@ -352,8 +337,8 @@
 
           <!-- Contact Form -->
           <div class="p-5">
-            <div class="space-y-5 p-5" data-aos="fade-up" data-aos-anchor-placement="center-center"
-              data-aos-duration="1500">
+            <div class="space-y-5 p-5" data-aos="fade-up" data-aos-anchor-placement="center-bottom"
+              data-aos-duration="1000">
               <h1
                 class="text-2xl font-ubuntu font-bold underline decoration-2 underline-offset-8 my-5 flex justify-center">
                 Contact us</h1>
@@ -371,7 +356,7 @@
 
             <div class="p-1">
               <form action="https://formsubmit.co/huzaifa.cs67@gmail.com" method="POST" class="space-y-4"
-                data-aos="fade-up" data-aos-anchor-placement="center-bottom" data-aos-duration="2000">
+                data-aos="fade-up" data-aos-anchor-placement="center-bottom" data-aos-duration="1500">
                 <input type="text" name="name" placeholder="Your Name" required
                   class="form-input w-full text-gray-400 dark:text-gray-50" />
                 <input type="email" name="email" placeholder="Your Email" required
@@ -477,9 +462,56 @@
     AOS.init({
       startEvent: 'DOMContentLoaded', // Event to initialize AOS
       once: false, // Whether animation should happen only once
+      mirror: true, // animate on scroll up
       debounceDelay: 55, // Delay in milliseconds for debouncing scroll events
       throttleDelay: 99, // Delay in milliseconds for throttling scroll events
     });
+  </script>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      new Typed(
+        ".type", {
+        strings: ["Flutter Developer", "Jr. NodeJs Developer", "Jr. Web Developer"],
+        typeSpeed: 88,
+        backSpeed: 44,
+        loop: true
+      });
+    });
+  </script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const themeToggle = document.getElementById('themeToggle');
+      const html = document.documentElement;
+
+      themeToggle.addEventListener('click', () => {
+        html.classList.toggle('dark');
+        localStorage.setItem('theme', html.classList.contains('dark') ? 'dark' : 'light');
+      });
+    });
+
+
+    // // theme-switcher.js
+    // document.addEventListener('DOMContentLoaded', () => {
+    //   const themeToggle = document.getElementById('themeToggle');
+    //   const html = document.documentElement;
+
+    //   // Check for saved preference or system preference
+    //   const savedTheme = localStorage.getItem('theme') ||
+    //     (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+
+    //   // Apply initial theme
+    //   if (savedTheme === 'dark') {
+    //     html.classList.add('dark');
+    //   }
+
+    //   // Toggle handler
+    //   themeToggle.addEventListener('click', () => {
+    //     html.classList.toggle('dark');
+    //     localStorage.setItem('theme', html.classList.contains('dark') ? 'dark' : 'light');
+    //   });
+    // });
   </script>
 
 </body>
