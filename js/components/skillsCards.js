@@ -1,19 +1,14 @@
+// components/skills.js
+import { SKILLS } from '../data/skillsData.js';
 
-
-
-
-import { SKILLS } from '../skills.js';
-
-const createSkillsCard = (skill, index) => {
-  const delay = index * 150 + 100; // Delay each skill slightly
-
-  return `
+function createSkillsCard(skill, index) {
+  const delay = index * 100 + 100;
+  return  `
     <div 
-      class="skills-card w-full h-auto p-2 border-3 border-blue-300/10 rounded-lg shadow-md " 
+      class="skills-card w-full h-auto p-2 border-3 border-blue-300/10 rounded-lg shadow-md" 
       data-aos="fade-up" 
       data-aos-duration="800" 
-      data-aos-delay="${delay}"
-    >
+      data-aos-delay="${delay}">
       <p class="skills-title">${skill.title}</p>
       <div class="flex space-x-5 items-center">
         <i class="${skill.icon}"></i>
@@ -25,15 +20,11 @@ const createSkillsCard = (skill, index) => {
       </div>
     </div>
   `;
-};
+}
 
-document.addEventListener('DOMContentLoaded', () => {
+export function skillsCards() {
   const container = document.getElementById('skills-container');
   if (container) {
-    container.innerHTML = SKILLS.map((skill, index) => createSkillsCard(skill, index)).join('');
+    container.innerHTML = SKILLS.map(createSkillsCard).join('');
   }
-});
-
-
-
-
+}

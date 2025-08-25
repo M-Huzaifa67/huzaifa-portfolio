@@ -5,6 +5,15 @@ html {
   
 }
 
+div::-webkit-scrollbar {
+  display: none;
+}
+
+.hyphens-auto {
+  hyphens: auto;
+}
+
+
 
 .content-section {
   scroll-snap-align: start;

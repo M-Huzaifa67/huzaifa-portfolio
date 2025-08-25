@@ -5,6 +5,7 @@ export const CV = {
   },
     PDF: {
     CV : "assets/Huzaifa_Flutter_CV.pdf",
+    filename: "Huzaifa_Flutter_CV.pdf", 
   },
 
 };
