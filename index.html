@@ -11,7 +11,23 @@
   <title>Huzaifa - Flutter & Jr. NodeJs Developer</title>
 
   <!-- Favicon -->
-  <link rel="icon" href="assets/prof1.jpg" type="image/png">
+  <link rel="icon" href="assets/dp2.png" type="image/png">
+  <!-- set icon/logo for website/portfolio -->
+  <link rel="icon" href="https://huzaifa-portfolio-67.web.app/assets/dp2.png" type="image/png">
+  <link rel="apple-touch-icon" href="https://huzaifa-portfolio-67.web.app/assets/dp2.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="https://huzaifa-portfolio-67.web.app/assets/dp2.png">
+
+
+
+
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-9GQW87FDSJ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-9GQW87FDSJ');
+  </script>
 
   <!-- Instant Theme Loader -->
   <script>
@@ -26,27 +42,22 @@
 
   <!-- SEO Meta Tags -->
   <meta name="google-site-verification" content="28cuH-llgbR88SIqx83tpB8ljiBSBZdR3r-reDJaz9E">
-  <meta name="description" content="Huzaifa, a skilled Flutter & Jr.NodeJs & Jr.Web developer, showcasing mobile and web development projects. Explore my portfolio for innovative solutions.">
-  <meta name="keywords" content="Huzaifa, Huzaifa67, Flutter Developer, Jr.NodeJs developer, Jr.Web Developer, hybrid developer, mobile app developer, software developer, portfolio">
+  <meta name="description"
+    content="Huzaifa, a skilled Flutter - Jr.NodeJs & Jr.Web developer, showcasing mobile and web development projects. Explore my portfolio for innovative solutions.">
+  <meta name="keywords"
+    content="Huzaifa, Huzaifa67, Flutter Developer, Jr.NodeJs developer, Jr.Web Developer, hybrid developer, mobile app developer, software developer, portfolio">
   <meta name="author" content="Muhammad Huzaifa">
   <meta name="robots" content="index, follow">
   <!-- set preview image for social media -->
-  <meta name="image" content="https://huzaifa-portfolio-67.web.app/assets/prof-social.png">
-
-  <!-- set icon/logo for website/portfolio -->
-  <link rel="icon" href="https://huzaifa-portfolio-67.web.app/assets/prof-social.png" type="image/png">
-  <link rel="apple-touch-icon" href="https://huzaifa-portfolio-67.web.app/assets/prof-social.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="https://huzaifa-portfolio-67.web.app/assets/prof-social.png">
-
-
+  <meta name="image" content="https://huzaifa-portfolio-67.web.app/assets/dp.png">
 
   <!-- Open Graph Meta Tags (for Facebook, Whatsapp, LinkedIn, etc.) -->
   <meta property="og:title" content="Flutter - Jr.NodeJs - Jr.Web Developer">
   <meta property="og:description"
     content="Explore Huzaifa's portfolio, featuring Flutter projects, showcasing expertise in mobile and web development.">
-  <meta property="og:image" itemprop="image" content="https://huzaifa-portfolio-67.web.app/assets/prof-social.png">
-  <meta name="msapplication-TileImage" content="https://huzaifa-portfolio-67.web.app/assets/prof-social.png">
-  <meta property="og:image:secure_url" content="https://huzaifa-portfolio-67.web.app/assets/prof-social.png">
+  <meta property="og:image" itemprop="image" content="https://huzaifa-portfolio-67.web.app/assets/social-coverr.png">
+  <meta name="msapplication-TileImage" content="https://huzaifa-portfolio-67.web.app/assets/social-coverr.png">
+  <meta property="og:image:secure_url" content="https://huzaifa-portfolio-67.web.app/assets/social-coverr.png">
   <meta property="og:image:alt" content="Huzaifa's Portfolio Image">
   <meta property="og:url" content="https://huzaifa-portfolio-67.web.app">
   <meta property="og:type" content="website">
@@ -61,8 +72,8 @@
   <meta property="og:whatsapp:description"
     content="Explore Huzaifa's portfolio, featuring Flutter projects, showcasing expertise in mobile and web development.">
   <meta property="og:whatsapp:title" content="Flutter - Jr.NodeJs - Jr.Web Developer">
-  <meta property="og:whatsapp:image" content="https://huzaifa-portfolio-67.web.app/assets/prof-social.png">
-  <meta property="og:whatsapp:image:secure_url" content="https://huzaifa-portfolio-67.web.app/assets/prof-social.png">
+  <meta property="og:whatsapp:image" content="https://huzaifa-portfolio-67.web.app/assets/social-coverr.png">
+  <meta property="og:whatsapp:image:secure_url" content="https://huzaifa-portfolio-67.web.app/assets/social-coverr.png">
   <meta property="og:whatsapp:url" content="https://huzaifa-portfolio-67.web.app">
   <meta property="og:whatsapp:site_name" content="Huzaifa's Portfolio">
   <meta property="og:whatsapp:locale" content="en_US">
@@ -86,6 +97,62 @@
   }
   </script>
 
+  <!-- text to speech -->
+  <!-- Add Annyang (speech recognition / text-to-speech helper) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/annyang/6.0.0/annyang.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/SpeechKITT/1.0.0/speechkitt.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/SpeechKITT/1.0.0/speechkitt-annyang.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/SpeechKITT/1.0.0/speechkitt-ui.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/SpeechKITT/1.0.0/speechkitt-ui.min.css">
+  <script>
+    if (annyang) {
+      const commands = {
+        'open home': () => {
+          document.getElementById('home').scrollIntoView({ behavior: 'smooth' });
+        },
+        'open about': () => {
+          document.getElementById('about').scrollIntoView({ behavior: 'smooth' });
+        },
+        'open experiences': () => {
+          document.getElementById('experiences').scrollIntoView({ behavior: 'smooth' });
+        },
+        'open skills': () => {
+          document.getElementById('skills').scrollIntoView({ behavior: 'smooth' });
+        },
+        'open projects': () => {
+          document.getElementById('projects').scrollIntoView({ behavior: 'smooth' });
+        },
+        'open contact': () => {
+          document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
+        }
+      };
+      annyang.addCommands(commands);
+      annyang.start();
+    }
+  </script>
+
+
+  <script>
+    // Set up SpeechKITT with default UI
+    SpeechKITT.annyang();
+    SpeechKITT.setStylesheet('https://cdnjs.cloudflare.com/ajax/libs/SpeechKITT/1.0.0/themes/flat.css');
+    SpeechKITT.vroom();
+  </script>
+
+  <!-- emailJs -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+  </script>
+  <script type="text/javascript">
+    (function () {
+      emailjs.init({
+        publicKey: "2HjjXpB5tqRJVk5OG",
+      });
+    })();
+  </script>
+
+
+
+
   <!-- Main CSS -->
   <link href="./src/output.css" rel="stylesheet">
 
@@ -93,131 +160,125 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/simple-icons@latest/font/simple-icons.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 
+  <!-- circleTyped.js -->
+  <script src="https://cdn.jsdelivr.net/npm/circletype@2.3.0/dist/circletype.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/circle-typed@1.0.0/dist/circle-typed.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/circle-typed@1.0.0/dist/circle-typed.min.css">
+
+
   <!-- AOS CSS -->
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <!-- AOS JS -->
   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 
-
   <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
 
 
 </head>
+<!-- antialiased -->
 
 <body class="font-sans flex flex-col min-h-screen bg-white text-gray-900 dark:bg-gray-900 dark:text-white">
-  <!-- Header -->
-  <header class="flex fixed top-0 w-full justify-center z-20">
-    <div class="header w-[92%] sm:w-[80%] h-[64px] flex justify-between items-center">
-      <div class="flex-1 whitespace-nowrap font-bold">👋 Welcome</div>
 
-      <!-- Desktop Navigation -->
-      <div class="w-3/4 justify-center hidden md:block">
-        <nav class="nav">
-          <div class="flex justify-center items-center">
-            <a href="#home" class="tab-link active" data-section="home"><span>Home</span></a>
-            <a href="#about" class="tab-link" data-section="about"><span>About</span></a>
-            <a href="#experiences" class="tab-link" data-section="experiences"><span>Experince</span></a>
-            <a href="#skills" class="tab-link" data-section="skills"><span>Skills</span></a>
-            <a href="#projects" class="tab-link" data-section="projects"><span>Projects</span></a>
-            <a href="#contact" class="tab-link" data-section="contact"><span>Contact</span></a>
-          </div>
-        </nav>
-      </div>
+  <div id="header-container"></div>
 
-
-      <div class="flex-1 flex justify-end items-center gap-3"> <!-- Added gap-3 -->
-        <button id="themeToggle" class="p-1 rounded-full bg-gray-800 text-white dark:bg-gray-200 dark:text-black">
-          <span id="lightIcon" class="dark:hidden">🌙</span>
-          <span id="darkIcon" class="hidden dark:inline">☀️</span>
-        </button>
-
-        <!-- Mobile Menu Button -->
-        <button id="menu-toggle" class="md:hidden">
-          <i class="fas fa-bars text-lg pointer-events-none"></i>
-        </button>
-      </div>
-
-    </div>
-  </header>
-
-  <!-- Mobile Menu -->
-  <nav id="mobile-menu" class="mobile-menu hidden">
-    <div class="mobile-menu-card">
-      <a href="#home" class="mob-tab-link active" data-section="home"><span>Home</span></a>
-      <a href="#about" class="mob-tab-link" data-section="about"><span>About</span></a>
-      <a href="#experiences" class="mob-tab-link" data-section="experiences"><span>Experience</span></a>
-      <a href="#skills" class="mob-tab-link" data-section="skills"><span>Skills</span></a>
-      <a href="#projects" class="mob-tab-link" data-section="projects"><span>Projects</span></a>
-      <a href="#contact" class="mob-tab-link" data-section="contact"><span>Contact</span></a>
-    </div>
-  </nav>
+  <!-- <div id="mobile-menu-container"></div> -->
 
 
   <!-- Main Content -->
   <main class="flex justify-center">
 
+    <!-- id="app" -->
     <div id="scroll-container" class="w-[92%] sm:w-[80%] mx-auto flex flex-col shadow-lg shadow-blue-500/50">
 
       <!-- <div class="h-[64px]"></div> -->
 
       <!-- bg-[url('/assets/images/prof.jpg')] bg-cover bg-center -->
       <section id="home" class="content-section scroll-mt-16 dark:bg-gray-900 bg-blue-50" data-section="home">
-        <div class="flex h-full flex-col md:flex-row">
-          <div class="basis-[50%] flex flex-col justify-center items-start" 
-          data-aos="fade-down-right" data-aos-duration="1000"  data-aos-mirror="false" data-aos-once="true"> 
+        <div class="flex h-[95%] flex-col md:flex-row">
+          <div class="basis-[50%] flex flex-col justify-center items-start" data-aos="fade-down-right"
+            data-aos-duration="1000" data-aos-mirror="false" data-aos-once="true">
             <h1 class="intro text-gray-900 dark:text-white">Hi, This is Huzaifa</h1>
             <h1 class="py-2 pl-5"> <span class="type"></span></h1>
           </div>
           <div
             class="basis-[50%] flex relative w-full h-full justify-center items-center animate__animated animate__fadeInLeft ">
-            <div class="size-55 sm:size-77 relative  hover:animate-pulse" 
-            data-aos="fade-up-left" data-aos-duration="1200" data-aos-mirror="false" data-aos-once="true">
+            <div class="size-55 sm:size-77 relative  hover:animate-pulse" data-aos="fade-up-left"
+              data-aos-duration="1200" data-aos-mirror="false" data-aos-once="true">
               <div class="profile-image absolute inset-0 animate-spin"></div>
-              <div class="profile-image absolute inset-1 bg-[url('/assets/prof1.jpg')] 
+              <div class="profile-image absolute inset-1 bg-[url('/assets/dp.png')] 
                   brightness-50 hover:brightness-90 bg-cover bg-center">
               </div>
             </div>
           </div>
         </div>
+        <!-- write qoutes here -->
+        <div class="flex justify-center items-center">
+          <p class="text-sm lg:text-md font-mono text-blue-300 animate__animated animate__fadeInUp animate__delay-1s"
+            data-aos="fade-up" data-aos-duration="1000" data-aos-mirror="false" data-aos-once="true">
+            "Silence is not weakness; it's the preparation of a storm"</p>
+        </div>
+
       </section>
 
       <section id="about" class="content-section scroll-mt-16 dark:bg-gray-800 bg-gray-50" data-section="about">
         <div class="h-full w-full flex flex-col-reverse lg:flex-row items-center">
           <div class="flex h-full p-5 animate-full-bounce">
-            <div class="relative w-full h-full flex items-end justify-end">
+
+            <!-- <div class="relative w-full h-full flex items-end justify-end">
               <div class="size-55 sm:size-77 relative">
-                <div class="absolute inset-3 rounded-full border-t-4 border-blue-500 border-opacity-50 animate-spin">
+                <div class="absolute inset-3 indent-1 rounded-full border-t-4 border-blue-500 border-opacity-50 animate-spin animate__delay-2s" style="animation-duration: 5s;"></div>
+                <div class="absolute inset-4 rounded-full border-b-4 border-blue-600 border-opacity-50 animate-spin" style="animation-duration: 5s;"></div>
+                <div  class="absolute inset-5 rounded-full bg-[url('/assets/prof.jpg')] brightness-50 hover:brightness-90 hover:scale-105 z-10 bg-cover bg-center"> </div>
+              </div>
+            </div> -->
+
+
+
+            <!-- Curved Animated Text with Center Image -->
+            <div class="relative w-full h-full flex items-end justify-end">
+              <div class="size-66 relative">
+                <div class="absolute inset-2 rounded-full border-t-4 border-blue-500 border-opacity-50 animate-spin">
                 </div>
-                <div class="absolute inset-4 rounded-full border-l-4 border-blue-600 border-opacity-50 animate-spin">
+                <div class="absolute inset-4 rounded-full border-b-4 border-blue-600 border-opacity-50 animate-spin">
                 </div>
+                <!-- Rotating text -->
+                <div id="circle-text"
+                  class="absolute inset-6 flex items-center justify-center animate-spin text-black dark:text-white uppercase tracking-widest"
+                  style="animation-duration: 12s;">
+                  <span><i class="fa-brands fa-node-js text-red-500"></i> • Flutter</span>
+                  <span><i class="fas fa-code text-blue-400"></i> • Dart</span>
+                  <span><i class="fas fa-cloud text-orange-400"></i> • Firebase</span>
+                  <span><i class="fas fa-bolt text-green-500"></i> • NodeJs</span>
+                  <span><i class="fas fa-sitemap text-yellow-400"></i> • MVC</span>
+                  <span><i class="fas fa-paint-brush text-pink-400"></i> • UI/UX Design</span>
+                </div>
+
+                <!-- Static center image -->
                 <div
-                  class="absolute inset-5 rounded-full bg-[url('/assets/prof.jpg')] brightness-50 hover:brightness-90 hover:scale-105 z-10 bg-cover bg-center">
+                  class="absolute inset-10 rounded-full bg-[url('/assets/icons/mob-app-dev.jpg')] brightness-50 hover:brightness-90 hover:scale-120 z-10 bg-cover bg-center">
                 </div>
               </div>
             </div>
-            <div class="absolute bottom-6 left-0 right-0 text-center">
-              <p class="text-lg font-medium text-emerald-300"></p>
-            </div>
+
           </div>
           <div class="flex p-1">
             <div class="about-card" data-aos="fade-up" data-aos-duration="1000">
               <p class="about-title">
                 About me</p>
-              <div class="about-desc h-full px-1 space-y-3 indent-1 leading-8 max-w-3xl text-justify">
-                <p>I am a Computer Science graduate with over 2+ years of experience in mobile and backend development.
-                  My core expertise lies in building cross-platform mobile applications using Flutter and developing
-                  backend services with Node.js, Express.js, and MongoDB.</p>
+              <div class="about-desc h-full px-1 break-words hyphens-auto space-y-3 indent-1 leading-8 text-justify">
+                <p>I am a Computer Science graduate with over 2 years of experience in mobile apps development.
+                  My core expertise lies in building cross-platform mobile applications using Flutter.</p>
 
                 <p>I have a strong command of tools and technologies such as Firebase, Google Maps, RESTful APIs, JWT
                   authentication, and state management (Getx & Riverpod) solutions. I also integrate secure APIs and
-                  optimize app
-                  performance for better user experience.</p>
+                  optimize app performance for better user experience.</p>
 
                 <p>With a solid foundation in Object-Oriented Programming and a good grasp of design patterns like MVC
                   and MVVM, I focus on writing clean, scalable, and maintainable code. My UI/UX design skills using
                   Figma and Canva help me create interfaces that are both functional and user-friendly.</p>
 
-                <p>I am continuously learning and improving, currently expanding my skillset with React Native to become
+                <p>I am continuously learning and improving, currently expanding my skillset with MERN
+                  and developing backend services with Node.js, Express.js, and MongoDB, React Native to become
                   more versatile in mobile development. I enjoy collaborative environments, mentoring others, and
                   building digital solutions that solve real-world problems.</p>
 
@@ -234,68 +295,25 @@
         <div class="flex h-full flex-col justify-center items-start">
           <h1 class="text-2xl font-ubuntu font-bold underline decoration-2 underline-offset-8 my-5">Experiences</h1>
 
-          <div class="experience-card" data-aos="fade-up" data-aos-anchor-placement="center-bottom"
+          <div id="experience-container"></div>
+
+          <!-- <div class="experience-card" data-aos="fade-up" data-aos-anchor-placement="center-bottom"
             data-aos-duration="1000">
             <div class="flex flex-col justify-start items-start leading-normal">
               <span class="experience-title">Flutter Developer</span>
-              <span class="experience-subtitle">Software Develpment Hub | Rawalakot - 2025-Present</span>
+              <span class="experience-subtitle">Software Develpment Hub | Rawalakot - 2025</span>
             </div>
             <div class="pl-5 py-1">
               <p class="experience-desc">Working as a Flutter Developer while also mentoring and leading internees in
                 mobile app development</p>
-              <ul class="experience-desc bullet-point ">
+              <ul class="experience-desc bullet-point">
                 <li>Developing cross-platform mobile apps using Flutter with clean UI and responsive UX</li>
                 <li>Leading and mentoring internees in mobile development tasks and best practices</li>
                 <li>Collaborating with the team to implement scalable and maintainable features</li>
                 <li>Developing and integrating APIs and optimizing app performance</li>
               </ul>
             </div>
-          </div>
-
-          <div class="experience-card" data-aos="fade-up" data-aos-anchor-placement="center-bottom"
-            data-aos-duration="1500">
-            <div class="flex flex-col justify-start items-start leading-normal">
-              <span class="experience-title">NodeJs Developer</span>
-              <span class="experience-subtitle">Next Gen | 2025-(6 Months)</span>
-            </div>
-            <div class="pl-5 py-1">
-              <ul class="experience-desc bullet-point ">
-                <li>Developing backend APIs using Node.js, Express.js, and MongoDB to enhance full-stack expertise.</li>
-                <li>Implementing authentication, database management, and server-side logic.</li>
-                <li>Gaining experience in JWT authentication, Encryption, API Integration.</li>
-              </ul>
-            </div>
-          </div>
-
-          <div class="experience-card" data-aos="fade-up" data-aos-anchor-placement="center-bottom"
-            data-aos-duration="2000">
-            <div class="flex flex-col justify-start items-start leading-normal">
-              <span class="experience-title">Flutter Developer and Graphic Designer</span>
-              <span class="experience-subtitle">From PSEB at PTCP | Peshawar-2024</span>
-            </div>
-            <div class="pl-5 py-1">
-              <ul class="experience-desc bullet-point ">
-                <li>Developed applications using Flutter, focusing on functionality and UI/UX.</li>
-                <li>Integrated ML models to enhance functionality and personalization.</li>
-                <li>Gained experience in graphic design using Canva and Figma.</li>
-              </ul>
-            </div>
-          </div>
-
-          <div class="experience-card" data-aos="fade-up" data-aos-anchor-placement="center-bottom"
-            data-aos-duration="2500">
-            <div class="flex flex-col justify-start items-start leading-normal">
-              <span class="experience-title">Flutter and Graphic Designer </span>
-              <span class="experience-subtitle">Self - 2 years</span>
-            </div>
-            <div class="pl-5 py-1">
-              <ul class="experience-desc bullet-point ">
-                <li>Developed applications using Flutter, implementing features such as Firebase, FCM, RESTful API,
-                  Google Maps, and State Management.</li>
-                <li>Designed professional UIs, logos for apps, and posters using Figma and Canva.</li>
-              </ul>
-            </div>
-          </div>
+          </div> -->
 
         </div>
       </section>
@@ -305,17 +323,15 @@
         <div class="flex h-full flex-col justify-center items-start">
           <h2 class="text-2xl font-ubuntu font-bold underline decoration-2 underline-offset-8 my-5">SKILLS</h2>
           <div id="skills-container" class="h-full w-full space-y-3"></div>
-          <script type="module" src="/utils/scripts/renderSkills.js"></script>
+          <!-- <script type="module" src="/utils/scripts/renderSkills.js"></script> -->
         </div>
       </section>
-
-
 
 
       <section id="projects" class="content-section scroll-mt-16 dark:bg-gray-900 bg-blue-50" data-section="projects">
         <div class="flex h-full flex-col justify-center items-start">
           <h2 class="text-2xl font-ubuntu font-bold underline decoration-2 underline-offset-8 my-5">Projects</h2>
-          <p class="text-md mb-8 text-justify indent-3 px-5" data-aos="fade-up"
+          <p class="text-md mb-8 text-justify indent-3 px-5 break-words hyphens-auto" data-aos="fade-up"
             data-aos-anchor-placement="center-bottom" data-aos-duration="1000">
             Here are some of my key projects, developed using cutting-edge technologies like Flutter, Google Maps, and
             more. Each project reflects my problem-solving skills, attention to detail, and passion for creating
@@ -325,11 +341,9 @@
           </p>
 
           <div id="projects-container" class="grid grid-cols-1 sm:grid-cols-2 gap-4"></div>
-          <script type="module" src="/utils/scripts/renderProjects.js"></script>
 
         </div>
       </section>
-
 
       <section id="contact" class="content-section scroll-mt-16 dark:bg-gray-800 bg-gray-50 dark:text-white"
         data-section="contact">
@@ -354,38 +368,7 @@
               </div>
             </div>
 
-            <div class="p-1">
-              <form action="https://formsubmit.co/huzaifa.cs67@gmail.com" method="POST" class="space-y-4"
-                data-aos="fade-up" data-aos-anchor-placement="center-bottom" data-aos-duration="1500">
-                <input type="text" name="name" placeholder="Your Name" required
-                  class="form-input w-full text-gray-400 dark:text-gray-50" />
-                <input type="email" name="email" placeholder="Your Email" required
-                  class="form-input w-full text-gray-400 dark:text-gray-50" />
-                <input type="text" name="subject" placeholder="Subject" required
-                  class="form-input w-full text-gray-400 dark:text-gray-50" />
-                <textarea name="message" placeholder="Your Message" required
-                  class="form-textarea w-full h-40 text-gray-400 dark:text-gray-50"></textarea>
-
-                <input type="hidden" name="_next" value="https://huzaifa-portfolio-67.web.app?sent=1">
-
-                <div class="flex justify-center">
-                  <button type="submit" id="emailButton" class="btn-primary">Send Message</button>
-                </div>
-              </form>
-
-              <script>
-                import { showToast } from '/utils/scripts/toast.js';
-                document.addEventListener("DOMContentLoaded", () => {
-                  const urlParams = new URLSearchParams(window.location.search);
-                  if (urlParams.get("sent") === "1") {
-                    const emailButton = document.getElementById("emailButton");
-                    emialButton.disabled = true;
-                    emialButton.classList.add("bg-gray-500", "cursor-not-allowed");
-                    showToast("Email sent, Thanks", "success");
-                  }
-                });
-              </script>
-            </div>
+            <div id="contact-form-container" class="p-1"></div>
 
           </div>
 
@@ -393,36 +376,13 @@
 
             <div class="flex-1 hidden lg:block"></div>
 
-            <div id="socials-container" class="flex-[3] flex justify-center text-center gap-5 "></div>
-            <script type="module" src="/utils/scripts/renderSocial.js"></script>
+            <div id="socials-container" class="flex-[3] flex justify-center text-center gap-3 "></div>
+            <!-- <script type="module" src="/utils/scripts/renderSocial.js"></script> -->
 
 
-
-            <!-- Desktop CV Download -->
-            <div class="flex-1 w-full hidden lg:block justify-center lg:justify-end">
-              <button id="cvInDesktop" onclick="downloadCV()"
-                class="bg-blue-600 text-white p-2 rounded-lg hover:bg-blue-700 transition whitespace-nowrap">
-                📄 Download CV
-              </button>
-            </div>
-
-
-            <!-- Mobile CV Download -->
-            <div class="flex-1 flex w-full lg:hidden justify-center">
-              <button id="cvInMobile" onclick="downloadCV()"
-                class="bg-blue-600 text-white p-3 rounded-full hover:bg-blue-700 flex items-center gap-2">
-                <span class="px-3">CV</span>
-                <div
-                  class="w-6 h-6 bg-[url('/assets/downloadIcon.png')] bg-contain bg-no-repeat bg-center animate-bounce">
-                </div>
-              </button>
-            </div>
-
-
-
+            <div id="cv-download-container"></div>
 
           </div>
-
         </div>
       </section>
 
@@ -430,43 +390,73 @@
       <div class="h-[5px]"></div>
 
 
+      <!-- project detail section -->
+      <div id="projectModal" class="fixed hidden inset-0 items-center justify-center bg-black/40 backdrop-blur-sm z-50">
+        <div class="flex flex-col items-center p-3">
+          <div class="w-[320px] flex justify-end items-center">
+            <button class="hover:bg-red-400 w-5 h-5 flex items-center justify-center rounded-full text-white font-bold"
+              onclick="closeProjectDetails()">X</button>
+          </div>
+
+          <div class="w-[320px] h-[640px] rounded-[2rem] border-4 border-gray-400 bg-white p-[1px] ">
+            <div class="h-full rounded-[2rem] border-6 border-black overflow-hidden px-[1px]">
+
+              <div class="flex justify-between items-center w-full px-5 pb-1 rounded-t-[2rem] bg-black/10 text-black text-[10px] font-medium">
+
+                <span id="notch-time">12:30 pm</span>
+
+                <div class="flex justify-center items-center rounded-t-[2rem]">
+                  <div class="w-32 h-4 flex justify-center items-center bg-black rounded-b-xl ">
+                    <div class="w-2 h-2 bg-gray-400 rounded-full mr-2"></div>
+                    <div class="w-6 h-2 bg-gray-500 rounded-full"></div>
+                  </div>
+                </div>
+
+                <div class="flex items-center justify-center">
+                  <div class="w-4 h-2 border border-black rounded-sm flex items-center justify-end pl-[5px]">
+                    <div class="w-4 h-2 bg-black/50"></div>
+                  </div>
+                  <div class="w-[3px] h-[6px] bg-black"></div>
+                </div>
+
+              </div>
+
+              <div id="project-detail" class="text-black p-1 overflow-y-auto h-full pb-6"></div>
+
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+
+
+
     </div>
+
+
+
+
+
+
+
+
   </main>
 
 
 
   <!-- Toast (Snackbar) -->
-  <div class="fixed bottom-5 left-0 w-full flex justify-center z-50">
-    <div id="global-toast"
-      class="bg-blue-700/50 text-white m-5 px-4 py-2 rounded border-2 border-blue-500  shadow-lg shadow-blue-500/50 opacity-0 translate-y-5 transition-all duration-500 ease-in-out pointer-events-none">
-    </div>
-  </div>
+  <div id="global-toast" class="fixed bottom-5 left-0 w-full flex justify-center z-50"></div>
+
+
+
+  <!-- Footer slot -->
+  <div id="footer-container"></div>
 
 
 
 
 
-  <footer class="flex justify-center pt-1">
-    <div class="footer w-[92%] sm:w-[80%] p-3 text-center text-sm text-gray-500">
-      <p>&copy; 2025 M. Huzaifa. All rights reserved.</p>
-    </div>
-  </footer>
-
-
-  <script type="module" src="/utils/scripts/cv_download.js"></script>
-  <script src="/utils/scripts/pageScript.js"></script>
-
-
-  <script>
-    // Initialize AOS
-    AOS.init({
-      startEvent: 'DOMContentLoaded', // Event to initialize AOS
-      once: false, // Whether animation should happen only once
-      mirror: false, // animate on scroll up
-      debounceDelay: 33, // Delay in milliseconds for debouncing scroll events
-      throttleDelay: 66, // Delay in milliseconds for throttling scroll events
-    });
-  </script>
 
   <script>
     document.addEventListener("DOMContentLoaded", function () {
@@ -481,38 +471,62 @@
   </script>
 
   <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      const themeToggle = document.getElementById('themeToggle');
-      const html = document.documentElement;
+    document.addEventListener("DOMContentLoaded", function () {
+      const now = new Date();
 
-      themeToggle.addEventListener('click', () => {
-        html.classList.toggle('dark');
-        localStorage.setItem('theme', html.classList.contains('dark') ? 'dark' : 'light');
-      });
+      let hours = now.getHours();
+      const minutes = now.getMinutes().toString().padStart(2, "0");
+      const ampm = hours >= 12 ? "pm" : "am";
+      hours = hours % 12;
+      hours = hours ? hours : 12; // 0 => 12
+
+      document.getElementById("notch-time").textContent = `${hours}:${minutes} ${ampm}`;
     });
-
-
-    // // theme-switcher.js
-    // document.addEventListener('DOMContentLoaded', () => {
-    //   const themeToggle = document.getElementById('themeToggle');
-    //   const html = document.documentElement;
-
-    //   // Check for saved preference or system preference
-    //   const savedTheme = localStorage.getItem('theme') ||
-    //     (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
-
-    //   // Apply initial theme
-    //   if (savedTheme === 'dark') {
-    //     html.classList.add('dark');
-    //   }
-
-    //   // Toggle handler
-    //   themeToggle.addEventListener('click', () => {
-    //     html.classList.toggle('dark');
-    //     localStorage.setItem('theme', html.classList.contains('dark') ? 'dark' : 'light');
-    //   });
-    // });
   </script>
+
+
+
+  <script>
+    const circle = new CircleType(document.getElementById("circle-text"));
+    circle.radius(115);
+    circle.dir(-1); // controls text direction
+    circle.forceWidth(true); // forces text to fit the circle
+    circle.forceHeight(true); // forces text to fit the circle height
+    circle.fitText(true); // fits text to circle size
+    circle.forceFontSize(20); // controls font size
+    circle.forceCircleSize(200);
+
+    // controls circle size
+  </script>
+
+
+
+
+  <div  id="custom-cursor" class="fixed hidden lg:block w-7 h-7  border-1 border-blue-500  rounded-full pointer-events-none mix-blend-difference z-[9999]">
+      <div class="w-2 h-2 m-2.5 flex justify-center items-center bg-blue-400/60 animate-ping rounded-full "></div>
+  </div>
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+  const cursor = document.getElementById("custom-cursor");
+
+  document.addEventListener("mousemove", (e) => {
+    cursor.style.transform = `translate3d(${e.clientX - 12}px, ${e.clientY - 12}px, 0)`;
+  });
+
+  // Hover effect on links/buttons
+  document.querySelectorAll("a, button").forEach(el => {
+    el.addEventListener("mouseenter", () => {
+      cursor.classList.add("scale-150", "bg-red-500");
+    });
+    el.addEventListener("mouseleave", () => {
+      cursor.classList.remove("scale-150", "bg-red-500");
+    });
+  });
+});
+</script>
+
+
+  <script type="module" src="/js/main.js"></script>
 
 </body>
 
