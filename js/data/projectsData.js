@@ -1,7 +1,13 @@
 
 
 const imageBasePath = "/assets/images/";
-const videoBasePath = "/assets/videos/";
+// const videoBasePath = "/assets/videos/";
+const crs_admin_video = "https://github.com/M-Huzaifa67/huzaifa-portfolio/releases/download/crs_videos/crs-admin.mp4";
+const crs_user_video = "https://github.com/M-Huzaifa67/huzaifa-portfolio/releases/download/crs_videos/crs-user.mp4";
+
+
+
+
 
 
 export const PROJECTS = [
@@ -44,10 +50,21 @@ export const PROJECTS = [
         ],
       },
       {
-        section: "video",
-        thumbnail: imageBasePath + "proj1.jpg",
-        content: "https://huzaifa-portfolio-67.web.app/assets/videos/crs.mp4",
+        section: "videos",
+        content: [
+          {
+            thumbnail: imageBasePath + "proj1.jpg",
+            label: "User Side",
+            src: crs_user_video
+          },
+          {
+            thumbnail: imageBasePath + "proj1.jpg",
+            label: "Admin Side",
+            src: crs_admin_video
+          },
+        ]
       },
+
       {
         section: "link",
         content: "#",
@@ -93,8 +110,12 @@ export const PROJECTS = [
       },
       {
         section: "video",
-        thumbnail: imageBasePath + "foodies.jpeg",
-        content: "assets/videos/food-delivery.mp4",
+        content: [
+          {
+            thumbnail: imageBasePath + "foodies.jpeg",
+            src: ""
+          },
+        ]
       },
       {
         section: "link",
@@ -144,8 +165,12 @@ export const PROJECTS = [
       },
       {
         section: "video",
-        thumbnail: imageBasePath + "proj3.jpg",
-        content: "assets/videos/tourism-guide.mp4",
+        content: [
+          {
+            thumbnail: imageBasePath + "proj3.jpg",
+            src: "#"
+          },
+        ]
       },
       {
         section: "link",
@@ -192,8 +217,12 @@ export const PROJECTS = [
       },
       {
         section: "video",
-        thumbnail: imageBasePath + "chatApp.jpeg",
-        content: "assets/videos/chat-app.mp4",
+        content: [
+          {
+            thumbnail: imageBasePath + "chatApp.jpeg",
+            src: ""
+          },
+        ]
       },
       {
         section: "link",
@@ -239,8 +268,12 @@ export const PROJECTS = [
       },
       {
         section: "video",
-        thumbnail: imageBasePath + "goride.jpeg",
-        content: "assets/videos/goride-demo.mp4",
+        content: [
+          {
+            thumbnail: imageBasePath + "goride.jpeg",
+            src: ""
+          },
+        ]
       },
       {
         section: "link",
@@ -288,8 +321,12 @@ export const PROJECTS = [
       },
       {
         section: "video",
-        thumbnail: imageBasePath + "6valley.jpeg",
-        content: "assets/videos/6valley.mp4",
+        content: [
+          {
+            thumbnail: imageBasePath + "6valley.jpeg",
+            src: ""
+          },
+        ]
       },
       {
         section: "link",
