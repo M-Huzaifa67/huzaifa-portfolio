@@ -237,12 +237,16 @@
         @apply h-auto w-full flex flex-col justify-center items-start px-2 py-3 my-3 rounded-md border-2 border-blue-400/40 shadow-lg shadow-blue-500/50;
     }
 
-    .about-title {
+    .about-heading{
+        @apply text-2xl font-ubuntu font-bold underline decoration-2 underline-offset-8 my-5
+    }
+
+    .about-title{
         @apply text-xl font-oswald font-bold underline decoration-2 underline-offset-8 my-5 text-center;
     }
 
     .about-desc {
-        @apply text-sm md:text-md font-serif ;
+        @apply text-md md:text-lg font-serif;
     }
 
     #experience-container{
@@ -253,20 +257,28 @@
         @apply justify-start items-start px-3 py-3 my-3 rounded-md border-2 border-blue-400/40 shadow-lg shadow-blue-500/50
     }
 
+    .experience-heading{
+        @apply text-2xl font-ubuntu font-bold underline decoration-2 underline-offset-8 my-5
+    }
+
     .experience-title {
-        @apply text-md font-bold;
+        @apply text-xl font-oswald font-bold;
     }
 
     .experience-subtitle {
-        @apply text-sm text-gray-400;
+        @apply text-sm md:text-md text-gray-400;
     }
 
     .experience-desc {
-        @apply list-disc font-oswald text-md pl-3;
+        @apply list-disc font-oswald text-md md:text-lg pl-3;
+    }
+
+    .skills-heading{
+        @apply text-2xl font-ubuntu font-bold underline decoration-2 underline-offset-8 my-5
     }
 
     .skills-title {
-        @apply py-2 text-md;
+        @apply text-xl font-oswald font-bold py-2;
     }
 
     .skills-bar {
@@ -285,15 +297,37 @@
 
     /* project section */
 
-    .project-title {
-        @apply text-lg font-semibold text-gray-900 dark:text-gray-100;
+    .projects-heading{
+        @apply text-2xl font-ubuntu font-bold underline decoration-2 underline-offset-8 my-5
+    }
+    .projects-desc{
+        @apply text-md md:text-lg font-lato mb-8 text-justify indent-3 px-5 break-words hyphens-auto text-gray-500 dark:text-gray-300;
     }
 
-    .project-desc {
-        @apply text-md font-oswald line-clamp-4 text-gray-500 dark:text-gray-300;
+    .project-title {
+        @apply text-lg md:text-xl font-oswald font-semibold text-gray-900 dark:text-gray-100;
     }
+
+    .project-desc{
+      @apply text-md md:text-lg font-lora text-gray-400;
+    }
+
+
 
     /* Form components */
+
+    .contact-us-heading{
+        @apply text-2xl font-ubuntu font-bold underline decoration-2 underline-offset-8 my-5;
+    }
+
+    .contact-us-desc{
+      @apply text-md md:text-lg font-serif;
+    }
+   .contact-us-card{
+        @apply h-auto w-full flex flex-col justify-center items-start px-2 py-3 my-1 rounded-md border-2 border-blue-400/40 shadow-lg shadow-blue-500/50;
+   }
+
+
     .form-input {
         @apply w-full p-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-colors duration-200;
     }
@@ -319,9 +353,6 @@
     .mobile-card {
         @apply flex flex-col w-full justify-start items-start p-2 my-2 shadow-md rounded-md border-2 border-blue-400/40 shadow-blue-500/30;
     }
-
-    /* contact section */
-
 
 
 }

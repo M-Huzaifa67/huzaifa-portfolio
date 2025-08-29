@@ -41,10 +41,11 @@
 
 
   <!-- SEO Meta Tags -->
-   
+
   <meta name="google-site-verification" content="28cuH-llgbR88SIqx83tpB8ljiBSBZdR3r-reDJaz9E">
   <meta name="description"
-content="Hi, I'm Huzaifa — Flutter Developer with experience in Web Development and Node.js backend. Passionate about building modern mobile and web apps. Explore my projects, coding journey, and innovative solutions.">  <meta name="keywords"
+    content="Hi, I'm Huzaifa — Flutter Developer with experience in Web Development and Node.js backend. Passionate about building modern mobile and web apps. Explore my projects, coding journey, and innovative solutions.">
+  <meta name="keywords"
     content="Huzaifa, Huzaifa 67, Flutter Developer, Jr.NodeJs developer, Jr.Web Developer, hybrid developer, mobile app developer, software developer, portfolio">
   <meta name="author" content="Muhammad Huzaifa">
   <meta name="robots" content="index, follow">
@@ -121,7 +122,7 @@ content="Hi, I'm Huzaifa — Flutter Developer with experience in Web Developmen
 
   <!-- circleTyped.js -->
   <script src="https://cdn.jsdelivr.net/npm/circletype@2.3.0/dist/circletype.min.js"></script>
-  
+
 
 
   <!-- AOS CSS -->
@@ -221,7 +222,7 @@ content="Hi, I'm Huzaifa — Flutter Developer with experience in Web Developmen
           </div>
           <div class="flex p-1">
             <div class="about-card" data-aos="fade-up" data-aos-duration="1000">
-              <p class="about-title">
+              <p class="about-heading">
                 About me</p>
               <div class="about-desc h-full px-1 break-words hyphens-auto space-y-3 indent-1 leading-8 text-justify">
                 <p>I am a Computer Science graduate with over 2 years of experience in mobile apps development.
@@ -251,7 +252,7 @@ content="Hi, I'm Huzaifa — Flutter Developer with experience in Web Developmen
       <section id="experiences" class="content-section scroll-mt-16 dark:bg-gray-900 bg-blue-50"
         data-section="experiences">
         <div class="flex h-full flex-col justify-center items-start">
-          <h1 class="text-2xl font-ubuntu font-bold underline decoration-2 underline-offset-8 my-5">Experiences</h1>
+          <h1 class="experience-heading">Experiences</h1>
 
           <div id="experience-container"></div>
 
@@ -279,7 +280,7 @@ content="Hi, I'm Huzaifa — Flutter Developer with experience in Web Developmen
 
       <section id="skills" class="content-section scroll-mt-16 dark:bg-gray-800 bg-gray-50" data-section="skills">
         <div class="flex h-full flex-col justify-center items-start">
-          <h2 class="text-2xl font-ubuntu font-bold underline decoration-2 underline-offset-8 my-5">SKILLS</h2>
+          <h2 class="skills-heading">SKILLS</h2>
           <div id="skills-container" class="h-full w-full space-y-3"></div>
           <!-- <script type="module" src="/utils/scripts/renderSkills.js"></script> -->
         </div>
@@ -288,15 +289,17 @@ content="Hi, I'm Huzaifa — Flutter Developer with experience in Web Developmen
 
       <section id="projects" class="content-section scroll-mt-16 dark:bg-gray-900 bg-blue-50" data-section="projects">
         <div class="flex h-full flex-col justify-center items-start">
-          <h2 class="text-2xl font-ubuntu font-bold underline decoration-2 underline-offset-8 my-5">Projects</h2>
-          <p class="text-sm md:text-md font-lato mb-8 text-justify indent-3 px-5 break-words hyphens-auto" data-aos="fade-up"
-            data-aos-anchor-placement="center-bottom" data-aos-duration="1000">
-            Here are some of my key projects, developed using cutting-edge technologies like Flutter, Google Maps, and
-            more. Each project reflects my problem-solving skills, attention to detail, and passion for creating
-            seamless user experiences. I’ve leveraged best practices in UI/UX design, API integration, and performance
-            optimization to deliver robust and scalable solutions. These works showcase my ability to turn ideas into
-            functional, high-quality applications.
-          </p>
+          <h2 class="projects-heading">Projects</h2>
+          <div data-aos="fade-up" data-aos-anchor-placement="center-bottom" data-aos-duration="1000">
+            <p class="projects-desc">
+              Here are some of my key projects, developed using cutting-edge technologies like Flutter, Google Maps, and
+              more. Each project reflects my problem-solving skills, attention to detail, and passion for creating
+              seamless user experiences. I’ve leveraged best practices in UI/UX design, API integration, and performance
+              optimization to deliver robust and scalable solutions. These works showcase my ability to turn ideas into
+              functional, high-quality applications.
+            </p>
+          </div>
+
 
           <div id="projects-container" class="grid grid-cols-1 sm:grid-cols-2 gap-4"></div>
 
@@ -309,27 +312,42 @@ content="Hi, I'm Huzaifa — Flutter Developer with experience in Web Developmen
 
           <!-- Contact Form -->
           <div class="p-5">
-            <div class="space-y-5 p-5" data-aos="fade-up" data-aos-anchor-placement="center-bottom"
-              data-aos-duration="1000">
-              <div class="flex w-full justify-start">
-                         <h1
-                class="text-2xl font-ubuntu font-bold underline decoration-2 underline-offset-8 my-5 flex justify-center">
-                Contact us</h1> 
-              </div>
-    
-              <div class="flex flex-col md:flex-row justify-end text-center space-x-5 ">
-                <div class="flex items-center justify-center gap-2">
-                  <i class="fas fa-envelope text-blue-500"></i>
-                  <span>huzaifa.cs67@gmail.com</span>
-                </div>
-                <div class="flex items-center justify-center gap-2">
-                  <i class="fas fa-phone text-green-500"></i>
-                  <span>+92 335 1533 981</span>
-                </div>
-              </div>
+            <div class="flex w-full justify-start space-y-3 p-3" data-aos="fade-up"
+              data-aos-anchor-placement="center-bottom" data-aos-duration="1000">
+              <h1 class="contact-us-heading">
+                Contact us</h1>
             </div>
 
-            <div id="contact-form-container" class="p-1"></div>
+
+            <div class="flex flex-col md:flex-row justify-end text-start space-x-5 gap-5">
+
+              <div class="contact-us-card w-full md:w-[60%] flex flex-col justify-between md:mb-16">
+                <div class="contact-us-desc">
+                  <p>Let’s get in touch! I’m open to connecting and collaborating on exciting Flutter projects, job
+                    opportunities, or other professional ventures. Whether you have questions, want to explore
+                    opportunities, or just want to say hello, I’d love to hear from you. Feel free to reach out, and
+                    let’s create something great together!</p>
+                </div>
+
+                <div class="flex w-full justify-between mt-6">
+                  <div class="flex text-xs md:text-sm items-center justify-center gap-2">
+                    <i class="fas fa-envelope text-blue-500"></i>
+                    <span>huzaifa.cs67@gmail.com</span>
+                  </div>
+                  <div class="flex text-xs md:text-sm items-center justify-center gap-2">
+                    <i class="fas fa-phone text-green-500"></i>
+                    <span >+92 335 1533 981</span>
+                  </div>
+                </div>
+
+
+              </div>
+
+
+
+              <div id="contact-form-container" class="p-1"></div>
+            </div>
+
 
           </div>
 
@@ -362,7 +380,8 @@ content="Hi, I'm Huzaifa — Flutter Developer with experience in Web Developmen
           <div class="w-[320px] h-[640px] rounded-[2rem] border-4 border-gray-400 bg-white p-[1px] ">
             <div class="h-full rounded-[2rem] border-6 border-black overflow-hidden px-[1px]">
 
-              <div class="flex justify-between items-center w-full px-5 pb-1 rounded-t-[2rem] bg-black/10 text-black text-[10px] font-medium">
+              <div
+                class="flex justify-between items-center w-full px-5 pb-1 rounded-t-[2rem] bg-black/10 text-black text-[10px] font-medium">
 
                 <span id="notch-time">12:30 pm</span>
 
@@ -444,28 +463,29 @@ content="Hi, I'm Huzaifa — Flutter Developer with experience in Web Developmen
 
 
 
-  <div  id="custom-cursor" class="fixed hidden lg:block w-7 h-7  border-1 border-blue-500  rounded-full pointer-events-none mix-blend-difference z-[9999]">
-      <div class="w-2 h-2 m-2.5 flex justify-center items-center bg-blue-400/60 animate-ping rounded-full "></div>
+  <div id="custom-cursor"
+    class="fixed hidden lg:block w-7 h-7  border-1 border-blue-500  rounded-full pointer-events-none mix-blend-difference z-[9999]">
+    <div class="w-2 h-2 m-2.5 flex justify-center items-center bg-blue-400/60 animate-ping rounded-full "></div>
   </div>
-<script>
-  document.addEventListener("DOMContentLoaded", () => {
-  const cursor = document.getElementById("custom-cursor");
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const cursor = document.getElementById("custom-cursor");
 
-  document.addEventListener("mousemove", (e) => {
-    cursor.style.transform = `translate3d(${e.clientX - 12}px, ${e.clientY - 12}px, 0)`;
-  });
+      document.addEventListener("mousemove", (e) => {
+        cursor.style.transform = `translate3d(${e.clientX - 12}px, ${e.clientY - 12}px, 0)`;
+      });
 
-  // Hover effect on links/buttons
-  document.querySelectorAll("a, button").forEach(el => {
-    el.addEventListener("mouseenter", () => {
-      cursor.classList.add("scale-150", "bg-red-500");
+      // Hover effect on links/buttons
+      document.querySelectorAll("a, button").forEach(el => {
+        el.addEventListener("mouseenter", () => {
+          cursor.classList.add("scale-150", "bg-red-500");
+        });
+        el.addEventListener("mouseleave", () => {
+          cursor.classList.remove("scale-150", "bg-red-500");
+        });
+      });
     });
-    el.addEventListener("mouseleave", () => {
-      cursor.classList.remove("scale-150", "bg-red-500");
-    });
-  });
-});
-</script>
+  </script>
 
 
   <script type="module" src="/js/main.js"></script>

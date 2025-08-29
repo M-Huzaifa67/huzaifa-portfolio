@@ -22,8 +22,8 @@ export function projectCards(containerId) {
       </div>
       <div class="pl-5 flex-1 flex flex-col">
         <div class="flex-1">
-          <h3 class="project-title text-md font-semibold pb-2">${project.title}</h3>
-          <p class="project-desc text-sm">${project.overview}</p>
+          <h3 class="project-title">${project.title}</h3>
+          <p class="project-desc">${project.overview}</p>
         </div>
         <div class="text-center pt-2">
           <button class="view-project-btn text-blue-500 hover:underline" data-project-index="${i}">
