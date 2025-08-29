@@ -69,7 +69,7 @@ content="Hi, I'm Huzaifa — Flutter Developer with experience in Web Developmen
 
 
   <!-- set for whatsapp -->
-  <meta property="og:whatsapp:title" content="Flutter - Jr. NodeJs - Jr. Web Developer">
+  <!-- <meta property="og:whatsapp:title" content="Flutter - Jr. NodeJs - Jr. Web Developer">
   <meta property="og:whatsapp:description"
     content="Explore Huzaifa's portfolio, featuring Flutter projects, showcasing expertise in mobile and web development.">
   <meta property="og:whatsapp:image" content="https://huzaifa-portfolio-67.web.app/assets/social-coverr.png">
@@ -79,7 +79,7 @@ content="Hi, I'm Huzaifa — Flutter Developer with experience in Web Developmen
   <meta property="og:whatsapp:locale" content="en_US">
   <meta property="og:whatsapp:image:width" content="1200">
   <meta property="og:whatsapp:image:height" content="630">
-  <meta property="og:whatsapp:image:type" content="image/png">
+  <meta property="og:whatsapp:image:type" content="image/png"> -->
 
 
   <!-- JSON-LD Structured Data for Schema.org -->
@@ -289,7 +289,7 @@ content="Hi, I'm Huzaifa — Flutter Developer with experience in Web Developmen
       <section id="projects" class="content-section scroll-mt-16 dark:bg-gray-900 bg-blue-50" data-section="projects">
         <div class="flex h-full flex-col justify-center items-start">
           <h2 class="text-2xl font-ubuntu font-bold underline decoration-2 underline-offset-8 my-5">Projects</h2>
-          <p class="text-md mb-8 text-justify indent-3 px-5 break-words hyphens-auto" data-aos="fade-up"
+          <p class="text-sm md:text-md font-lato mb-8 text-justify indent-3 px-5 break-words hyphens-auto" data-aos="fade-up"
             data-aos-anchor-placement="center-bottom" data-aos-duration="1000">
             Here are some of my key projects, developed using cutting-edge technologies like Flutter, Google Maps, and
             more. Each project reflects my problem-solving skills, attention to detail, and passion for creating
@@ -311,10 +311,13 @@ content="Hi, I'm Huzaifa — Flutter Developer with experience in Web Developmen
           <div class="p-5">
             <div class="space-y-5 p-5" data-aos="fade-up" data-aos-anchor-placement="center-bottom"
               data-aos-duration="1000">
-              <h1
+              <div class="flex w-full justify-start">
+                         <h1
                 class="text-2xl font-ubuntu font-bold underline decoration-2 underline-offset-8 my-5 flex justify-center">
-                Contact us</h1>
-              <div class="flex flex-col md:flex-row justify-center text-center space-x-5 ">
+                Contact us</h1> 
+              </div>
+    
+              <div class="flex flex-col md:flex-row justify-end text-center space-x-5 ">
                 <div class="flex items-center justify-center gap-2">
                   <i class="fas fa-envelope text-blue-500"></i>
                   <span>huzaifa.cs67@gmail.com</span>
@@ -388,32 +391,18 @@ content="Hi, I'm Huzaifa — Flutter Developer with experience in Web Developmen
       </div>
 
 
-
-
     </div>
 
 
-
-
-
-
-
-
   </main>
-
 
 
   <!-- Toast (Snackbar) -->
   <div id="global-toast" class="fixed bottom-5 left-0 w-full flex justify-center z-50"></div>
 
 
-
   <!-- Footer slot -->
   <div id="footer-container"></div>
-
-
-
-
 
 
   <script>
@@ -450,11 +439,6 @@ content="Hi, I'm Huzaifa — Flutter Developer with experience in Web Developmen
     circle.dir(-1); // controls text direction
     circle.forceWidth(true); // forces text to fit the circle
     circle.forceHeight(true); // forces text to fit the circle height
-    // circle.fitText(true); // fits text to circle size
-    // circle.forceFontSize(20); // controls font size
-    // circle.forceCircleSize(200);
-
-    // controls circle size
   </script>
 
 

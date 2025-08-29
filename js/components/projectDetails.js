@@ -43,7 +43,7 @@ export function projectDetails() {
         switch (section.section) {
           case "description":
             html += `
-              <div class="mobile-card" data-aos="fade-up" data-aos-anchor-placement="center-bottom" data-aos-duration="${1000 + idx * 200}">
+              <div class="mobile-card break-words hyphens-auto" data-aos="fade-up" data-aos-anchor-placement="center-bottom" data-aos-duration="${1000 + idx * 200}">
                 <p class="text-sm leading-relaxed text-justify">${section.content}</p>
               </div>
             `;
