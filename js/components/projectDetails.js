@@ -19,7 +19,7 @@ export function projectDetails() {
           <div class="mobile-card animate-pulse" data-aos="fade-up" data-aos-anchor-placement="center-bottom" data-aos-duration="1000"> 
             <div class="flex items-start justify-start"> 
               <h2 class="text-xs text-red-400 break-words hyphens-auto p-1 font-light text-start">
-                This portfolio is in progress. For now, only the <b><i>Course Recommendation App</i></b> demo videos are available to view.
+                This portfolio is in progress. For now, only the <b><i>Course Recommendation App</i></b> videos are available to view.
               </h2> 
             </div>
           </div>
@@ -31,8 +31,8 @@ export function projectDetails() {
     html += `
       <div class="mobile-card" data-aos="fade-up" data-aos-anchor-placement="center-bottom" data-aos-duration="1000}"> 
       <div class"flex items-start justify-start"> 
-      <h2 class="text-md font-bold text-start">${project.title}</h2> 
-      <p class="text-sm text-gray-600 dark:text-gray-400 text-start mb-2">${project.overview}</p> 
+      <h2 class="text-sm font-bold text-start">${project.title}</h2> 
+      <p class="text-sm italic text-gray-600 dark:text-gray-400 text-start mb-2">${project.overview}</p> 
       </div>
       </div>
     `;

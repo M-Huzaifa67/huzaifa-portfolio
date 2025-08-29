@@ -5,7 +5,7 @@ export function contactForm(containerId) {
 
   container.innerHTML = `
     <form id="contact-form" class="space-y-4"
-      data-aos="fade-up" data-aos-anchor-placement="center-bottom" data-aos-duration="1500">
+      data-aos="fade-up" data-aos-anchor-placement="center-bottom" data-aos-duration="800">
 
       <input type="text" name="from_name" placeholder="Your Name" required
         class="form-input w-full text-gray-400 dark:text-gray-50" />

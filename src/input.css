@@ -220,6 +220,9 @@
         scroll-snap-align: start;
         /* Optional for better scroll control */
     }
+    
+
+
 
 
 
@@ -246,7 +249,7 @@
     }
 
     .about-desc {
-        @apply text-md md:text-lg font-serif;
+        @apply text-md md:text-md font-noto italic;
     }
 
     #experience-container{
@@ -262,15 +265,20 @@
     }
 
     .experience-title {
-        @apply text-xl font-oswald font-bold;
+        @apply text-lg font-oswald font-bold;
     }
 
     .experience-subtitle {
-        @apply text-sm md:text-md text-gray-400;
+        @apply text-sm md:text-sm text-gray-400;
     }
 
     .experience-desc {
-        @apply list-disc font-oswald text-md md:text-lg pl-3;
+        @apply list-disc font-noto text-md md:text-md pl-3;
+    }
+
+    .experience-bullets{
+       @apply list-disc font-oswald text-md md:text-md pl-3;
+
     }
 
     .skills-heading{
@@ -278,7 +286,7 @@
     }
 
     .skills-title {
-        @apply text-xl font-oswald font-bold py-2;
+        @apply text-md font-oswald font-bold py-2;
     }
 
     .skills-bar {
@@ -293,6 +301,13 @@
         /* hover:opacity-70 */
         hover:brightness-70 dark:shadow-blue-500/70 ease-in-out transition-all duration-300
     }
+    .profile-image-border {
+        @apply rounded-full
+        /* opacity-40 */
+        brightness-60 border-blue-500 shadow-xl shadow-blue-500/50 hover:scale-105
+        /* hover:opacity-70 */
+        hover:brightness-70 dark:shadow-blue-500/70 ease-in-out transition-all duration-300
+    }
 
 
     /* project section */
@@ -301,15 +316,15 @@
         @apply text-2xl font-ubuntu font-bold underline decoration-2 underline-offset-8 my-5
     }
     .projects-desc{
-        @apply text-md md:text-lg font-lato mb-8 text-justify indent-3 px-5 break-words hyphens-auto text-gray-500 dark:text-gray-300;
+        @apply text-md md:text-md font-mono  italic mb-8 text-justify indent-3 px-5 break-words hyphens-auto text-gray-500 dark:text-gray-300;
     }
 
     .project-title {
-        @apply text-lg md:text-xl font-oswald font-semibold text-gray-900 dark:text-gray-100;
+        @apply text-lg md:text-lg font-oswald font-semibold text-gray-900 dark:text-gray-100;
     }
 
     .project-desc{
-      @apply text-md md:text-lg font-lora text-gray-400;
+      @apply text-md md:text-md font-lora line-clamp-5 text-gray-400;
     }
 
 
@@ -321,7 +336,7 @@
     }
 
     .contact-us-desc{
-      @apply text-md md:text-lg font-serif;
+      @apply text-md md:text-md font-noto italic;
     }
    .contact-us-card{
         @apply h-auto w-full flex flex-col justify-center items-start px-2 py-3 my-1 rounded-md border-2 border-blue-400/40 shadow-lg shadow-blue-500/50;

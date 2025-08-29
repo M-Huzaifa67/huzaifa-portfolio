@@ -2,12 +2,12 @@
 import { SKILLS } from '../data/skillsData.js';
 
 function createSkillsCard(skill, index) {
-  const delay = index * 100 + 100;
+  const delay = index * 70 + 100;
   return  `
     <div 
       class="skills-card w-full h-auto p-2 border-3 border-blue-300/10 rounded-lg shadow-md" 
       data-aos="fade-up" 
-      data-aos-duration="800" 
+      data-aos-duration="700" 
       data-aos-delay="${delay}">
       <p class="skills-title">${skill.title}</p>
       <div class="flex space-x-5 items-center">

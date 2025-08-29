@@ -2,13 +2,13 @@
 import { experienceData } from "../data/experienceData.js";
 
 function createExperienceCard(exp, index) {
-  const delay = index * 100 + 100;
+  const delay = index * 70 + 100;
   return `
     <div 
       class="experience-card w-full" 
       data-aos="fade-up" 
       data-aos-anchor-placement="center-bottom"
-      data-aos-duration="1000"
+      data-aos-duration="700"
       data-aos-delay="${delay}"
     >
       <!-- Position & Company -->
@@ -22,11 +22,11 @@ function createExperienceCard(exp, index) {
       </div>
 
       <!-- Role -->
-      <p class="experience-desc">${exp.role}</p>
+      <p class="experience-desc"><i>${exp.role}</i></p>
 
       <!-- Work / Achievements -->
-      <div class="pl-4">
-        <ul class="experience-desc list-disc">
+      <div class="pl-4 pt-3">
+        <ul class="experience-bullets list-disc space-y-1">
           ${exp.work.map(item => item ? `<li>${item}</li>` : "").join("")}
         </ul>
       </div>

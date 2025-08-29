@@ -12,12 +12,12 @@ export function projectCards(containerId) {
       class="project-card transition duration-300 ease-in-out flex h-full bg-white dark:bg-gray-800 p-3 rounded-lg shadow-md"
       data-aos="zoom-in-up"
       data-aos-duration="1000"
-      data-aos-delay="${i*100 + 100}"
+      data-aos-delay="${i*70 + 100}"
     >
       <div class="aspect-video w-25 h-auto"    
         data-aos="flip-right"
         data-aos-easing="ease-out-cubic"
-        data-aos-delay="${i*150 + 200}">
+        data-aos-delay="${i*200 + 300}">
         <img src="${project.image}" alt="${project.title}" loading="lazy" class="object-cover rounded-lg">
       </div>
       <div class="pl-5 flex-1 flex flex-col">

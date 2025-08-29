@@ -153,29 +153,34 @@
 
       <!-- bg-[url('/assets/images/prof.jpg')] bg-cover bg-center -->
       <section id="home" class="content-section scroll-mt-16 dark:bg-gray-900 bg-blue-50" data-section="home">
-        <div class="flex h-[95%] flex-col md:flex-row">
-          <div class="basis-[50%] flex flex-col justify-center items-start" data-aos="fade-down-right"
-            data-aos-duration="1000" data-aos-mirror="false" data-aos-once="true">
-            <h1 class="intro text-gray-900 dark:text-white">Hi, This is Huzaifa</h1>
-            <h1 class="py-2 pl-5"> <span class="type"></span></h1>
-          </div>
-          <div
-            class="basis-[50%] flex relative w-full h-full justify-center items-center animate__animated animate__fadeInLeft ">
-            <div class="size-55 sm:size-77 relative  hover:animate-pulse" data-aos="fade-up-left"
-              data-aos-duration="1200" data-aos-mirror="false" data-aos-once="true">
-              <div class="profile-image absolute inset-0 animate-spin"></div>
-              <div class="profile-image absolute inset-1 bg-[url('/assets/dp.png')] 
+        <div class="h-[100%]">
+          <div class="flex h-[95%] flex-col md:flex-row">
+            <div class="basis-[50%] flex flex-col justify-center items-start" data-aos="fade-down-right"
+              data-aos-duration="1000" data-aos-mirror="false" data-aos-once="true">
+              <h1 class="intro text-gray-900 dark:text-white">Hi, This is Huzaifa</h1>
+              <h1 class="py-2 pl-5"> <span class="type"></span></h1>
+            </div>
+            <div
+              class="basis-[50%] flex relative w-full h-full justify-center items-center animate__animated animate__fadeInLeft ">
+              <div class="size-55 sm:size-77 relative animate-pulse" data-aos="fade-up-left" data-aos-duration="1200"
+                data-aos-mirror="false" data-aos-once="true">
+                <div class="profile-image-border absolute inset-0 animate-pulse"></div>
+                <div class="profile-image absolute inset-1 bg-[url('/assets/dp-round.png')] 
                   brightness-50 hover:brightness-90 bg-cover bg-center">
+                </div>
               </div>
             </div>
           </div>
+          <!-- write qoutes here -->
+          <div class="flex h-[5%] justify-center items-center ">
+            <div class="text-sm lg:text-md font-mono text-blue-300 text-center" data-aos="fade-up"
+              data-aos-duration="1000" data-aos-mirror="false" data-aos-once="true">
+              <p>Silence is not weakness.</p>
+              <p>It's the preparation of a storm</p>
+            </div>
+          </div>
         </div>
-        <!-- write qoutes here -->
-        <div class="flex justify-center items-center">
-          <p class="text-sm lg:text-md font-mono text-blue-300 animate__animated animate__fadeInUp animate__delay-1s"
-            data-aos="fade-up" data-aos-duration="1000" data-aos-mirror="false" data-aos-once="true">
-            "Silence is not weakness; it's the preparation of a storm"</p>
-        </div>
+
 
       </section>
 
@@ -308,50 +313,45 @@
 
       <section id="contact" class="content-section scroll-mt-16 dark:bg-gray-800 bg-gray-50 dark:text-white"
         data-section="contact">
-        <div class="w-full h-full flex flex-col justify-between">
+        <div class="w-full h-full relative flex flex-col justify-start">
 
           <!-- Contact Form -->
-          <div class="p-5">
-            <div class="flex w-full justify-start space-y-3 p-3" data-aos="fade-up"
-              data-aos-anchor-placement="center-bottom" data-aos-duration="1000">
-              <h1 class="contact-us-heading">
-                Contact us</h1>
-            </div>
-
-
-            <div class="flex flex-col md:flex-row justify-end text-start space-x-5 gap-5">
-
-              <div class="contact-us-card w-full md:w-[60%] flex flex-col justify-between md:mb-16">
-                <div class="contact-us-desc">
-                  <p>Let’s get in touch! I’m open to connecting and collaborating on exciting Flutter projects, job
-                    opportunities, or other professional ventures. Whether you have questions, want to explore
-                    opportunities, or just want to say hello, I’d love to hear from you. Feel free to reach out, and
-                    let’s create something great together!</p>
-                </div>
-
-                <div class="flex w-full justify-between mt-6">
-                  <div class="flex text-xs md:text-sm items-center justify-center gap-2">
-                    <i class="fas fa-envelope text-blue-500"></i>
-                    <span>huzaifa.cs67@gmail.com</span>
-                  </div>
-                  <div class="flex text-xs md:text-sm items-center justify-center gap-2">
-                    <i class="fas fa-phone text-green-500"></i>
-                    <span >+92 335 1533 981</span>
-                  </div>
-                </div>
-
-
-              </div>
-
-
-
-              <div id="contact-form-container" class="p-1"></div>
-            </div>
-
-
+          <div class="flex justify-start space-y-3 p-3" data-aos="fade-up" data-aos-anchor-placement="center-bottom"
+            data-aos-duration="500">
+            <h1 class="contact-us-heading">
+              Contact us</h1>
           </div>
 
-          <div class="w-full flex flex-col-reverse lg:flex-row items-center lg:gap-y-5 gap-4">
+          <div class="flex flex-col md:flex-row text-start space-x-5">
+
+            <div class="contact-us-card w-full md:w-[60%] flex flex-col justify-between mb-16" data-aos="zoom-in-up"
+              data-aos-duration="700" data-aos-delay="500">
+              <div class="contact-us-desc">
+                <p>Let’s get in touch! I’m open to connecting and collaborating on exciting Flutter projects, job
+                  opportunities, or other professional ventures. Whether you have questions, want to explore
+                  opportunities, or just want to say hello, I’d love to hear from you. Feel free to reach out, and
+                  let’s create something great together!</p>
+              </div>
+
+              <div class="flex w-full flex-col md:flex-row items-start md:justify-between mt-6 gap-2 md:gap-0">
+                <div class="flex text-xs md:text-sm items-center justify-center gap-2">
+                  <i class="fas fa-envelope text-blue-500"></i>
+                  <span>huzaifa.cs67@gmail.com</span>
+                </div>
+                <div class="flex text-xs md:text-sm items-center justify-center gap-2">
+                  <i class="fas fa-phone text-green-500"></i>
+                  <span>+92 335 1533 981</span>
+                </div>
+              </div>
+            </div>
+
+
+            <div id="contact-form-container" class="p-1"></div>
+          </div>
+
+          <!-- yahan pe extra empty space ha -->
+
+          <div class="w-full absolute bottom-0 flex flex-col-reverse lg:flex-row items-center lg:gap-y-5 gap-4">
 
             <div class="flex-1 hidden lg:block"></div>
 
@@ -362,6 +362,7 @@
             <div id="cv-download-container"></div>
 
           </div>
+
         </div>
       </section>
 
@@ -425,6 +426,7 @@
 
 
   <script>
+    // into animation
     document.addEventListener("DOMContentLoaded", function () {
       new Typed(
         ".type", {
@@ -434,30 +436,44 @@
         loop: true
       });
     });
-  </script>
 
-  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const profileImage = document.querySelector(".profile-image");
+      const profileImageBorder = document.querySelector(".profile-image-border");
+
+      profileImage.addEventListener("mouseenter", () => {
+        profileImageBorder.classList.remove("animate-pulse");
+        profileImageBorder.classList.add("animate-ping");
+      });
+
+      profileImage.addEventListener("mouseleave", () => {
+        profileImageBorder.classList.remove("animate-ping");
+        profileImageBorder.classList.add("animate-pulse");
+      });
+    });
+
+
+
+    // time on mobile
     document.addEventListener("DOMContentLoaded", function () {
       const now = new Date();
-
       let hours = now.getHours();
       const minutes = now.getMinutes().toString().padStart(2, "0");
       const ampm = hours >= 12 ? "pm" : "am";
       hours = hours % 12;
       hours = hours ? hours : 12; // 0 => 12
-
       document.getElementById("notch-time").textContent = `${hours}:${minutes} ${ampm}`;
     });
-  </script>
 
 
-
-  <script>
+    // skill circle animation
     const circle = new CircleType(document.getElementById("circle-text"));
     circle.radius(115);
     circle.dir(-1); // controls text direction
     circle.forceWidth(true); // forces text to fit the circle
     circle.forceHeight(true); // forces text to fit the circle height
+
+
   </script>
 
 
