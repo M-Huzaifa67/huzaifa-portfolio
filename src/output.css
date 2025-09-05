@@ -13,7 +13,6 @@
     --color-red-500: oklch(63.7% 0.237 25.331);
     --color-red-600: oklch(57.7% 0.245 27.325);
     --color-orange-400: oklch(75% 0.183 55.934);
-    --color-amber-600: oklch(66.6% 0.179 58.318);
     --color-yellow-50: oklch(98.7% 0.026 102.212);
     --color-yellow-300: oklch(90.5% 0.182 98.111);
     --color-yellow-400: oklch(85.2% 0.199 91.936);
@@ -323,17 +322,11 @@
       max-width: 96rem;
     }
   }
-  .m-0 {
-    margin: calc(var(--spacing) * 0);
-  }
   .m-2 {
     margin: calc(var(--spacing) * 2);
   }
   .m-2\.5 {
     margin: calc(var(--spacing) * 2.5);
-  }
-  .m-3 {
-    margin: calc(var(--spacing) * 3);
   }
   .m-5 {
     margin: calc(var(--spacing) * 5);
@@ -433,9 +426,6 @@
   .h-150 {
     height: calc(var(--spacing) * 150);
   }
-  .h-\[5\%\] {
-    height: 5%;
-  }
   .h-\[5px\] {
     height: 5px;
   }
@@ -448,11 +438,8 @@
   .h-\[64px\] {
     height: 64px;
   }
-  .h-\[70\%\] {
-    height: 70%;
-  }
-  .h-\[95\%\] {
-    height: 95%;
+  .h-\[85\%\] {
+    height: 85%;
   }
   .h-\[100\%\] {
     height: 100%;
@@ -634,9 +621,6 @@
   .justify-start {
     justify-content: flex-start;
   }
-  .gap-1 {
-    gap: calc(var(--spacing) * 1);
-  }
   .gap-2 {
     gap: calc(var(--spacing) * 2);
   }
@@ -651,9 +635,6 @@
   }
   .gap-6 {
     gap: calc(var(--spacing) * 6);
-  }
-  .gap-9 {
-    gap: calc(var(--spacing) * 9);
   }
   .space-y-1 {
     :where(& > :not(:last-child)) {
@@ -779,9 +760,6 @@
   .border-gray-400 {
     border-color: var(--color-gray-400);
   }
-  .bg-amber-600 {
-    background-color: var(--color-amber-600);
-  }
   .bg-black {
     background-color: var(--color-black);
   }
@@ -820,9 +798,6 @@
   }
   .bg-blue-600 {
     background-color: var(--color-blue-600);
-  }
-  .bg-blue-700 {
-    background-color: var(--color-blue-700);
   }
   .bg-gray-50 {
     background-color: var(--color-gray-50);
@@ -944,9 +919,6 @@
   .py-3 {
     padding-block: calc(var(--spacing) * 3);
   }
-  .py-8 {
-    padding-block: calc(var(--spacing) * 8);
-  }
   .pt-1 {
     padding-top: calc(var(--spacing) * 1);
   }
@@ -986,8 +958,14 @@
   .indent-1 {
     text-indent: calc(var(--spacing) * 1);
   }
+  .font-lora {
+    font-family: var(--font-lora);
+  }
   .font-mono {
     font-family: var(--font-mono);
+  }
+  .font-noto {
+    font-family: var(--font-noto);
   }
   .font-sans {
     font-family: var(--font-sans);
@@ -1454,12 +1432,6 @@
       padding-inline: calc(var(--spacing) * 6);
     }
   }
-  .md\:text-sm {
-    @media (width >= 48rem) {
-      font-size: var(--text-sm);
-      line-height: var(--tw-leading, var(--text-sm--line-height));
-    }
-  }
   .md\:text-md {
     @media (width >= 48rem) {
       font-size: var(--text-md);
@@ -1904,8 +1876,8 @@
   .about-heading {
     margin-block: calc(var(--spacing) * 5);
     font-family: var(--font-ubuntu);
-    font-size: var(--text-2xl);
-    line-height: var(--tw-leading, var(--text-2xl--line-height));
+    font-size: var(--text-xl);
+    line-height: var(--tw-leading, var(--text-xl--line-height));
     --tw-font-weight: var(--font-weight-bold);
     font-weight: var(--font-weight-bold);
     text-decoration-line: underline;
@@ -1926,7 +1898,8 @@
   }
   .about-desc {
     font-family: var(--font-noto);
-    font-size: var(--text-md);
+    font-size: var(--text-sm);
+    line-height: var(--tw-leading, var(--text-sm--line-height));
     font-style: italic;
     @media (width >= 48rem) {
       font-size: var(--text-md);
@@ -1960,8 +1933,8 @@
   .experience-heading {
     margin-block: calc(var(--spacing) * 5);
     font-family: var(--font-ubuntu);
-    font-size: var(--text-2xl);
-    line-height: var(--tw-leading, var(--text-2xl--line-height));
+    font-size: var(--text-xl);
+    line-height: var(--tw-leading, var(--text-xl--line-height));
     --tw-font-weight: var(--font-weight-bold);
     font-weight: var(--font-weight-bold);
     text-decoration-line: underline;
@@ -1976,8 +1949,8 @@
     font-weight: var(--font-weight-bold);
   }
   .experience-subtitle {
-    font-size: var(--text-sm);
-    line-height: var(--tw-leading, var(--text-sm--line-height));
+    font-size: var(--text-xs);
+    line-height: var(--tw-leading, var(--text-xs--line-height));
     color: var(--color-gray-400);
     @media (width >= 48rem) {
       font-size: var(--text-sm);
@@ -1988,7 +1961,8 @@
     list-style-type: disc;
     padding-left: calc(var(--spacing) * 3);
     font-family: var(--font-noto);
-    font-size: var(--text-md);
+    font-size: var(--text-sm);
+    line-height: var(--tw-leading, var(--text-sm--line-height));
     @media (width >= 48rem) {
       font-size: var(--text-md);
     }
@@ -1997,7 +1971,8 @@
     list-style-type: disc;
     padding-left: calc(var(--spacing) * 3);
     font-family: var(--font-oswald);
-    font-size: var(--text-md);
+    font-size: var(--text-sm);
+    line-height: var(--tw-leading, var(--text-sm--line-height));
     @media (width >= 48rem) {
       font-size: var(--text-md);
     }
@@ -2005,8 +1980,8 @@
   .skills-heading {
     margin-block: calc(var(--spacing) * 5);
     font-family: var(--font-ubuntu);
-    font-size: var(--text-2xl);
-    line-height: var(--tw-leading, var(--text-2xl--line-height));
+    font-size: var(--text-xl);
+    line-height: var(--tw-leading, var(--text-xl--line-height));
     --tw-font-weight: var(--font-weight-bold);
     font-weight: var(--font-weight-bold);
     text-decoration-line: underline;
@@ -2114,8 +2089,8 @@
   .projects-heading {
     margin-block: calc(var(--spacing) * 5);
     font-family: var(--font-ubuntu);
-    font-size: var(--text-2xl);
-    line-height: var(--tw-leading, var(--text-2xl--line-height));
+    font-size: var(--text-xl);
+    line-height: var(--tw-leading, var(--text-xl--line-height));
     --tw-font-weight: var(--font-weight-bold);
     font-weight: var(--font-weight-bold);
     text-decoration-line: underline;
@@ -2128,7 +2103,8 @@
     text-align: justify;
     text-indent: calc(var(--spacing) * 3);
     font-family: var(--font-mono);
-    font-size: var(--text-md);
+    font-size: var(--text-sm);
+    line-height: var(--tw-leading, var(--text-sm--line-height));
     overflow-wrap: break-word;
     -webkit-hyphens: auto;
     hyphens: auto;
@@ -2143,8 +2119,7 @@
   }
   .project-title {
     font-family: var(--font-oswald);
-    font-size: var(--text-lg);
-    line-height: var(--tw-leading, var(--text-lg--line-height));
+    font-size: var(--text-md);
     --tw-font-weight: var(--font-weight-semibold);
     font-weight: var(--font-weight-semibold);
     color: var(--color-gray-900);
@@ -2162,7 +2137,8 @@
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 5;
     font-family: var(--font-lora);
-    font-size: var(--text-md);
+    font-size: var(--text-sm);
+    line-height: var(--tw-leading, var(--text-sm--line-height));
     color: var(--color-gray-400);
     @media (width >= 48rem) {
       font-size: var(--text-md);
@@ -2171,8 +2147,8 @@
   .contact-us-heading {
     margin-block: calc(var(--spacing) * 5);
     font-family: var(--font-ubuntu);
-    font-size: var(--text-2xl);
-    line-height: var(--tw-leading, var(--text-2xl--line-height));
+    font-size: var(--text-xl);
+    line-height: var(--tw-leading, var(--text-xl--line-height));
     --tw-font-weight: var(--font-weight-bold);
     font-weight: var(--font-weight-bold);
     text-decoration-line: underline;
@@ -2181,7 +2157,8 @@
   }
   .contact-us-desc {
     font-family: var(--font-noto);
-    font-size: var(--text-md);
+    font-size: var(--text-sm);
+    line-height: var(--tw-leading, var(--text-sm--line-height));
     font-style: italic;
     @media (width >= 48rem) {
       font-size: var(--text-md);

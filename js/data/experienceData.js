@@ -26,7 +26,7 @@ export const experienceData = [
   },
   {
     position: "Flutter Developer & Graphic Designer",
-    company: "PSEB (at PTCP)",
+    company: "From PM of Pakistan (at PTCP)",
     place: "Peshawar",
     date: "2024",
     role: "Worked on mobile app development and graphics as part of a structured training program.",

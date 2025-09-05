@@ -32,7 +32,7 @@ export function projectDetails() {
       <div class="mobile-card" data-aos="fade-up" data-aos-anchor-placement="center-bottom" data-aos-duration="1000}"> 
       <div class"flex items-start justify-start"> 
       <h2 class="text-sm font-bold text-start">${project.title}</h2> 
-      <p class="text-sm italic text-gray-600 dark:text-gray-400 text-start mb-2">${project.overview}</p> 
+      <p class="text-xs font-noto italic text-gray-600 dark:text-gray-400 text-start mb-2">${project.overview}</p> 
       </div>
       </div>
     `;
@@ -44,7 +44,7 @@ export function projectDetails() {
           case "description":
             html += `
               <div class="mobile-card break-words hyphens-auto" data-aos="fade-up" data-aos-anchor-placement="center-bottom" data-aos-duration="${1000 + idx * 200}">
-                <p class="text-sm leading-relaxed text-justify">${section.content}</p>
+                <p class="text-xs font-lora leading-relaxed text-justify">${section.content}</p>
               </div>
             `;
             break;
@@ -54,8 +54,8 @@ export function projectDetails() {
           case "My Contributions":
             html += `
               <div class="mobile-card" data-aos="fade-up" data-aos-anchor-placement="center-bottom" data-aos-duration="${1000 + idx * 200}">
-                <h3 class="font-semibold mb-2">${section.section}</h3>
-                <ul class="list-disc list-outside pl-5 space-y-1 text-sm">
+                <h3 class="font-semibold font-noto mb-2">${section.section}</h3>
+                <ul class="list-disc list-outside pl-5 space-y-1 text-xs font-noto">
                   ${section.content.map(item => `<li>${item}</li>`).join("")}
                 </ul>
               </div>
