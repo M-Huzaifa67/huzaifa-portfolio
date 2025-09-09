@@ -11,10 +11,10 @@
   <title>Huzaifa - Flutter - Jr. NodeJs & Web Developer</title>
 
   <!-- Favicon -->
-  <link rel="icon" type="image/png" href="/assets/dp-round.png">
+  <link rel="icon" href="/assets/dp-round.png?v=2" type="image/png">
   <!-- set icon/logo for website/portfolio -->
-  <link rel="apple-touch-icon" href="/assets/dp-round.png">
-  <link rel="shortcut icon" href="/assets/dp-round.png" type="image/png">
+  <link rel="apple-touch-icon" href="/assets/dp-round.png?v=2">
+  <link rel="shortcut icon" href="/assets/dp-round.png?v=2" type="image/png">
   <!-- <link rel="icon" href="https://huzaifa-portfolio-67.web.app/assets/dp-round.png" type="image/png"> -->
   <!-- <link rel="apple-touch-icon" href="https://huzaifa-portfolio-67.web.app/assets/dp-round.png"> -->
   <!-- <link rel="icon" type="image/png" sizes="32x32" href="https://huzaifa-portfolio-67.web.app/assets/dp-round.png"> -->
@@ -142,7 +142,6 @@
 
   <!-- <div id="mobile-menu-container"></div> -->
 
-
   <!-- Main Content -->
   <main class="flex justify-center">
 
@@ -152,43 +151,62 @@
 
       <!-- bg-[url('/assets/images/prof.jpg')] bg-cover bg-center -->
       <section id="home" class="content-section dark:bg-gray-900 bg-blue-50" data-section="home">
-        <div class="h-[100%]"> 
-        <div class="h-[64px]"></div>
-        <div class="flex h-[85%] flex-col md:flex-row">
-          <div class="basis-[50%] flex flex-col justify-center items-start" data-aos="fade-down-right"
-            data-aos-duration="1000" data-aos-mirror="false" data-aos-once="true">
-            <h1 class="intro text-gray-900 dark:text-white">Hi, This is Huzaifa</h1>
-            <h1 class="py-2 pl-5"> <span class="type"></span></h1>
-          </div>
-          <div
-            class="basis-[50%] flex relative w-full h-full justify-center items-center animate__animated animate__fadeInLeft ">
-            <div class="size-55 sm:size-77 relative animate-pulse" data-aos="fade-up-left" data-aos-duration="1200"
-              data-aos-mirror="false" data-aos-once="true">
-              <div class="profile-image-border absolute inset-0 animate-pulse"></div>
-              <div class="profile-image absolute inset-1 bg-[url('/assets/dp-round.png')] 
+        <div class="h-[100%] w-full">
+          <div class="flex h-[92%] flex-col md:flex-row">
+            <div class="basis-[50%] flex flex-col justify-center items-start" data-aos="fade-down-right"
+              data-aos-duration="1000" data-aos-mirror="false" data-aos-once="true">
+              <h1 class="intro text-gray-900 dark:text-white">Hi, This is Huzaifa</h1>
+              <h1 class="py-2 pl-5"> <span class="type"></span></h1>
+            </div>
+            <div
+              class="basis-[50%] flex relative w-full h-full justify-center items-center animate__animated animate__fadeInLeft ">
+              <div class="size-55 sm:size-77 relative animate-pulse" data-aos="fade-up-left" data-aos-duration="1200"
+                data-aos-mirror="false" data-aos-once="true">
+                <div class="profile-image-border absolute inset-0 animate-pulse" style="animation-duration: 2s;"></div>
+                <div class="profile-image absolute inset-1 bg-[url('/assets/dp-round.png')] 
                   brightness-50 hover:brightness-90 bg-cover bg-center">
+                </div>
               </div>
             </div>
           </div>
-        </div>
-                <!-- write qoutes here -->
-        <div class="flex justify-center items-center">
-          <div class="text-sm lg:text-md font-mono text-blue-300 text-center" data-aos="fade-up"
-            data-aos-duration="1000" data-aos-mirror="false" data-aos-once="true">
-            <p>Silence is not weakness.</p>
-            <p>It's the preparation of a storm</p>
+          <!-- write qoutes here -->
+          <div class="flex justify-center items-center">
+            <div class="text-sm lg:text-md font-mono text-blue-300 text-center" data-aos="fade-up"
+              data-aos-duration="500" data-aos-mirror="false" data-aos-once="true">
+              <p>Silence is not weakness.</p>
+              <p>It's the preparation of a storm</p>
+            </div>
           </div>
-        </div>
         </div>
 
 
       </section>
 
-      <section id="about" class="content-section scroll-mt-16 dark:bg-gray-800 bg-gray-50" data-section="about">
-        <div class="h-full w-full flex flex-col-reverse lg:flex-row items-center">
-          <div class="flex h-full p-5 animate-full-bounce">
+      <section id="about" class="content-section dark:bg-gray-800 bg-gray-50" data-section="about">
+        <div class="w-full flex flex-col-reverse items-center py-3">
+          <!-- lg:flex-row -->
+          <div class="marquee-container relative w-full overflow-hidden h-[99px] bg-gray-100 dark:bg-gray-800">
+            <div id="marquee" class="flex gap-4 pr-35">
+              <div class="card aos-card"><img src="/assets/logos/flutter_logo.png" class="marquee-card"><span> • Flutter
+                  & Dart</span></div>
+              <div class="card aos-card"><img src="/assets/logos/firebase_logo.png" class="marquee-card"><span> •
+                  Firebase</span>
+              </div>
+              <div class="card aos-card"><img src="/assets/logos/nodejs_logo.png" class="marquee-card"><span> •
+                  NodeJs</span></div>
+              <div class="card aos-card"><img src="/assets/logos/web_logo.png" class="marquee-card"><span> •
+                  Website</span></div>
+              <div class="card aos-card"><img src="/assets/logos/figma_logo.png" class="marquee-card"><span> •
+                  UI/UX</span></div>
+            </div>
+          </div>
 
-            <!-- <div class="relative w-full h-full flex items-end justify-end">
+
+
+          <!-- <div class="flex h-full p-5 animate-full-bounce"> -->
+
+          <!-- 5 lines old, center my dp -->
+          <!-- <div class="relative w-full h-full flex items-end justify-end">
               <div class="size-55 sm:size-77 relative">
                 <div class="absolute inset-3 indent-1 rounded-full border-t-4 border-blue-500 border-opacity-50 animate-spin animate__delay-2s" style="animation-duration: 5s;"></div>
                 <div class="absolute inset-4 rounded-full border-b-4 border-blue-600 border-opacity-50 animate-spin" style="animation-duration: 5s;"></div>
@@ -197,15 +215,14 @@
             </div> -->
 
 
-
-            <!-- Curved Animated Text with Center Image -->
-            <div class="relative w-full h-full flex items-end justify-end">
+          <!-- new round circle, center app logo -->
+          <!-- Curved Animated Text with Center Image -->
+          <!-- <div class="relative w-full h-full flex items-end justify-end">
               <div class="size-66 relative">
                 <div class="absolute inset-2 rounded-full border-t-4 border-blue-500 border-opacity-50 animate-spin">
                 </div>
                 <div class="absolute inset-4 rounded-full border-b-4 border-blue-600 border-opacity-50 animate-spin">
                 </div>
-                <!-- Rotating text -->
                 <div id="circle-text"
                   class="absolute inset-6 flex items-center justify-center animate-spin text-black dark:text-white uppercase tracking-widest"
                   style="animation-duration: 12s;">
@@ -216,15 +233,14 @@
                   <span><i class="fas fa-sitemap text-yellow-400"></i> • MVC</span>
                   <span><i class="fas fa-paint-brush text-pink-400"></i> • UI/UX Design</span>
                 </div>
-
-                <!-- Static center image -->
                 <div
                   class="absolute inset-10 rounded-full bg-[url('/assets/icons/mob-app-dev.jpg')] brightness-50 hover:brightness-90 hover:scale-120 z-10 bg-cover bg-center">
                 </div>
               </div>
-            </div>
+            </div> -->
 
-          </div>
+          <!-- </div> -->
+
           <div class="flex p-1">
             <div class="about-card" data-aos="fade-up" data-aos-duration="1000">
               <p class="about-heading">
@@ -316,38 +332,40 @@
         <div class="w-full h-full flex flex-col justify-start">
 
           <!-- Contact Form -->
-            <div class="flex justify-start space-y-3 p-3" data-aos="fade-up"
-              data-aos-anchor-placement="center-bottom" data-aos-duration="500">
-              <h1 class="contact-us-heading">
-                Contact us</h1>
-            </div>
+          <div class="flex justify-start space-y-3 p-3" data-aos="fade-up" data-aos-anchor-placement="center-bottom"
+            data-aos-duration="500">
+            <h1 class="contact-us-heading">
+              Contact us</h1>
+          </div>
 
 
-            <div class="flex flex-col md:flex-row justify-end text-start space-x-5 gap-5">
+          <div class="flex flex-col md:flex-row justify-end text-start space-x-5 gap-5">
 
-              <div class="contact-us-card w-full md:w-[60%] flex flex-col justify-between md:mb-16"
-                data-aos="zoom-in-up" data-aos-duration="700" data-aos-delay="500">
-                <div class="contact-us-desc">
-                  <p>Let’s get in touch! I’m open to connecting and collaborating on exciting Flutter projects, job
-                    opportunities, or other professional ventures. Whether you have questions, want to explore
-                    opportunities, or just want to say hello, I’d love to hear from you. Feel free to reach out, and
-                    let’s create something great together!</p>
-                </div>
-
-                <div class="flex w-full flex-col md:flex-row items-start md:justify-between mt-6 gap-2 md:gap-0">
-                  <div class="flex text-xs items-center justify-center gap-2">
-                    <i class="fas fa-envelope text-blue-500"></i>
-                    <span class="indent-1">huzaifa.cs67@gmail.com</span>
-                  </div>
-                  <div class="flex text-xs items-center justify-center gap-2">
-                    <i class="fas fa-phone text-green-500"></i>
-                    <span>+92 335 1533 981</span>
-                  </div>
-                </div>
+            <div class="contact-us-card w-full md:w-[60%] flex flex-col justify-between md:mb-16" data-aos="zoom-in-up"
+              data-aos-duration="700" data-aos-delay="500">
+              <div class="contact-us-desc">
+                <p>Let’s get in touch! I’m open to connecting and collaborating on exciting Flutter projects, job
+                  opportunities, or other professional ventures. Whether you have questions, want to explore
+                  opportunities, or just want to say hello, I’d love to hear from you. Feel free to reach out, and
+                  let’s create something great together!</p>
               </div>
 
-              <div id="contact-form-container" class="p-1"></div>
+              <div class="flex w-full flex-col md:flex-row items-start md:justify-between mt-6 gap-2 md:gap-0">
+                <div class="flex text-xs items-center justify-center gap-2">
+                  <i class="fas fa-envelope text-blue-500"></i>
+                  <span class="indent-1">huzaifa.cs67@gmail.com</span>
+                </div>
+                <div class="flex text-xs items-center justify-center gap-2">
+                  <i class="fas fa-phone text-green-500"></i>
+                  <span>+92 335 1533 981</span>
+                </div>
+              </div>
             </div>
+
+            <div id="contact-form-container" class="p-1"></div>
+          </div>
+
+          <div class="h-20"></div>
 
 
           <div class="w-full flex flex-col-reverse lg:flex-row items-center lg:gap-y-5 gap-4">
@@ -449,6 +467,53 @@
         profileImageBorder.classList.remove("animate-ping");
         profileImageBorder.classList.add("animate-pulse");
       });
+    });
+
+    // marquee animation
+    document.addEventListener("DOMContentLoaded", function () {
+      const container = document.querySelector(".w-full.overflow-hidden");
+      const marquee = document.getElementById("marquee");
+
+      // Clone 2 more times
+      const clone1 = marquee.cloneNode(true);
+      const clone2 = marquee.cloneNode(true);
+
+      clone1.id = "marquee-clone";
+      clone2.id = "marquee-clone2";
+
+      container.appendChild(clone1);
+      container.appendChild(clone2);
+
+      let speed = 0.5;
+      let pos = 0;
+
+      function animate() {
+        pos -= speed;
+        const width = marquee.offsetWidth;
+
+        if (Math.abs(pos) >= width) {
+          pos = 0;
+        }
+
+        marquee.style.transform = `translateX(${pos}px)`;
+        clone1.style.transform = `translateX(${pos + width}px)`;
+        clone2.style.transform = `translateX(${pos + width * 2}px)`;
+
+        requestAnimationFrame(animate);
+      }
+
+      animate();
+
+    });
+
+    document.addEventListener("DOMContentLoaded", function () {
+      document.querySelectorAll(".aos-card").forEach(el => {
+        el.setAttribute("data-aos", "fade-down");
+        el.setAttribute("data-aos-duration", "700");
+        el.setAttribute("data-aos-delay", "500");
+        el.setAttribute("data-aos-anchor-placement", "center-bottom");
+      });
+
     });
 
 

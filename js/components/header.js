@@ -5,7 +5,7 @@ export function renderHeader(containerId) {
     container.innerHTML = `
     <header class="flex fixed top-0 w-full justify-center z-20">
     <div class="header w-[92%] sm:w-[80%] h-[64px] flex justify-between items-center">
-      <div class="flex-1 whitespace-nowrap font-bold">👋 Welcome</div>
+      <div class="flex-1 text-md md:text-lg whitespace-nowrap font-bold">👋 Welcome</div>
 
       <div class="w-3/4 justify-center hidden md:block">
         <nav class="nav">

@@ -38,17 +38,30 @@ export function initPageScripts() {
     entries.forEach(e => {
       if (e.isIntersecting) setActive(e.target.id);
     });
-  }, { threshold: 0.6 });
+  }, { threshold: 0.5 });
   sections.forEach(s => observer.observe(s));
 
   // Theme toggle
-  const themeToggle = document.getElementById("themeToggle");
-  if (themeToggle) {
-    themeToggle.addEventListener("click", () => {
-      document.documentElement.classList.toggle("dark");
-      localStorage.setItem("theme", document.documentElement.classList.contains("dark") ? "dark" : "light");
-    });
-  }
+const themeToggle = document.getElementById("themeToggle");
+
+// ✅ Force dark mode initially
+if (!localStorage.getItem("theme")) {
+  document.documentElement.classList.add("dark");
+  localStorage.setItem("theme", "dark");
+} else if (localStorage.getItem("theme") === "dark") {
+  document.documentElement.classList.add("dark");
+}
+
+if (themeToggle) {
+  themeToggle.addEventListener("click", () => {
+    document.documentElement.classList.toggle("dark");
+    localStorage.setItem(
+      "theme",
+      document.documentElement.classList.contains("dark") ? "dark" : "light"
+    );
+  });
+}
+
 
   // on initial load set active from hash or home
   const hash = location.hash.replace("#", "") || "home";
